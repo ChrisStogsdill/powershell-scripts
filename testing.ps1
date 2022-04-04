@@ -1,0 +1,16 @@
+
+
+
+
+
+
+
+
+
+Get-ADComputer -Filter *
+
+
+
+
+
+test
