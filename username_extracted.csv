@@ -1,283 +1,283 @@
-#TYPE System.Management.Automation.PSCustomObject
-"Employee_Code","Employee_Name","Location_Desc","Position","status","UserName_Extracted"
-"78","HENRY, DONNA L","Oklahoma City","AP SPECIALIST","Done","DHenry"
-"95","WAGNER, GREG A","Oklahoma City","INSIDE SALES","Done","GWagner"
-"101","LOPEZ, MICHAEL","Odessa, TX","OPERATIONS MANAGER","Done","MLopez"
-"129","GELISTA, SAMUEL","Alice, TX","OPERATIONS MANAGER","Done","SGelista"
-"160","ELMER, NICHOLAS P","Houston, TX","OPERATIONS MANAGER","","nelmer"
-"230","WESTENDORF, MADISON J","Oklahoma City","OUTSIDE SALES","","mwestendorf"
-"263","HANCOCK, HEATH","Kilgore, TX","STORE MANAGER","","hhancock"
-"282","SABO, WILLIAM F","Pittsburgh, PA","OUTSIDE SALES MANAGER","","NO USERNAME"
-"288","TURNER, RHONDA A","Oklahoma City","HR Coordinator","","rturner"
-"296","JANISE, DAVID","Dallas, TX","OUTSIDE SALES","","djanise"
-"297","EVERS, DEREK J","Oklahoma City","OUTSIDE SALES","","devers"
-"304","UTCHEL, DANIEL L","Lakeland, FL","STORE MANAGER","","dutchel"
-"318","MORGAN, PRESTON","Oklahoma City","SUPERVISOR","","pmorgan"
-"363","SMITH, BRANDON C","Vernal, UT","REGIONAL OPERATIONS MANAGER","","bsmith"
-"387","HURST, WACEY R","Ft Worth West, TX","OUTSIDE SALES","","whurst"
-"462","HURST, CODY","Ft Worth West, TX","STORE MANAGER","","churst"
-"463","ROBERSON, KELSIE L","Oklahoma City","INSIDE SALES","","KRoberson"
-"524","KOHL, RICHARD","Pittsburgh, PA","STORE MANAGER","","rkohl"
-"552","CANON, MICHAEL A","San Antonio, TX","REGIONAL SALES MANAGER","","mcanon"
-"638","CARROLL, CLAY","Bakersfield, CA","INSIDE SALES","","ccarroll"
-"647","CURTIS, ROBERT","Oklahoma City","BUYER - Corp Purch","","NO USERNAME"
-"755","LOCKHART, MARK","Corry, PA","STORE MANAGER","","mlockhart"
-"758","BOLERATZ, BRADLEY","Corry, PA","WEAVING TECH MANAGER","","bboleratz"
-"771","STINE, KYLE","Corry, PA","EXTRUSION TECH MANAGER","","kstine"
-"781","MYERS, RYAN","Pasadena, TX","STORE MANAGER","","rmyers"
-"791","JONES, KRISTEN","Oklahoma City","BUYER - Corp Purch","","KJones"
-"794","THOMAS, HAYNES","Lakeland, FL","REGION SALES MANAGER","","hthomas"
-"800","CARRIER, JASON","Lakeland, FL","OUTSIDE SALES","","jcarrier"
-"880","WHITTEN, RICHARD","Lakeland, FL","INSIDE SALES","","rwhitten"
-"921","AGUILAR, CARLOS","Bakersfield, CA","STORE MANAGER","","caguilar"
-"969","MOSLEY, THOMAS","Kilgore, TX","OUTSIDE SALES","","tmosley"
-"1001","JACKSON, MISTY","Lafayette, LA","OUTSIDE SALES","","mjackson"
-"1012","REAGAN, KARI","Oklahoma City","AR SPECIALIST","","kreagan"
-"1014","VALLEY, FRANK","Oklahoma City","IT MANAGER","","fvalley"
-"1030","BARRERA, VICTORIA","Pasadena, TX","INSIDE SALES","","vbarrera"
-"1062","FERGUSON, JUSTIN","Oklahoma City","IT SPECIALIST","","jferguson"
-"1064","INGRAM, EMILY","Oklahoma City","Supervisor - Corp Purchasing","","eingram"
-"1065","BERRIOS, VICTOR","Pompano Beach, FL","OPERATIONS MANAGER","","vberrios"
-"1105","MILLER, VICTOR","Salt Lake City, UT","STORE MANAGER","","vmiller"
-"1110","SCHULER, CHRISTOPHER","Oklahoma City","BUYER - Corp Purch","","cschuler"
-"1139","PIERCE, KAILEE","Oklahoma City","INSIDE SALES","","kpierce"
-"1169","SEALES, RYAN","Oklahoma City","AutoCad Drafter","","rseales"
-"1174","LARSON, MATTHEW","Lakeland, FL","OUTSIDE SALES","","mlarson"
-"1218","LUBA, CHRISTOPHER","Corry, PA","Quality Assurance Engineer","","cluba"
-"1270","BAUM, DAVID","Oklahoma City","IT NETWORK ADMINISTRATOR","","dbaum"
-"1301","GRIFFIN, MICHAEL","Lakeland, FL","MOBILE HOSE TECHNICIAIN","","mgriffin"
-"1353","MORENO, AARON","Greeley, CO","OPERATIONS MANAGER","","amoreno"
-"1410","JARVIS, BAILEY","Oklahoma City","CORPORATE ACCOUNTANT","","bjarvis"
-"1411","HOAG, CHRISTIE","Oklahoma City","AP SPECIALIST","","choag"
-"1422","ZURLINE, KRISTIN","Oklahoma City","RECEPTIONIST","","kzurline"
-"1423","CATALDO, CHRISTINE","Oklahoma City","HUMAN RESOURCES MANAGER","","ccataldo"
-"1424","ELSEN, MARY","Oklahoma City","ACCOUNTING CLERK","","melsen"
-"1472","HENSON, HALEY","Oklahoma City","Import Specialist / International Logistics Clerk - Supply Chain","","hhenson"
-"1474","LEONARD, J D","Oklahoma City","Safety and Training Coordinator","","jleonard"
-"1479","STOGSDILL, CHRIS","Oklahoma City","IT Junior Systems Administrator","","cstogsdill"
-"130","SCHULZE, JEANELL C","Alice, TX","STORE MANAGER","","JSchulze"
-"217","ORTIZ, JUAN","FT Worth East, TX","INSIDE SALES","","jortiz"
-"482","DERAMUS, ARDEN L","Oklahoma City","INSIDE SALES","","aderamus"
-"528","SPLICHAL, TROY R","Houston, TX","OUTSIDE SALES","","tsplichal"
-"559","HILTON, MARCUS","San Antonio, TX","OUTSIDE SALES","","mhilton"
-"1027","BROWN, CHRISTOPHER","Oklahoma City","OUTSIDE SALES","","cbrown"
-"1196","CRYER, TIMOTHY","Lake Charles, LA","OUTSIDE SALES","","tcryer"
-"1223","OGILVIE, BRAYDEN","Salt Lake City, UT","INSIDE SALES","","bogilvie"
-"1228","CASARES, DAMIAN","Greeley, CO","OUTSIDE SALES","","dcasares"
-"1233","MARKOVICH, TOBY","Oklahoma City","INSIDE SALES","","tmarkovich"
-"1277","COX, LAURA","Houston, TX","INSIDE SALES","","lcox"
-"1304","JUSTICE, MICHAEL","Charlotte - Remote, NC","OUTSIDE SALES","","mjustice"
-"1305","CASTON II, STEWART","Charlotte - Remote, NC","SALES OUTSIDE","","scaston"
-"1337","HERMAN, KEITH","Pasadena, TX","OUTSIDE SALES","","kherman"
-"1344","COLEMAN, KASEY","Odessa, TX","OUTSIDE SALES","","kcoleman"
-"1388","ROBINSON, TONY","Salt Lake City, UT","OUTSIDE SALES","","trobinson"
-"1391","BURNS, MATTHEW","Pittsburgh, PA","OUTSIDE SALES","","mburns"
-"1406","CONROY, MICHAEL","Houston, TX","OUTSIDE SALES","","mconroy"
-"1408","MERCER, AMANDA","Pasadena, TX","INSIDE SALES","","amercer"
-"1425","EISMANN, CHRISTOPHER M","Los Angeles, LA","OUTSIDE SALES","","Cheismann"
-"1426","KISSEBERTH, KEITH","Los Angeles, LA","INSIDE SALES","","NO USERNAME"
-"1443","GRAHAM, JACOB","Salt Lake City, UT","INSIDE SALES","","jgraham"
-"1487","YAP, JARED","Bakersfield, CA","OUTSIDE SALES","","jyap"
-"1488","LEWIS, CORY","Salt Lake City, UT","OUTSIDE SALES","","clewis"
-"143","EZIOMOWHO, FOSTER","Houston, TX","HOSE TECHNICIAN","","NO USERNAME"
-"144","STACEY, DAVID A","Oklahoma City","Ducting Warehouse","","dstacey"
-"151","GOVEA, AGUSTIN","Houston, TX","HOSE TECHNICIAN ROTARY","","agovea"
-"182","RAMSEY, GARRET S","Odessa, TX","INSIDE SALES","","gramsey"
-"212","BURNETT, BRENT","Oklahoma City","DRIVER","","bburnett"
-"213","MCLEMORE, DONNIE","Hobbs, NM","WAREHOUSE ATTENDANT","","dmclemore"
-"221","GONZALEZ, RUBEN","Houston, TX","HOSE TECHNICIAN ROTARY","","rgonzalez"
-"228","SANTOS, CRUZ","Pasadena, TX","HOSE TECHNICIAN","","csantos"
-"236","SPEAKS, JOSHUA","Oklahoma City","SUPERVISOR","","jspeaks"
-"241","CHESTER, JAMES R","Dallas, TX","HOSE TECHNICIAN","","jchester"
-"273","CAMPOS, JESSIE A","Ft Worth West, TX","WAREHOUSE MANAGER","","jcampos"
-"294","MARTIN, ANDREW","Oklahoma City","SUPERVISOR","","amartin"
-"313","DAHLEM, JOSHUA","Oklahoma City","HOSE TECHNICIAN","","jdahlem"
-"320","WEEKS, AUSTIN","Vernal, UT","INSIDE SALES","","aweeks"
-"326","HOMER, AARON A","Kilgore, TX","INSIDE SALES","","ahomer"
-"340","RODGERS, JOSHUA G","Odessa, TX","HOSE TECHNICIAN","","jrodgers"
-"349","DERMOTTA, JOSEPH D","Pittsburgh, PA","WAREHOUSE LEAD","","jdermotta"
-"353","ALLEN, SHALENA D","Oklahoma City","COUNTER SALES","","sallen"
-"356","RAMIREZ, BENITO","Alice, TX","HOSE TECHNICIAN","","bramirez"
-"378","MEISSINGER, JERRY D","Oklahoma City","KIT ASSEMBLER","","jmeissinger"
-"381","DIRKS, CALEB A","Williston, ND","STORE MANAGER","","cdirks"
-"398","HOWELL, DALTON W","Odessa, TX","INSIDE SALES","","dhowell"
-"417","HAYWOOD, ADAM J","Oklahoma City","COUNTER SALES","","ahaywood"
-"424","KOLDOFF, MARK","Oklahoma City","QUALITY CONTROL MANAGER","","mkoldoff"
-"425","GARCIA, ISRAEL","Houston, TX","HOSE TECHNICIAN","","igracia"
-"445","HERRERA, JOSEPH","Houston, TX","HOSE TECHNICIAN","","jherrera"
-"451","TORRES JR, PETER","Pasadena, TX","HOSE TECHNICIAN","","NO USERNAME"
-"455","GESCH, PATRICK P","Odessa, TX","HOSE TECHNICIAN","","pgesch"
-"489","BOOKOUT, KYLE D","El Reno, OK","STORE MANAGER","","kbookout"
-"495","BUTTERS, IAN W","Williston, ND","INSIDE SALES","","ibutters"
-"507","RATER, STEPHEN L","San Antonio, TX","STORE MANAGER","","srater"
-"526","DE LA CRUZ, MICHAEL","Houston, TX","PACKERSHIPPER","","NO USERNAME"
-"532","BUSSING, BRIAN A","Oklahoma City","MACHINIST","","bbussing"
-"557","MCGLOTHLIN, RANDY J","Odessa, TX","OUTSIDE SALES","","rmcglothlin"
-"564","WYATT, KIEFER J","Houston, TX","OUTSIDE SALES","","Kwyatt"
-"567","WHITFIELD JR, ANTHONY L","Bakersfield, CA","OPERATIONS MANAGER","","awhitfield"
-"580","MORRIS, STEPHEN E","Odessa, TX","HOSE TECHNICIAN","","smorris"
-"599","HAWKINS, JAMES","Oklahoma City","HOSE TECHNICIAN","","jhawkins"
-"632","ANDERSON, ANTHONY","Ft Worth West, TX","HOSE TECHNICIAN","","aanderson"
-"634","O NEAL, MICHAEL","Oklahoma City","MAINTENANCE","","SKIPPED"
-"658","RIVAS, LUIS","San Antonio, TX","HOSE TECH  DRIVER (PRIMARY)","","lrivas"
-"661","HALLIDAY, CHUCK","Oklahoma City","RECEIVING CLERK","","challiday"
-"675","WEDDING, JOSHUA","Kilgore, TX","HYDRAULIC SHOP MANAGER","","JWedding"
-"676","RIDGE, KASEY","Kilgore, TX","HYDRAULIC TECHNICIAN","","KRidge"
-"682","BEATY, ANDREW","FT Worth East, TX","STORE MANAGER","","abeaty"
-"691","BOGGUS, DEREK","Kilgore, TX","HYDRAULIC TECHNICIAN","","dboggus"
-"749","BECERRA, JESUS","Pasadena, TX","HOSE TECHNICIAN","","JBecerra"
-"750","OLVERA, RAUL","Pasadena, TX","STORE MANAGER","","rolvera"
-"752","RIVERA, OSCAR","Pasadena, TX","WELDER","","orivera"
-"759","BROOKS, ILA","Corry, PA","WEAVER","","ibrooks"
-"769","PETERSON, JAMES","Corry, PA","WEAVER","","SKIPPED"
-"778","CHELTON, KELLY","Corry, PA","WEAVER","","kchelton"
-"782","PERKINS, AARON","Oklahoma City","SUPERVISOR","","NO USERNAME"
-"819","GRAHAM, CODY","Vernal, UT","SALES INSIDEOUTSIDE","","cgraham"
-"822","PLOSS, BRANDON","Corry, PA","EXTRUDER OPERATOR","","bploss"
-"830","MOON, LOGAN","Odessa, TX","HOSE TECHNICIAN","","lmoon"
-"831","COLE JR, JAMES","Pittsburgh, PA","HOSE TECHNICIAN","","jcole"
-"838","SCHOLAR, DOUGLAS","Corry, PA","EXTRUDER OPERATOR","","dscholar"
-"845","LINDSTROM JR, SCOTT","Corry, PA","EXTRUDER OPERATOR","","shlindstrom"
-"846","WOODIN JR, ROBERT","Corry, PA","EXTRUDER OPERATOR","","rwoodin"
-"847","HODAK JR, VICTOR","Corry, PA","WEAVING SET UP","","vhodak"
-"872","SPROVERI, TRACEY","Corry, PA","WEAVER","","NO USERNAME"
-"876","BROWN, SARAH","Corry, PA","WEAVER","","sbrown"
-"906","HUGHES, LUKE","Kilgore, TX","HYDRAULIC SALESSERVICE TECH","","lhughes"
-"912","JORDAN, JAMES","Dallas, TX","WELDER","","jjordan"
-"926","MESSINGER, JEFFERY","Corry, PA","EXTRUDER OPERATOR","","jmessinger"
-"927","BENOIT, RYAN","Lake Charles, LA","INSIDE SALES","","rbenoit"
-"928","MUESSMAN, JASON","Williston, ND","COUNTER SALES","","jmuessman"
-"929","SHUCK, ADAM","Lakeland, FL","WAREHOUSE MANAGER","","ashuck"
-"930","CLARK, KEVIN","Corry, PA","EXTRUDER OPERATOR","","kclark"
-"946","CALDWELL, ANDREW","Corry, PA","EXTRUDER OPERATOR","","acaldwell"
-"960","MURADY, MOHAMMED","Dallas, TX","COUNTER SALES  DRIVER BACK UP","","mmurady"
-"965","CHELTON, BROOKE","Corry, PA","WEAVER","","bchelton"
-"968","MORTON, JENNIFER","Corry, PA","WEAVER","","jmorton"
-"970","WINANS, ROBIN","Corry, PA","WEAVER","","rwinans"
-"976","LA-VAN, JOHN","Pasadena, TX","WELDER","","jlavan"
-"977","MCLAUGHLIN, DAVID","El Reno, OK","HOSE TECHNICIAN","","dmclaughlin"
-"989","PETERS, JEREMY","Oklahoma City","SUPERVISOR","","jpeters"
-"992","ROJAS, MARCOS","Oklahoma City","SUPERVISOR","","mrojas"
-"996","JAQUITH, CHEYENNE","Corry, PA","WEAVER","","cjaquith"
-"1004","BOUTELLE, KILEY","Corry, PA","WEAVER","","kboutelle"
-"1010","HACKETT, CORBIN","Oklahoma City","HOSE TECHNICIAN","","chackett"
-"1028","GILES, LEVI","Oklahoma City","COUNTER SUPERVISOR","","lgiles"
-"1033","DELAROSA, EUGENIO","Dallas, TX","INSIDE SALES","","edelarosa"
-"1041","CUMMINGS, TERRY","Lakeland, FL","HOSE TECHNICIAN","","tcummings"
-"1052","ALAMILLO, EDGAR","FT Worth East, TX","DRIVER","","ealamillo"
-"1067","BONHAM, PRESTON","FT Worth East, TX","HOSE TECHNICIAN","","pbonham"
-"1071","MAGEE, JUSTIN","Oklahoma City","HOSE TECHNICIAN","","jmagee"
-"1091","ALFARO, EDGARDO","Oklahoma City","MACHINIST","","ealfaro"
-"1099","GERDY, LARRY","Corry, PA","EXTRUDER OPERATOR","","lgerdy"
-"1100","COLLINS, KYLE","Oklahoma City","HOSE TESTER","","kcollins"
-"1102","COFFIN, CHARLES","Oklahoma City","SUPERVISOR","","ccoffin"
-"1118","PERU, DAMON","Corry, PA","EXTRUDER OPERATOR","","dperu"
-"1127","PENA, ANTHONY","San Antonio, TX","HOSE TECHNICIAN","","apena"
-"1147","NERI, BRIAN","Bakersfield, CA","WELDER","","bneri"
-"1151","CHERRY, JEFFERY","Oklahoma City","CNC PROGRAMMER","","jcherry"
-"1168","ESCOBEDO, MICHEAL","Oklahoma City","HOSE TECHNICIAN","","mescobedo"
-"1173","NOWELL, JEOFFREY","Oklahoma City","HOSE TECHNICIAN","","NO USERNAME"
-"1181","HULL, JUSTIN","Oklahoma City","HOSE TECHNICIAN","","NO USERNAME"
-"1183","WELLS, KYLE","Oklahoma City","HOSE TECHNICIAN","","NO USERNAME"
-"1194","CHRISTOPHE, JEREMY","Lafayette, LA","HOSE TECHNICIAN","","jchristophe"
-"1199","HANKINS, WAYNE","Lakeland, FL","COUNTER SUPERVISOR","","whankins"
-"1216","AGUILAR, JOHN","San Antonio, TX","HOSE TECHNICIAN","","jaguilar"
-"1226","SANDHU, JOSIAH","Pasadena, TX","WAREHOUSE ATTENDANT","","jsandhu"
-"1227","HILTERBRAN, CHARLES","Oklahoma City","HOSE TECHNICIAN","","chilterbran"
-"1238","FLOREZ, GABRIEL MATEO","Hobbs, NM","HOSE TECHNICIAN","","gflorez"
-"1239","PETERSON, TIMOTHY","Corry, PA","EXTRUDER OPERATOR","","tpeterson"
-"1245","QUIROZ, ISAIAH","Odessa, TX","HOSE TECHNICIAN","","NO USERNAME"
-"1247","BOYD, KEVIN","Oklahoma City","HOSE TECHNICIAN","","kboyd"
-"1264","GAUTHIER, LARRY","Oklahoma City","HOSE TECHNICIAN","","lGauthier"
-"1268","MARTIN, SHANNON","Oklahoma City","WAREHOUSE ATTENDANT","","ShMartin"
-"1273","WEDDING, BENJAMIN","El Reno, OK","HOSE TECHNICIAN","","bwedding"
-"1282","HERRING, JULIAN","Oklahoma City","HOSE TECHNICIAN","","JHerring"
-"1288","NEUERBURG, JESSICA","Greeley, CO","HOSE TECHNICIAN","","jneuerburg"
-"1289","GALINDO, ELIAS","Odessa, TX","HYDRAULIC TECHNICIAN","","egalindo"
-"1290","SALGUERO FARIA, MARIO","Pompano Beach, FL","COUNTER SALES","","NO USERNAME"
-"1293","MEDINA, ALVIN","Oklahoma City","WELDER","","amedina"
-"1295","BLANCO, ALEXANDER","Lafayette, LA","HOSE TECHNICIAN","","ablanco"
-"1306","RAO, JOHN","Charlotte, NC","STORE MANAGER","","jrao"
-"1307","CARPENTER, LUKE","Charlotte, NC","WAREHOUSE MANAGER","","lcarpenter"
-"1310","RADFORD, ASHLEY","Oklahoma City","CUSTODIAN","","NO USERNAME"
-"1318","BUERGER, MICHAEL","Oklahoma City","MACHINIST","","mbuerger"
-"1322","WIGGINS, BENJAMIN","Pittsburgh, PA","HOSE TECHNICIAN","","NO USERNAME"
-"1326","HOLLOWAY, BENTON JAKE","Lake Charles, LA","HOSE TECHNICIAN","","NO USERNAME"
-"1327","ECHEVERRIA, DAVID","Greeley, CO","HOSE TECHNICIAN","","decheverria"
-"1329","RUBIO, MARCO","Oklahoma City","Sewing Machine Operator","","NO USERNAME"
-"1330","HERNANDEZ, SANTIAGO","Oklahoma City","Sewing Machine Operator","","NO USERNAME"
-"1331","MUNIZ, ISELA","Oklahoma City","Ducting Warehouse","","NO USERNAME"
-"1333","RIVAS, ISELA","Oklahoma City","Ducting Warehouse","","NO USERNAME"
-"1339","COLCHADO, FELIPE","Oklahoma City","Ducting Warehouse","","NO USERNAME"
-"1340","GUERRERO, ANAYELI","Oklahoma City","Ducting Warehouse","","NO USERNAME"
-"1341","ALVAREZ, RUDY","Oklahoma City","Ducting Warehouse","","NO USERNAME"
-"1346","GREEN, SHADE","Lakeland, FL","HOSE TECHNICIAN","","sgreen"
-"1348","GUEVARA, JOSEPH","Corry, PA","EXTRUDER OPERATOR","","jguevara"
-"1354","JUAREZ, CESAR","Oklahoma City","Sewing Machine Operator","","cjuarez"
-"1356","ROBINSON, GREGORY","Corry, PA","WEAVER","","grobinson"
-"1361","LINDSTROM, SHERI","Corry, PA","WEAVER","","shlindstrom"
-"1362","ESCOBEDO, ROCIO","Oklahoma City","Ducting Warehouse","","NO USERNAME"
-"1363","SCHMOKE, DAKODA","Corry, PA","EXTRUDER OPERATOR","","NO USERNAME"
-"1364","GARCIA QUINONEZ, JOSE","Oklahoma City","Ducting Warehouse","","jgarcia"
-"1368","ROSE, SAMANTHA","Corry, PA","WEAVER","","srose"
-"1369","PROPER, DEVON","Corry, PA","TEST OPERATOR","","dproper"
-"1374","CASTILLO, BRYCE","Oklahoma City","HOSE TECHNICIAN","","bcastillo"
-"1377","GARCIA, BENJAMIN","Williston, ND","HOSE TECHNICIAN","","NO USERNAME"
-"1382","BOONE, LARRY","Oklahoma City","HOSE TECHNICIAN","","LBoone"
-"1383","ALVEY, JEFFREY ROBERT","Oklahoma City","HOSE TECHNICIAN","","jalvey"
-"1387","ESCOBEDO, MIGUEL","Oklahoma City","HOSE TECHNICIAN","","mescobedo"
-"1392","ANDERSON, JEFFERY","Oklahoma City","HOSE TECHNICIAN","","janderson"
-"1393","WACHTER, DEREK","Corry, PA","EXTRUDER OPERATOR","","dwachter"
-"1394","RHOADES, LOGAN","Kilgore, TX","HOSE TECHNICIAN","","lrhoades"
-"1396","WHEELER, SEAN","Oklahoma City","COUNTER SALES","","swheeler"
-"1397","WEED, JAMES","Corry, PA","EXTRUDER OPERATOR","","jweed"
-"1399","NEVAREZ, ANTHONY","Oklahoma City","SHIPPING CLERK","","aNevarez"
-"1401","YATES, JUSTIN","Lakeland, FL","HOSE TECHNICIAN","","jyates"
-"1403","DELAROSA, RAYMUNDO","Dallas, TX","HOSE TECHNICIAN","","rdelarosa"
-"1404","WHITE, MIRANDA","Oklahoma City","COUNTER SALES","","mwhite"
-"1405","TORRES, GRACIELA","Oklahoma City","Ducting Warehouse","","NO USERNAME"
-"1409","CUELLAR, ELRAD","Los Angeles, LA","WAREHOUSE MANAGER","","ecuellar"
-"1413","WILKINS, MATTHEW","Oklahoma City","MACHINIST","","NO USERNAME"
-"1415","DOMINGUEZ, NATHANIEL","Pasadena, TX","DRIVER","","NO USERNAME"
-"1417","ENGEL, SCOTT","Oklahoma City","MACHINIST","","NO USERNAME"
-"1420","SIEGESMUND, CORY","Lakeland, FL","MOBILE HOSE TECHNICIAIN","","csiegesmund"
-"1427","REYNA, DANIEL","Oklahoma City","WELDER","","NO USERNAME"
-"1428","HARRIS, STANLEY","Salt Lake City, UT","DRIVER","","sharris"
-"1430","DILWORTH, JONATHAN","Corry, PA","EXTRUDER OPERATOR","","jDilworth"
-"1435","LUCERO, MARK","Greeley, CO","HOSE TECH DRIVER","","mlucero"
-"1438","HILL, DEMOND","Oklahoma City","WAREHOUSE ATTENDANT","","NO USERNAME"
-"1440","HAGEN, BLAKE DANIEL","Oklahoma City","HOSE TECHNICIAN","","NO USERNAME"
-"1441","BROYLES, JOSHUA","Kilgore, TX","INSIDE SALESHOSE TECHNICIAN","","jbroyles"
-"1446","MORAN, GABRIELA","Oklahoma City","Sewing Machine Operator","","NO USERNAME"
-"1447","CERVANTES, GUADALUPE","Oklahoma City","Sewing Machine Operator","","NO USERNAME"
-"1448","REYNA, ISAAC","Oklahoma City","HOSE TECHNICIAN","","NO USERNAME"
-"1451","CARPIO, GABRIEL","Oklahoma City","Sewing Machine Operator","","NO USERNAME"
-"1452","BREAUX, BRANDON","Oklahoma City","WELDER","","NO USERNAME"
-"1453","MILLER JR, RONALD","Lake Charles, LA","WELDER","","rmiller"
-"1455","SPICER, BRIAN","Lakeland, FL","HOSE TECHNICIAN","","NO USERNAME"
-"1457","CHACON, CARMEN","Oklahoma City","Ducting Warehouse","","NO USERNAME"
-"1459","ARRECIS, EDWIN","Oklahoma City","Ducting Warehouse","","NO USERNAME"
-"1460","MERIDA, ANGEL","Oklahoma City","Ducting Warehouse","","NO USERNAME"
-"1462","OLIVER, KELVIN","Lake Charles, LA","HOSE TECH DRIVER","","NO USERNAME"
-"1464","CRUZ, ERNIE","Bakersfield, CA","HOSE TECHNICIAN","","NO USERNAME"
-"1466","CROSBY, CLAUDE","Corry, PA","TEST OPERATOR","","cCrosby"
-"1467","DORMAN, JON","Corry, PA","TEST OPERATOR","","jdorman"
-"1468","NIELSON, TREVOR","Vernal, UT","HOSE TECHNICIAN","","tnielson"
-"1469","ERIKSEN, SIERRA","Corry, PA","WEAVER","","sEriksen"
-"1470","NEWCHURCH, CURLEY","Oklahoma City","SHIPPING CLERK","","NO USERNAME"
-"1471","TIMMS, TYNESHIA","Oklahoma City","Inventory Control Specialist","","ttimms"
-"1473","NOLAN, NICHOLAS","Oklahoma City","Inventory Control Specialist","","nnolan"
-"1475","ROMERO, JOSE","Odessa, TX","HOSE TECHNICIAN","","NO USERNAME"
-"1476","MACON, DWIGHT","Pittsburgh, PA","HOSE TECHNICIAN","","NO USERNAME"
-"1477","HOUSE V, EDWIN","Lake Charles, LA","HOSE TECHNICIAN","","ehouse"
-"1478","PLOSS, MICHAEL","Corry, PA","TEST OPERATOR","","mploss"
-"1480","CURTIS, MARCUS","Oklahoma City","SHIPPING CLERK","","mcurtis"
-"1481","BRADLEY, KEVIN","Oklahoma City","HOSE TECHNICIAN","","kbradley"
-"1482","DEVIA, ANDRES","Oklahoma City","Ducting Manager","","NO USERNAME"
-"1483","EISMANN JR, CHRISTOPHER","Los Angeles, LA","HYDRAULIC TECHNICIAN","","Cheismann"
-"1485","PEPPERMAN, LESTER","Corry, PA","TEST OPERATOR","","lpepperman"
-"1486","OGILVIE, IVAN","Salt Lake City, UT","INSIDE SALES","","Iogilvie"
-"1489","SANDERS, TREVOR LEON","Oklahoma City","EXTRUDER OPERATOR","","tsanders"
-"1490","VIERA, LUCY","Oklahoma City","SHIPPING CLERK","","lviera"
-"1491","SUMMERLIN, JUSTIN JAMES","Lake Charles, LA","HOSE TECH  DRIVER (PRIMARY)","","jsummerlin"
-"1493","TURNER JR, BILLY J","Oklahoma City","WAREHOUSE LEAD","","NO USERNAME"
+#TYPE System.Management.Automation.PSCustomObject,,,,,
+Employee_Code,Employee_Name,Location_Desc,Position,status,UserName_Extracted
+78,"HENRY, DONNA L",Oklahoma City,AP SPECIALIST,Done,DHenry
+95,"WAGNER, GREG A",Oklahoma City,INSIDE SALES,Done,GWagner
+101,"LOPEZ, MICHAEL","Odessa, TX",OPERATIONS MANAGER,Done,MLopez
+129,"GELISTA, SAMUEL","Alice, TX",OPERATIONS MANAGER,Done,SGelista
+160,"ELMER, NICHOLAS P","Houston, TX",OPERATIONS MANAGER,,nelmer
+230,"WESTENDORF, MADISON J",Oklahoma City,OUTSIDE SALES,,mwestendorf
+263,"HANCOCK, HEATH","Kilgore, TX",STORE MANAGER,,hhancock
+282,"SABO, WILLIAM F","Pittsburgh, PA",OUTSIDE SALES MANAGER,,bsabo
+288,"TURNER, RHONDA A",Oklahoma City,HR Coordinator,,rturner
+296,"JANISE, DAVID","Dallas, TX",OUTSIDE SALES,,djanise
+297,"EVERS, DEREK J",Oklahoma City,OUTSIDE SALES,,devers
+304,"UTCHEL, DANIEL L","Lakeland, FL",STORE MANAGER,,dutchel
+318,"MORGAN, PRESTON",Oklahoma City,SUPERVISOR,,pmorgan
+363,"SMITH, BRANDON C","Vernal, UT",REGIONAL OPERATIONS MANAGER,,bsmith
+387,"HURST, WACEY R","Ft Worth West, TX",OUTSIDE SALES,,whurst
+462,"HURST, CODY","Ft Worth West, TX",STORE MANAGER,,churst
+463,"ROBERSON, KELSIE L",Oklahoma City,INSIDE SALES,,KRoberson
+524,"KOHL, RICHARD","Pittsburgh, PA",STORE MANAGER,,rkohl
+552,"CANON, MICHAEL A","San Antonio, TX",REGIONAL SALES MANAGER,,mcanon
+638,"CARROLL, CLAY","Bakersfield, CA",INSIDE SALES,,ccarroll
+647,"CURTIS, ROBERT",Oklahoma City,BUYER - Corp Purch,,NO USERNAME
+755,"LOCKHART, MARK","Corry, PA",STORE MANAGER,,mlockhart
+758,"BOLERATZ, BRADLEY","Corry, PA",WEAVING TECH MANAGER,,bboleratz
+771,"STINE, KYLE","Corry, PA",EXTRUSION TECH MANAGER,,kstine
+781,"MYERS, RYAN","Pasadena, TX",STORE MANAGER,,rmyers
+791,"JONES, KRISTEN",Oklahoma City,BUYER - Corp Purch,,KJones
+794,"THOMAS, HAYNES","Lakeland, FL",REGION SALES MANAGER,,hthomas
+800,"CARRIER, JASON","Lakeland, FL",OUTSIDE SALES,,jcarrier
+880,"WHITTEN, RICHARD","Lakeland, FL",INSIDE SALES,,rwhitten
+921,"AGUILAR, CARLOS","Bakersfield, CA",STORE MANAGER,,caguilar
+969,"MOSLEY, THOMAS","Kilgore, TX",OUTSIDE SALES,,tmosley
+1001,"JACKSON, MISTY","Lafayette, LA",OUTSIDE SALES,,mjackson
+1012,"REAGAN, KARI",Oklahoma City,AR SPECIALIST,,kreagan
+1014,"VALLEY, FRANK",Oklahoma City,IT MANAGER,,fvalley
+1030,"BARRERA, VICTORIA","Pasadena, TX",INSIDE SALES,,vbarrera
+1062,"FERGUSON, JUSTIN",Oklahoma City,IT SPECIALIST,,jferguson
+1064,"INGRAM, EMILY",Oklahoma City,Supervisor - Corp Purchasing,,eingram
+1065,"BERRIOS, VICTOR","Pompano Beach, FL",OPERATIONS MANAGER,,vberrios
+1105,"MILLER, VICTOR","Salt Lake City, UT",STORE MANAGER,,vmiller
+1110,"SCHULER, CHRISTOPHER",Oklahoma City,BUYER - Corp Purch,,cschuler
+1139,"PIERCE, KAILEE",Oklahoma City,INSIDE SALES,,kpierce
+1169,"SEALES, RYAN",Oklahoma City,AutoCad Drafter,,rseales
+1174,"LARSON, MATTHEW","Lakeland, FL",OUTSIDE SALES,,mlarson
+1218,"LUBA, CHRISTOPHER","Corry, PA",Quality Assurance Engineer,,cluba
+1270,"BAUM, DAVID",Oklahoma City,IT NETWORK ADMINISTRATOR,,dbaum
+1301,"GRIFFIN, MICHAEL","Lakeland, FL",MOBILE HOSE TECHNICIAIN,,mgriffin
+1353,"MORENO, AARON","Greeley, CO",OPERATIONS MANAGER,,amoreno
+1410,"JARVIS, BAILEY",Oklahoma City,CORPORATE ACCOUNTANT,,bjarvis
+1411,"HOAG, CHRISTIE",Oklahoma City,AP SPECIALIST,,choag
+1422,"ZURLINE, KRISTIN",Oklahoma City,RECEPTIONIST,,kzurline
+1423,"CATALDO, CHRISTINE",Oklahoma City,HUMAN RESOURCES MANAGER,,ccataldo
+1424,"ELSEN, MARY",Oklahoma City,ACCOUNTING CLERK,,melsen
+1472,"HENSON, HALEY",Oklahoma City,Import Specialist / International Logistics Clerk - Supply Chain,,hhenson
+1474,"LEONARD, J D",Oklahoma City,Safety and Training Coordinator,,jleonard
+1479,"STOGSDILL, CHRIS",Oklahoma City,IT Junior Systems Administrator,,cstogsdill
+130,"SCHULZE, JEANELL C","Alice, TX",STORE MANAGER,,JSchulze
+217,"ORTIZ, JUAN","FT Worth East, TX",INSIDE SALES,,jortiz
+482,"DERAMUS, ARDEN L",Oklahoma City,INSIDE SALES,,aderamus
+528,"SPLICHAL, TROY R","Houston, TX",OUTSIDE SALES,,tsplichal
+559,"HILTON, MARCUS","San Antonio, TX",OUTSIDE SALES,,mhilton
+1027,"BROWN, CHRISTOPHER",Oklahoma City,OUTSIDE SALES,,cbrown
+1196,"CRYER, TIMOTHY","Lake Charles, LA",OUTSIDE SALES,,tcryer
+1223,"OGILVIE, BRAYDEN","Salt Lake City, UT",INSIDE SALES,,bogilvie
+1228,"CASARES, DAMIAN","Greeley, CO",OUTSIDE SALES,,dcasares
+1233,"MARKOVICH, TOBY",Oklahoma City,INSIDE SALES,,tmarkovich
+1277,"COX, LAURA","Houston, TX",INSIDE SALES,,lcox
+1304,"JUSTICE, MICHAEL","Charlotte - Remote, NC",OUTSIDE SALES,,mjustice
+1305,"CASTON II, STEWART","Charlotte - Remote, NC",SALES OUTSIDE,,scaston
+1337,"HERMAN, KEITH","Pasadena, TX",OUTSIDE SALES,,kherman
+1344,"COLEMAN, KASEY","Odessa, TX",OUTSIDE SALES,,kcoleman
+1388,"ROBINSON, TONY","Salt Lake City, UT",OUTSIDE SALES,,trobinson
+1391,"BURNS, MATTHEW","Pittsburgh, PA",OUTSIDE SALES,,mburns
+1406,"CONROY, MICHAEL","Houston, TX",OUTSIDE SALES,,mconroy
+1408,"MERCER, AMANDA","Pasadena, TX",INSIDE SALES,,amercer
+1425,"EISMANN, CHRISTOPHER M","Los Angeles, LA",OUTSIDE SALES,,ceismann
+1426,"KISSEBERTH, KEITH","Los Angeles, LA",INSIDE SALES,,NO USERNAME
+1443,"GRAHAM, JACOB","Salt Lake City, UT",INSIDE SALES,,jgraham
+1487,"YAP, JARED","Bakersfield, CA",OUTSIDE SALES,,jyap
+1488,"LEWIS, CORY","Salt Lake City, UT",OUTSIDE SALES,,clewis
+143,"EZIOMOWHO, FOSTER","Houston, TX",HOSE TECHNICIAN,,feziomowno
+144,"STACEY, DAVID A",Oklahoma City,Ducting Warehouse,,dstacey
+151,"GOVEA, AGUSTIN","Houston, TX",HOSE TECHNICIAN ROTARY,,agovea
+182,"RAMSEY, GARRET S","Odessa, TX",INSIDE SALES,,gramsey
+212,"BURNETT, BRENT",Oklahoma City,DRIVER,,bburnett
+213,"MCLEMORE, DONNIE","Hobbs, NM",WAREHOUSE ATTENDANT,,dmclemore
+221,"GONZALEZ, RUBEN","Houston, TX",HOSE TECHNICIAN ROTARY,,rgonzalez
+228,"SANTOS, CRUZ","Pasadena, TX",HOSE TECHNICIAN,,csantos
+236,"SPEAKS, JOSHUA",Oklahoma City,SUPERVISOR,,jspeaks
+241,"CHESTER, JAMES R","Dallas, TX",HOSE TECHNICIAN,,jchester
+273,"CAMPOS, JESSIE A","Ft Worth West, TX",WAREHOUSE MANAGER,,jcampos
+294,"MARTIN, ANDREW",Oklahoma City,SUPERVISOR,,amartin
+313,"DAHLEM, JOSHUA",Oklahoma City,HOSE TECHNICIAN,,jdahlem
+320,"WEEKS, AUSTIN","Vernal, UT",INSIDE SALES,,aweeks
+326,"HOMER, AARON A","Kilgore, TX",INSIDE SALES,,ahomer
+340,"RODGERS, JOSHUA G","Odessa, TX",HOSE TECHNICIAN,,jrodgers
+349,"DERMOTTA, JOSEPH D","Pittsburgh, PA",WAREHOUSE LEAD,,jdermotta
+353,"ALLEN, SHALENA D",Oklahoma City,COUNTER SALES,,sallen
+356,"RAMIREZ, BENITO","Alice, TX",HOSE TECHNICIAN,,bramirez
+378,"MEISSINGER, JERRY D",Oklahoma City,KIT ASSEMBLER,,jmeissinger
+381,"DIRKS, CALEB A","Williston, ND",STORE MANAGER,,cdirks
+398,"HOWELL, DALTON W","Odessa, TX",INSIDE SALES,,dhowell
+417,"HAYWOOD, ADAM J",Oklahoma City,COUNTER SALES,,ahaywood
+424,"KOLDOFF, MARK",Oklahoma City,QUALITY CONTROL MANAGER,,mkoldoff
+425,"GARCIA, ISRAEL","Houston, TX",HOSE TECHNICIAN,,igracia
+445,"HERRERA, JOSEPH","Houston, TX",HOSE TECHNICIAN,,jherrera
+451,"TORRES JR, PETER","Pasadena, TX",HOSE TECHNICIAN,,ptorres
+455,"GESCH, PATRICK P","Odessa, TX",HOSE TECHNICIAN,,pgesch
+489,"BOOKOUT, KYLE D","El Reno, OK",STORE MANAGER,,kbookout
+495,"BUTTERS, IAN W","Williston, ND",INSIDE SALES,,ibutters
+507,"RATER, STEPHEN L","San Antonio, TX",STORE MANAGER,,srater
+526,"DE LA CRUZ, MICHAEL","Houston, TX",PACKERSHIPPER,,mdelacruz
+532,"BUSSING, BRIAN A",Oklahoma City,MACHINIST,,bbussing
+557,"MCGLOTHLIN, RANDY J","Odessa, TX",OUTSIDE SALES,,rmcglothlin
+564,"WYATT, KIEFER J","Houston, TX",OUTSIDE SALES,,Kwyatt
+567,"WHITFIELD JR, ANTHONY L","Bakersfield, CA",OPERATIONS MANAGER,,awhitfield
+580,"MORRIS, STEPHEN E","Odessa, TX",HOSE TECHNICIAN,,smorris
+599,"HAWKINS, JAMES",Oklahoma City,HOSE TECHNICIAN,,jhawkins
+632,"ANDERSON, ANTHONY","Ft Worth West, TX",HOSE TECHNICIAN,,aanderson
+634,"O NEAL, MICHAEL",Oklahoma City,MAINTENANCE,,moneal
+658,"RIVAS, LUIS","San Antonio, TX",HOSE TECH  DRIVER (PRIMARY),,lrivas
+661,"HALLIDAY, CHUCK",Oklahoma City,RECEIVING CLERK,,challiday
+675,"WEDDING, JOSHUA","Kilgore, TX",HYDRAULIC SHOP MANAGER,,JWedding
+676,"RIDGE, KASEY","Kilgore, TX",HYDRAULIC TECHNICIAN,,KRidge
+682,"BEATY, ANDREW","FT Worth East, TX",STORE MANAGER,,abeaty
+691,"BOGGUS, DEREK","Kilgore, TX",HYDRAULIC TECHNICIAN,,dboggus
+749,"BECERRA, JESUS","Pasadena, TX",HOSE TECHNICIAN,,JBecerra
+750,"OLVERA, RAUL","Pasadena, TX",STORE MANAGER,,rolvera
+752,"RIVERA, OSCAR","Pasadena, TX",WELDER,,orivera
+759,"BROOKS, ILA","Corry, PA",WEAVER,,ibrooks
+769,"PETERSON, JAMES","Corry, PA",WEAVER,,jpeterson
+778,"CHELTON, KELLY","Corry, PA",WEAVER,,kchelton
+782,"PERKINS, AARON",Oklahoma City,SUPERVISOR,,NO USERNAME
+819,"GRAHAM, CODY","Vernal, UT",SALES INSIDEOUTSIDE,,cgraham
+822,"PLOSS, BRANDON","Corry, PA",EXTRUDER OPERATOR,,bploss
+830,"MOON, LOGAN","Odessa, TX",HOSE TECHNICIAN,,lmoon
+831,"COLE JR, JAMES","Pittsburgh, PA",HOSE TECHNICIAN,,jcole
+838,"SCHOLAR, DOUGLAS","Corry, PA",EXTRUDER OPERATOR,,dscholar
+845,"LINDSTROM JR, SCOTT","Corry, PA",EXTRUDER OPERATOR,,slindstrom
+846,"WOODIN JR, ROBERT","Corry, PA",EXTRUDER OPERATOR,,rwoodin
+847,"HODAK JR, VICTOR","Corry, PA",WEAVING SET UP,,vhodak
+872,"SPROVERI, TRACEY","Corry, PA",WEAVER,,tspoveri
+876,"BROWN, SARAH","Corry, PA",WEAVER,,sbrown
+906,"HUGHES, LUKE","Kilgore, TX",HYDRAULIC SALESSERVICE TECH,,lhughes
+912,"JORDAN, JAMES","Dallas, TX",WELDER,,jjordan
+926,"MESSINGER, JEFFERY","Corry, PA",EXTRUDER OPERATOR,,jmessinger
+927,"BENOIT, RYAN","Lake Charles, LA",INSIDE SALES,,rbenoit
+928,"MUESSMAN, JASON","Williston, ND",COUNTER SALES,,jmuessman
+929,"SHUCK, ADAM","Lakeland, FL",WAREHOUSE MANAGER,,ashuck
+930,"CLARK, KEVIN","Corry, PA",EXTRUDER OPERATOR,,kclark
+946,"CALDWELL, ANDREW","Corry, PA",EXTRUDER OPERATOR,,acaldwell
+960,"MURADY, MOHAMMED","Dallas, TX",COUNTER SALES  DRIVER BACK UP,,mmurady
+965,"CHELTON, BROOKE","Corry, PA",WEAVER,,bchelton
+968,"MORTON, JENNIFER","Corry, PA",WEAVER,,jmorton
+970,"WINANS, ROBIN","Corry, PA",WEAVER,,rwinans
+976,"LA-VAN, JOHN","Pasadena, TX",WELDER,,jlavan
+977,"MCLAUGHLIN, DAVID","El Reno, OK",HOSE TECHNICIAN,,dmclaughlin
+989,"PETERS, JEREMY",Oklahoma City,SUPERVISOR,,jpeters
+992,"ROJAS, MARCOS",Oklahoma City,SUPERVISOR,,mrojas
+996,"JAQUITH, CHEYENNE","Corry, PA",WEAVER,,cjaquith
+1004,"BOUTELLE, KILEY","Corry, PA",WEAVER,,kboutelle
+1010,"HACKETT, CORBIN",Oklahoma City,HOSE TECHNICIAN,,chackett
+1028,"GILES, LEVI",Oklahoma City,COUNTER SUPERVISOR,,lgiles
+1033,"DELAROSA, EUGENIO","Dallas, TX",INSIDE SALES,,edelarosa
+1041,"CUMMINGS, TERRY","Lakeland, FL",HOSE TECHNICIAN,,tcummings
+1052,"ALAMILLO, EDGAR","FT Worth East, TX",DRIVER,,ealamillo
+1067,"BONHAM, PRESTON","FT Worth East, TX",HOSE TECHNICIAN,,pbonham
+1071,"MAGEE, JUSTIN",Oklahoma City,HOSE TECHNICIAN,,jmagee
+1091,"ALFARO, EDGARDO",Oklahoma City,MACHINIST,,ealfaro
+1099,"GERDY, LARRY","Corry, PA",EXTRUDER OPERATOR,,lgerdy
+1100,"COLLINS, KYLE",Oklahoma City,HOSE TESTER,,kcollins
+1102,"COFFIN, CHARLES",Oklahoma City,SUPERVISOR,,ccoffin
+1118,"PERU, DAMON","Corry, PA",EXTRUDER OPERATOR,,dperu
+1127,"PENA, ANTHONY","San Antonio, TX",HOSE TECHNICIAN,,apena
+1147,"NERI, BRIAN","Bakersfield, CA",WELDER,,bneri
+1151,"CHERRY, JEFFERY",Oklahoma City,CNC PROGRAMMER,,jcherry
+1168,"ESCOBEDO, MICHEAL",Oklahoma City,HOSE TECHNICIAN,,mescobedo
+1173,"NOWELL, JEOFFREY",Oklahoma City,HOSE TECHNICIAN,,NO USERNAME
+1181,"HULL, JUSTIN",Oklahoma City,HOSE TECHNICIAN,,NO USERNAME
+1183,"WELLS, KYLE",Oklahoma City,HOSE TECHNICIAN,,NO USERNAME
+1194,"CHRISTOPHE, JEREMY","Lafayette, LA",HOSE TECHNICIAN,,jchristophe
+1199,"HANKINS, WAYNE","Lakeland, FL",COUNTER SUPERVISOR,,whankins
+1216,"AGUILAR, JOHN","San Antonio, TX",HOSE TECHNICIAN,,jaguilar
+1226,"SANDHU, JOSIAH","Pasadena, TX",WAREHOUSE ATTENDANT,,jsandhu
+1227,"HILTERBRAN, CHARLES",Oklahoma City,HOSE TECHNICIAN,,chilterbran
+1238,"FLOREZ, GABRIEL MATEO","Hobbs, NM",HOSE TECHNICIAN,,gflorez
+1239,"PETERSON, TIMOTHY","Corry, PA",EXTRUDER OPERATOR,,tiPeterson
+1245,"QUIROZ, ISAIAH","Odessa, TX",HOSE TECHNICIAN,,NO USERNAME
+1247,"BOYD, KEVIN",Oklahoma City,HOSE TECHNICIAN,,kboyd
+1264,"GAUTHIER, LARRY",Oklahoma City,HOSE TECHNICIAN,,lGauthier
+1268,"MARTIN, SHANNON",Oklahoma City,WAREHOUSE ATTENDANT,,ShMartin
+1273,"WEDDING, BENJAMIN","El Reno, OK",HOSE TECHNICIAN,,bwedding
+1282,"HERRING, JULIAN",Oklahoma City,HOSE TECHNICIAN,,JHerring
+1288,"NEUERBURG, JESSICA","Greeley, CO",HOSE TECHNICIAN,,jneuerburg
+1289,"GALINDO, ELIAS","Odessa, TX",HYDRAULIC TECHNICIAN,,egalindo
+1290,"SALGUERO FARIA, MARIO","Pompano Beach, FL",COUNTER SALES,,msalguero
+1293,"MEDINA, ALVIN",Oklahoma City,WELDER,,amedina
+1295,"BLANCO, ALEXANDER","Lafayette, LA",HOSE TECHNICIAN,,ablanco
+1306,"RAO, JOHN","Charlotte, NC",STORE MANAGER,,jrao
+1307,"CARPENTER, LUKE","Charlotte, NC",WAREHOUSE MANAGER,,lcarpenter
+1310,"RADFORD, ASHLEY",Oklahoma City,CUSTODIAN,,NO USERNAME
+1318,"BUERGER, MICHAEL",Oklahoma City,MACHINIST,,mbuerger
+1322,"WIGGINS, BENJAMIN","Pittsburgh, PA",HOSE TECHNICIAN,,NO USERNAME
+1326,"HOLLOWAY, BENTON JAKE","Lake Charles, LA",HOSE TECHNICIAN,,jholloway
+1327,"ECHEVERRIA, DAVID","Greeley, CO",HOSE TECHNICIAN,,decheverria
+1329,"RUBIO, MARCO",Oklahoma City,Sewing Machine Operator,,NO USERNAME
+1330,"HERNANDEZ, SANTIAGO",Oklahoma City,Sewing Machine Operator,,NO USERNAME
+1331,"MUNIZ, ISELA",Oklahoma City,Ducting Warehouse,,NO USERNAME
+1333,"RIVAS, ISELA",Oklahoma City,Ducting Warehouse,,NO USERNAME
+1339,"COLCHADO, FELIPE",Oklahoma City,Ducting Warehouse,,NO USERNAME
+1340,"GUERRERO, ANAYELI",Oklahoma City,Ducting Warehouse,,NO USERNAME
+1341,"ALVAREZ, RUDY",Oklahoma City,Ducting Warehouse,,NO USERNAME
+1346,"GREEN, SHADE","Lakeland, FL",HOSE TECHNICIAN,,sgreen
+1348,"GUEVARA, JOSEPH","Corry, PA",EXTRUDER OPERATOR,,jguevara
+1354,"JUAREZ, CESAR",Oklahoma City,Sewing Machine Operator,,cjuarez
+1356,"ROBINSON, GREGORY","Corry, PA",WEAVER,,grobinson
+1361,"LINDSTROM, SHERI","Corry, PA",WEAVER,,shlindstrom
+1362,"ESCOBEDO, ROCIO",Oklahoma City,Ducting Warehouse,,NO USERNAME
+1363,"SCHMOKE, DAKODA","Corry, PA",EXTRUDER OPERATOR,,NO USERNAME
+1364,"GARCIA QUINONEZ, JOSE",Oklahoma City,Ducting Warehouse,,jgarcia
+1368,"ROSE, SAMANTHA","Corry, PA",WEAVER,,srose
+1369,"PROPER, DEVON","Corry, PA",TEST OPERATOR,,dproper
+1374,"CASTILLO, BRYCE",Oklahoma City,HOSE TECHNICIAN,,bcastillo
+1377,"GARCIA, BENJAMIN","Williston, ND",HOSE TECHNICIAN,,NO USERNAME
+1382,"BOONE, LARRY",Oklahoma City,HOSE TECHNICIAN,,LBoone
+1383,"ALVEY, JEFFREY ROBERT",Oklahoma City,HOSE TECHNICIAN,,jalvey
+1387,"ESCOBEDO, MIGUEL",Oklahoma City,HOSE TECHNICIAN,,mescobedo
+1392,"ANDERSON, JEFFERY",Oklahoma City,HOSE TECHNICIAN,,janderson
+1393,"WACHTER, DEREK","Corry, PA",EXTRUDER OPERATOR,,dwachter
+1394,"RHOADES, LOGAN","Kilgore, TX",HOSE TECHNICIAN,,lrhoades
+1396,"WHEELER, SEAN",Oklahoma City,COUNTER SALES,,swheeler
+1397,"WEED, JAMES","Corry, PA",EXTRUDER OPERATOR,,jweed
+1399,"NEVAREZ, ANTHONY",Oklahoma City,SHIPPING CLERK,,aNevarez
+1401,"YATES, JUSTIN","Lakeland, FL",HOSE TECHNICIAN,,jyates
+1403,"DELAROSA, RAYMUNDO","Dallas, TX",HOSE TECHNICIAN,,rdelarosa
+1404,"WHITE, MIRANDA",Oklahoma City,COUNTER SALES,,mwhite
+1405,"TORRES, GRACIELA",Oklahoma City,Ducting Warehouse,,NO USERNAME
+1409,"CUELLAR, ELRAD","Los Angeles, LA",WAREHOUSE MANAGER,,ecuellar
+1413,"WILKINS, MATTHEW",Oklahoma City,MACHINIST,,NO USERNAME
+1415,"DOMINGUEZ, NATHANIEL","Pasadena, TX",DRIVER,,NO USERNAME
+1417,"ENGEL, SCOTT",Oklahoma City,MACHINIST,,NO USERNAME
+1420,"SIEGESMUND, CORY","Lakeland, FL",MOBILE HOSE TECHNICIAIN,,csiegesmund
+1427,"REYNA, DANIEL",Oklahoma City,WELDER,,NO USERNAME
+1428,"HARRIS, STANLEY","Salt Lake City, UT",DRIVER,,sharris
+1430,"DILWORTH, JONATHAN","Corry, PA",EXTRUDER OPERATOR,,jDilworth
+1435,"LUCERO, MARK","Greeley, CO",HOSE TECH DRIVER,,mlucero
+1438,"HILL, DEMOND",Oklahoma City,WAREHOUSE ATTENDANT,,NO USERNAME
+1440,"HAGEN, BLAKE DANIEL",Oklahoma City,HOSE TECHNICIAN,,NO USERNAME
+1441,"BROYLES, JOSHUA","Kilgore, TX",INSIDE SALESHOSE TECHNICIAN,,jbroyles
+1446,"MORAN, GABRIELA",Oklahoma City,Sewing Machine Operator,,NO USERNAME
+1447,"CERVANTES, GUADALUPE",Oklahoma City,Sewing Machine Operator,,NO USERNAME
+1448,"REYNA, ISAAC",Oklahoma City,HOSE TECHNICIAN,,NO USERNAME
+1451,"CARPIO, GABRIEL",Oklahoma City,Sewing Machine Operator,,NO USERNAME
+1452,"BREAUX, BRANDON",Oklahoma City,WELDER,,NO USERNAME
+1453,"MILLER JR, RONALD","Lake Charles, LA",WELDER,,rmiller
+1455,"SPICER, BRIAN","Lakeland, FL",HOSE TECHNICIAN,,NO USERNAME
+1457,"CHACON, CARMEN",Oklahoma City,Ducting Warehouse,,NO USERNAME
+1459,"ARRECIS, EDWIN",Oklahoma City,Ducting Warehouse,,NO USERNAME
+1460,"MERIDA, ANGEL",Oklahoma City,Ducting Warehouse,,NO USERNAME
+1462,"OLIVER, KELVIN","Lake Charles, LA",HOSE TECH DRIVER,,NO USERNAME
+1464,"CRUZ, ERNIE","Bakersfield, CA",HOSE TECHNICIAN,,NO USERNAME
+1466,"CROSBY, CLAUDE","Corry, PA",TEST OPERATOR,,cCrosby
+1467,"DORMAN, JON","Corry, PA",TEST OPERATOR,,jdorman
+1468,"NIELSON, TREVOR","Vernal, UT",HOSE TECHNICIAN,,tnielson
+1469,"ERIKSEN, SIERRA","Corry, PA",WEAVER,,sEriksen
+1470,"NEWCHURCH, CURLEY",Oklahoma City,SHIPPING CLERK,,NO USERNAME
+1471,"TIMMS, TYNESHIA",Oklahoma City,Inventory Control Specialist,,ttimms
+1473,"NOLAN, NICHOLAS",Oklahoma City,Inventory Control Specialist,,nnolan
+1475,"ROMERO, JOSE","Odessa, TX",HOSE TECHNICIAN,,NO USERNAME
+1476,"MACON, DWIGHT","Pittsburgh, PA",HOSE TECHNICIAN,,NO USERNAME
+1477,"HOUSE V, EDWIN","Lake Charles, LA",HOSE TECHNICIAN,,ehouse
+1478,"PLOSS, MICHAEL","Corry, PA",TEST OPERATOR,,mploss
+1480,"CURTIS, MARCUS",Oklahoma City,SHIPPING CLERK,,mcurtis
+1481,"BRADLEY, KEVIN",Oklahoma City,HOSE TECHNICIAN,,kbradley
+1482,"DEVIA, ANDRES",Oklahoma City,Ducting Manager,,NO USERNAME
+1483,"EISMANN JR, CHRISTOPHER","Los Angeles, LA",HYDRAULIC TECHNICIAN,,Cheismann
+1485,"PEPPERMAN, LESTER","Corry, PA",TEST OPERATOR,,lpepperman
+1486,"OGILVIE, IVAN","Salt Lake City, UT",INSIDE SALES,,Iogilvie
+1489,"SANDERS, TREVOR LEON",Oklahoma City,EXTRUDER OPERATOR,,tsanders
+1490,"VIERA, LUCY",Oklahoma City,SHIPPING CLERK,,lviera
+1491,"SUMMERLIN, JUSTIN JAMES","Lake Charles, LA",HOSE TECH  DRIVER (PRIMARY),,jsummerlin
+1493,"TURNER JR, BILLY J",Oklahoma City,WAREHOUSE LEAD,,NO USERNAME
