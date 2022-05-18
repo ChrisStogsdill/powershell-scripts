@@ -6,9 +6,9 @@
 # Setup Parameters
 Param
 (
-    [Parameter(Mandatory, HelpMessage="Username the User to add the phone number to")]
+    [Parameter(Mandatory, HelpMessage="Username the User to add the phone number to ex: cstogsdill")]
     $userNameInput,
-    [Parameter(Mandatory, HelpMessage="Phone number to add to the user")]
+    [Parameter(Mandatory, HelpMessage="Phone number to add to the user ex: +191082")]
     $phoneNumberInput
 )
 
@@ -48,4 +48,6 @@ catch
 
 Grant-CsOnlineVoiceRoutingPolicy -Identity "$($userEmail)" -PolicyName "UTOVRP"
 
-Set-CsPhoneNumberAssignment -Identity $userEmail -PhoneNumber +$phoneNumberInput -PhoneNumberType DirectRouting; Set-CsOnlineVoicemailUserSettings -Identity sip:$userEmail -VoicemailEnabled $true
+Set-CsPhoneNumberAssignment -Identity $userEmail -PhoneNumber $phoneNumberInput -PhoneNumberType DirectRouting; Set-CsOnlineVoicemailUserSettings -Identity sip:$userEmail -VoicemailEnabled $true
+
+Read-Host "Press Enter to exit"
