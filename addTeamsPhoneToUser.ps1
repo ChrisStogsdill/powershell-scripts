@@ -6,9 +6,9 @@
 # Setup Parameters
 Param
 (
-    [Parameter(Mandatory, HelpMessage="Username the User to add the phone number to ex: cstogsdill")]
+    [Parameter(Mandatory, HelpMessage="Username the User to add the phone number to `n ex: cstogsdill")]
     $userNameInput,
-    [Parameter(Mandatory, HelpMessage="Phone number to add to the user ex: +191082")]
+    [Parameter(Mandatory, HelpMessage="Phone number to add to the user. `n Usually just add a 9 to the begginning of their existing extengion. `n ex: +191082")]
     $phoneNumberInput
 )
 
