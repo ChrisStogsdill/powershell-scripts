@@ -121,7 +121,7 @@ foreach ($lineObject in $dataFromCSV) {
 }
 
 # Write the an output csv file
-$dataFromCSV | Export-Csv -Path ./username_extracted.csv
+$dataFromCSV | Export-Csv -Path ./username_extracted.csv -NoTypeInformation
 
 #open the csv file
 start ./username_extracted.csv
