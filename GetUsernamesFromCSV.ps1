@@ -46,7 +46,7 @@ function headerSelectionMenu {
     $userNameKey = $dataFromCSV[0].psobject.properties.name[$menuInput -1]
 }
 
-$userNameKey = getUserNameKey -searchTerm '*name*'
+$userNameKey = getUserNameKey -searchTerm '*Last-Name, First-Name*'
 
 if ($userNameKey -eq '') {
     Write-Host "Could not find a username key `n"
@@ -69,7 +69,8 @@ foreach ($lineObject in $dataFromCSV) {
     
     # Search for the username
     try {
-        $userName = get-aduser -Filter "Name -like ""*$lastName"" -and Name -like ""$firstInitial*"""
+        $userName = get-aduser -Filter "Surname -like '$($lastName)' -and GivenName -like '$($firstName)'"
+        Write-Host $userName.Name
 
         # Get a count of the output
         $userNameOutputCount = $userName.Count
