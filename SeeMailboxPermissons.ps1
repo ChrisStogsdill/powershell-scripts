@@ -16,9 +16,9 @@ try {
    Get-EXOMailbox mwhsupport@midwesthose.com | Select-Object UserPrincipalName
    Write-Host "Success!"
 }
+
 catch {
     $ExchangeConnectSucceeded = $false
-
 }
 
 if ($ExchangeConnectSucceeded -eq $false) {
