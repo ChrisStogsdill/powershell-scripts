@@ -7,10 +7,27 @@ Param (
     $targetUser
    )
 
-# connect with mwhsupport account because it has access
-Connect-ExchangeOnline -UserPrincipalName mwhsupport@midwesthose.com
+   # Connect ExchangeOnline is unable to run in a catch. Have to make a variable for that
+$ExchangeConnectSucceeded = $True
 
-# see full access rights
+# Check if ExchangeOnline is already connected
+try {
+   Write-Host "Checking if ExchangeOnline is already connected"
+   Get-EXOMailbox mwhsupport@midwesthose.com | Select-Object UserPrincipalName
+   Write-Host "Success!"
+}
+catch {
+    $ExchangeConnectSucceeded = $false
+
+}
+
+if ($ExchangeConnectSucceeded -eq $false) {
+    Write-Host "ExchangeOnline is not connected. Connecting..."
+    Connect-ExchangeOnline -UserPrincipalName mwhsupport@midwesthose.com
+}
+
+
+   # see full access rights
 Write-Host "Full Access"
 Get-EXOMailboxPermission -Identity $targetUser | Select-Object User, AccessRights | Out-Host
 Write-Host " "
