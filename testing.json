@@ -1,0 +1,4549 @@
+{
+	"BUCKET": {
+		"s3://iqhelper": "iqhelper"
+	},
+	"PRINTEDFIELDS": {
+		"AP-PO": {
+			"PO_SEARCH": "PO NUMBER",
+			"DATE_SEARCH": "DATE"
+		},
+		"INVOICE": {
+			"PO_SEARCH": "PO NUMBER",
+			"DATE_SEARCH": "DATE",
+			"TOTAL_SEARCH": "TOTAL"
+		},
+		"INVEXP": {
+			"ERPCODE1": "ERP Location Code",
+			"DATE_SEARCH": "Date",
+			"INVTYPE_CODE": "Invoice Type",
+			"INV_NUMBER": "Invoice #",
+			"TOTAL_SEARCH": "Total"
+		}
+	},
+	"REQUIREDFIELDS": {
+		"AP-PO": {
+			"PO_SEARCH": "PO NUMBER"
+		},
+		"INVOICE": {
+			"PO_SEARCH": "PO NUMBER"
+		},
+		"INVEXP": {
+			"ERPCODE1": "ERP Location Code"
+		}
+	},
+	"FINAL DUMPS": {
+		"AP-PO": {
+			"DUMP": "/map/iq/iq-mdrive-2-hq-PackingList/"
+		},
+		"INVOICE": {
+			"DUMP": "/map/iq/iq-mdrive-2-hq-invoices/"
+		},
+		"INVEXP": {
+			"DUMP": "/map/iq/iq-mdrive-2-hq-invoices-expense/"
+		}
+	},
+	"GENERIC_PO": "^0?0?[5-7][0-9]{5}|(?<!\\s)0?0?[5-7][0-9]{5}",
+	"MONEY_PATTERN": "-?[0-9]{0,3}\\,?[0-9]+\\.[0-9][0-9]",
+	"STORES": {
+		"HOU": {
+			"Name": "MWH - Houston",
+			"email": "iqhelpertest@midwesthose.com",
+			"ERP_Name": "HOUSTN"
+		},
+		"HQ": {
+			"Name": "Midwest Hose",
+			"email": "iqhelpertest@midwesthose.com",
+			"ERP_Name": "Approved"
+		},
+		"STOREX": {
+			"Name": "Test Store",
+			"email": "iqhelpertest@midwesthose.com",
+			"ERP_Name": "STOREX"
+		},		
+		"CALAX": {
+			"Name": "MWH - Los Angeles",
+			"email": "iqhelpertest@midwesthose.com",
+			"ERP_Name": "CALAX"
+		},
+		"PAS": {
+			"Name": "MWH - Pasadena",
+			"email": "iqhelpertest@midwesthose.com",
+			"ERP_Name": "PASADE"
+		},
+		"DKN": {
+			"Name": "MWH - Dickinson",
+			"email": "iqhelpertest@midwesthose.com",
+			"ERP_Name": "DICKEN"
+		},
+		"KIL": {
+			"Name": "MWH - Kilgore Longview",
+			"email": "iqhelpertest@midwesthose.com",
+			"ERP_Name": "LONG"
+		},
+		"ALI": {
+			"Name": "MWH - Alice",
+			"email": "iqhelpertest@midwesthose.com",
+			"ERP_Name": "ALICE"
+		},
+		"BAK": {
+			"Name": "MWH - Bakersfield",
+			"email": "iqhelpertest@midwesthose.com",
+			"ERP_Name": "BAKERF"
+		},
+		"CHAR": {
+			"Name": "MWH - Charlotte",
+			"email": "iqhelpertest@midwesthose.com",
+			"ERP_Name": "NCCHAR"
+		},
+		"COR": {
+			"Name": "MWH - Corry",
+			"email": "iqhelpertest@midwesthose.com",
+			"ERP_Name": "PAPLA"
+		},
+		"DAL": {
+			"Name": "MWH - Dallas",
+			"email": "iqhelpertest@midwesthose.com",
+			"ERP_Name": "DALLAS"
+		},
+		"ELR": {
+			"Name": "MWH - El Reno",
+			"email": "iqhelpertest@midwesthose.com",
+			"ERP_Name": "ELRENO"
+		},
+		"FWE": {
+			"Name": "MWH - Fort Worth East",
+			"email": "iqhelpertest@midwesthose.com",
+			"ERP_Name": "FWEAST"
+		},
+		"FWW": {
+			"Name": "MWH - Fort Worth West",
+			"email": "iqhelpertest@midwesthose.com",
+			"ERP_Name": "FTWORT"
+		},
+		"GRE": {
+			"Name": "MWH - Greeley",
+			"email": "iqhelpertest@midwesthose.com",
+			"ERP_Name": "GREELE"
+		},
+		"HOB": {
+			"Name": "MWH - Hobbs",
+			"email": "iqhelpertest@midwesthose.com",
+			"ERP_Name": "HOBBS"
+		},
+		"LAF": {
+			"Name": "MWH - Lafayette",
+			"email": "iqhelpertest@midwesthose.com",
+			"ERP_Name": "LAFAYE"
+		},
+		"LAK": {
+			"Name": "MWH - Lakeland",
+			"email": "iqhelpertest@midwesthose.com",
+			"ERP_Name": "FLLAKE"
+		},
+		"LAC": {
+			"Name": "MWH - Lake Charles/Sulfur",
+			"email": "iqhelpertest@midwesthose.com",
+			"ERP_Name": "LACHAR"
+		},
+		"ODE": {
+			"Name": "MWH - Odessa",
+			"email": "iqhelpertest@midwesthose.com",
+			"ERP_Name": "ODESSA"
+		},
+		"PIT": {
+			"Name": "MWH - Pittsburgh Bridgeville",
+			"email": "iqhelpertest@midwesthose.com",
+			"ERP_Name": "PITT"
+		},
+		"POM": {
+			"Name": "MWH - Pompano",
+			"email": "iqhelpertest@midwesthose.com",
+			"ERP_Name": "FLPOMP"
+		},
+		"SAN": {
+			"Name": "MWH - San Antonio",
+			"email": "iqhelpertest@midwesthose.com",
+			"ERP_Name": "SANANT"
+		},
+		"SLC": {
+			"Name": "MWH - Salt Lake City",
+			"email": "iqhelpertest@midwesthose.com",
+			"ERP_Name": "UTSALT"
+		},
+		"VER": {
+			"Name": "MWH - Vernal",
+			"email": "iqhelpertest@midwesthose.com",
+			"ERP_Name": "VERNAL"
+		},
+		"WIL": {
+			"Name": "MWH - Williston",
+			"email": "iqhelpertest@midwesthose.com",
+			"ERP_Name": "WILLIS"
+		},
+		"OKC": {
+			"Name": "MWH - Oklahoma City",
+			"email": "iqhelpertest@midwesthose.com",
+			"ERP_Name": "OKC"
+		},
+		"RSPARKMAN": {
+			"Name": "Ryan Sparkman",
+			"email": "iqhelpertest@midwesthose.com",
+			"ERP_Name": "RSPARKMAN"
+		},
+		"DEN": {
+			"Name": "MWH - Denver",
+			"email": "iqhelpertest@midwesthose.com",
+			"ERP_Name": "CODEN"
+		},
+		"FTW": {
+			"Name": "MWH - Fort Worth",
+			"email": "iqhelpertest@midwesthose.com",
+			"ERP_Name": "TXFTW"
+		}
+	},
+	"FOLDER_TO_DOC_TYPE": {
+		"IQ-AP-Checks": "CHECKS",
+		"IQ-AP-Invoices": "INVOICE",
+		"IQ-AP-Invoices-Expense": "INVEXP",
+		"IQ-AP-Packing-List": "AP-PO",
+		"IQ-AR-Barcode": "BARCODE",
+		"IQ-AR-Checks": "CHECKS",
+		"IQ-AR-SO-Packing-Slip": "ARPACKSLIP",
+		"IQ-CO-Receipts": "CO",
+		"IQ-Hose-Test-Graphs": "HOSETEST",
+		"IQ-MTRs": "MTRS",
+		"IQ-Non-Trade-Receipts": "NONTRADE_RECEIPTS",
+		"IQ-Rental-Agreements": "RENTAL",
+		"IQ-Rotary-Test-Certificates": "TESTCERT",
+		"IQ-Tax-Forms": "TAXFORM",
+		"IQ-Test-Accounting": "ACCT",
+		"IQ-AP-Invoices-Expense-Freight": "INVEXP",
+		"IQ-AP-Invoices-Expense-IT": "INVEXP",
+		"IQ-AP-Invoices-Expense-Non-Trade": "INVEXP",
+		"IQ-AP-Invoices-Expense-Utility": "INVEXP",
+		"IQ-AP-Invoices-Expense-Shop": "INVEXP"
+	},
+	"DOC_TYPE_TO_NICENAME": {
+		"IQ-AP-Checks": "CHECKS",
+		"IQ-AP-Invoices": "INVOICE",
+		"IQ-AP-Invoices-Expense": "INVOICE - EXPENSES",
+		"IQ-AP-Packing-List": "PACKING LIST",
+		"IQ-AR-Barcode": "BARCODE",
+		"IQ-AR-Checks": "AR CHECKS",
+		"IQ-AR-SO-Packing-Slip": "AR PACKING SLIP",
+		"IQ-CO-Receipts": "COUNTER ORDER RECEIPTS",
+		"IQ-Hose-Test-Graphs": "HOSE TEST GRAPHS",
+		"IQ-MTRs": "MTRS",
+		"IQ-Non-Trade-Receipts": "NONTRADE_RECEIPTS",
+		"IQ-Rental-Agreements": "RENTAL",
+		"IQ-Rotary-Test-Certificates": "TEST CERTS",
+		"IQ-Tax-Forms": "TAX FORM",
+		"IQ-Test-Accounting": "ACCOUNTING MEMO",
+		"IQ-AP-Invoices-Expense-Freight": "INVOICE - EXPENSES",
+		"IQ-AP-Invoices-Expense-IT": "INVOICE - EXPENSES",
+		"IQ-AP-Invoices-Expense-Non-Trade": "INVOICE - EXPENSES",
+		"IQ-AP-Invoices-Expense-Utility": "INVOICE - EXPENSES",
+		"IQ-AP-Invoices-Expense-Shop": "INVOICE - EXPENSES"
+
+	},
+	"DOC_TYPE_TO_INVEXP_TYPE": {
+		"IQ-AP-Invoices-Expense-Freight": "FREIGHT",
+		"IQ-AP-Invoices-Expense-IT": "IT",
+		"IQ-AP-Invoices-Expense-Non-Trade": "NON-TRADE",
+		"IQ-AP-Invoices-Expense-Utility": "UTILITY",
+		"IQ-AP-Invoices-Expense-Shop": "SHOP",
+		"IQ-AP-Invoices-Expense": "GENERIC"
+	},
+	"AP-PO": {
+		"KEYWORDS": ["brakequip", "matco.?norca\\s?\\:?\\s?", "matcoz.?norca\\s?\\:?\\s?", "KeywordTest2", "afp\\s?industries", "American\\sPacking\\s.\\sGasket", "adspipe.com", "CSI, Inc.", "CORONET PARTS", "Donaldson", "Fittings Export", "605\\-338\\-7210", "americanblock.com", "Ataram\\sOil\\sCompany", "A\\-?Tex Manufacturing", "TESS\\sHose\\sManagement", "Buffalo Seal and Gasket", "Cavco", "CBI Pipe", "emjmetals.com", "emetalsinc.com", "fuchs.com", "grainger.com", "Hose\\sMaster", "hydradynellc.com", "jgbhose.com", "Kelly Pipe Co", "KINETIC FLUIDS", "M . G Development", "MIKALOR CLAMPS", "PEACH SPECIALTY PRODUCTS", "2069 South 700 West", "Rite Choice Ducting", "Shannon Hardware", "Spears Manufacturing", "sun-source.com", "865 Lockwood Drive", "P.O. Box 1299", "Megadyne America", "KFH Industries", "800.821.5725", "B\\-Line Filter", "CHANDLER\\s?EQUIPMENT", "FMC\\s?Technologies", "UTEX\\s?INDUSTRIES", "Superior Supply", "INDUSTRIAL\\s?RUBBER\\s?.\\s?Supply", "meritbrass.com", "GULF COAST RUBBER", "National Vacuum", "ContiTech USA", "hpsperformanceproducts.com", "Hydraulex", "ZSi.Foster", "P.O.\\s?Box\\s?2483\\s?", "HOSE\\s?MASTER", "MasterDrive\\s?", "C &? R SUPPLY", "AAXION\\s*?I*?n*?c*?", "pacificecho.com", "ABC-Industries", "Abco\\s?", "(?i)4-?star\\s?hose\\s?", "(?i)ABB Motors and Mech.*\\s?", "Aberdeen Dynamics\\s?", "Access\\s?Hose\\s?International\\s?", "Texas\\s?air\\s?Hydraulic", "the total package\\s?", "sealfast\\.?com", "sealfast\\.?com","Novaflex\\sHose", "Seal\\s?Fast\\-?Bobo", "dixonvalve\\.com", "Bestorq", "Kuriyama.com", "Industrial\\s?Valco\\s?Inc\\.?", "\\(?713\\)?\\s?472\\-?2900\\s?", "dwyerindustries\\.?com", "Campbell\\s?Fittings\\s?", "dodson","Arrow Bolt\\s?.\\s?Electric","Bando USA","Cohn\\s?.\\s?Gregory","TEMPLAR INDUSTRIES","Shannon Hardware","The Gauge House", "ASC", "ASC", "FORCE\\sAMERICA", "zoro\\s?\\.?com", "1.?[6-8]00.?255.?1008\\s?", "1-?[6-8]00-?645-?7270\\s?", "American\\s?Packing\\s?\\&?\\s?Gasket\\s?\\:?\\s?", "250413\\s?Skyport\\s?\\:?\\s?", "P.?T\\s?COUPLING\\s?\\:?\\s?", "littlejohn\\s?\\:?\\s?", "Brice\\sCompany\\s?", "ors\\snasco\\s?\\:?\\s?", "cnc\\shouston\\s?\\:?\\s?", "sunsource", "STUCCHI\\s?\\:?\\s?", "DLG\\s?Houston\\s?\\:?\\s?", "DANFOSS\\s?POWER", "IRON\\sMULE\\s?", "1203\\s?Gerstner\\s?Memorial\\s?Drive", "Eaton", "Service\\sMetal\\s?\\:?\\s?", "Dynamic\\sFluid\\sComponents\\s?\\:?\\s?", "lenzinc\\.?com\\s?\\:?\\s?", "brennan\\s?\\:?\\s?", "george\\smyer", "713.?675-8888\\s?", "FLEX.?TECH", "myfui\\.?com", "texcel", "Sunbelt Supply", "thermoid", "nudraulix", "Adl\\s?insulflex", "ryco", "poconfirmations.midwesthose\\.com", "poconfirmations.m.*se\\.com", ".*\\n", "PO\\.?\\#?\\s?|Purchase|P\\.?o\\.?\\s?"],
+		"brakequip": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["release#"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["date amt"]
+			}
+
+		},
+		"Arrow Bolt\\s?.\\s?Electric":{"INFO":{"NICE_NAME":""},"PO_SEARCH":{"KEY":["Customer PO"]},"DATE_SEARCH":{"KEY":["Ordered Date"]}},
+		"Bando USA":{"INFO":{"NICE_NAME":""},"PO_SEARCH":{"KEY":["PO\\s?\\."]},"DATE_SEARCH":{"KEY":[""]}},
+		"Cohn\\s?.\\s?Gregory":{"INFO":{"NICE_NAME":""},"PO_SEARCH":{"KEY":["PO Number"]},"DATE_SEARCH":{"KEY":[""]}},
+		"TEMPLAR INDUSTRIES":{"INFO":{"NICE_NAME":""},"PO_SEARCH":{"KEY":["P\\.?\\s?O\\.\\s?"]},"DATE_SEARCH":{"KEY":[""]}},
+		"The Gauge House":{"INFO":{"NICE_NAME":""},"PO_SEARCH":{"KEY":["P\\.?\\s?O\\.\\s?"]},"DATE_SEARCH":{"KEY":[""]}},
+		"matco.?norca\\s?\\:?\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ""
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"americanblock.com": {
+			"INFO": {
+				"NICE_NAME": "American Block"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer PO"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Order Date"]
+			}
+		},
+		"matcoz.?norca\\s?\\:?\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["p.?o\\s?.?\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Order\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"Novaflex\\sHose": {
+			"INFO": {
+				"NICE_NAME": "NovaFlex Hose Inc"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Your PO NO\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date\\s?"]
+			}
+		}
+		,
+		"KeywordTest2": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["TestPO"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["TestDate"]
+			}
+		},
+		"1203\\s?Gerstner\\s?Memorial\\s?Drive": {
+			"INFO": {
+				"NICE_NAME": "Deep South Oilfield & Industrial Supply"
+			},
+			"PO_SEARCH": {
+				"KEY": ["CUSTOMER ORDER NO\\."]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["DATE SHIPPED"]
+			}
+		},
+		"DANFOSS\\s?POWER": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"TXTG": ["Order Number.*?(00[5-7][0-9]{5})"],
+				"GROUP_NO": 1
+			},
+			"DATE_SEARCH": {
+				"KEY": ["TestDate"]
+			}
+		},
+		"afp\\s?industries": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer\\sPO\\sNo\\.?\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"American\\sPacking\\s.\\sGasket": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Purchase Order\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"HOSE\\s?MASTER": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Cust PO"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"adspipe.com": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["CUSTOMER PO\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"CSI, Inc.": {
+			"INFO": {
+				"NICE_NAME": "Connector Specialists"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer PO\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"CORONET PARTS": {
+			"INFO": {
+				"NICE_NAME": "CORONET PARTS "
+			},
+			"PO_SEARCH": {
+				"KEY": ["CUSTOMER PO NUMBER\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"Donaldson": {
+			"INFO": {
+				"NICE_NAME": "Donaldson"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer PO Number\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"Fittings Export": {
+			"INFO": {
+				"NICE_NAME": "Fittings Export "
+			},
+			"PO_SEARCH": {
+				"KEY": ["PURCHASE ORDER NUMBER\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"Megadyne America": {
+			"INFO": {
+				"NICE_NAME": "Megadyne"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Cust PO.\\s?\\:?\\s?", "Cust PO. .\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"KFH Industries": {
+			"INFO": {
+				"NICE_NAME": "KFH Industries"
+			},
+			"PO_SEARCH": {
+				"KEY": ["PO.\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"800.821.5725": {
+			"INFO": {
+				"NICE_NAME": "Midland"
+			},
+			"PO_SEARCH": {
+				"KEY": ["ORDER\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["DATE\\s?\\:?\\s?"]
+			}
+		},
+		"B\\-Line Filter": {
+			"INFO": {
+				"NICE_NAME": "B-Line"
+			},
+			"PO_SEARCH": {
+				"KEY": ["PO Number\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"CHANDLER\\s?EQUIPMENT": {
+			"INFO": {
+				"NICE_NAME": "CHANDLER EQUIPMENT"
+			},
+			"PO_SEARCH": {
+				"KEY": ["PO Number\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"FMC\\s?Technologies": {
+			"INFO": {
+				"NICE_NAME": "FMC Technologies"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Purchase Order\\n?\\s?No.?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"UTEX\\s?INDUSTRIES": {
+			"INFO": {
+				"NICE_NAME": "UTEX INDUSTRIES"
+			},
+			"PO_SEARCH": {
+				"KEY": ["CUSTOMER ORDER"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"Superior Supply": {
+			"INFO": {
+				"NICE_NAME": "Superior Supply"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer PO"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Ship\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"INDUSTRIAL\\s?RUBBER\\s?.\\s?Supply": {
+			"INFO": {
+				"NICE_NAME": "INDUSTRIAL RUBBER .? Supply"
+			},
+			"PO_SEARCH": {
+				"KEY": ""
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"meritbrass.com": {
+			"INFO": {
+				"NICE_NAME": "MERIT BRASS"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer PO\\s?.?\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Pack date\\s?\\:?\\s?"]
+			}
+		},
+		"GULF COAST RUBBER": {
+			"INFO": {
+				"NICE_NAME": "GULF COAST RUBBER"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer PO\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["date\\s?\\:?\\s?"]
+			}
+		},
+		"National Vacuum": {
+			"INFO": {
+				"NICE_NAME": "National Vacuum"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Your PO\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["date\\s?\\:?\\s?"]
+			}
+		},
+		"ContiTech USA": {
+			"INFO": {
+				"NICE_NAME": "CONTI TECH"
+			},
+			"PO_SEARCH": {
+				"KEY": ["PURCHASE ORDER\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["P.O. DATE\\s?\\:?\\s?"]
+			}
+		},
+		"hpsperformanceproducts.com": {
+			"INFO": {
+				"NICE_NAME": "hpsperformanceproducts.com"
+			},
+			"PO_SEARCH": {
+				"KEY": ["P\\.O\\.\\s?.?\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice Date\\s?\\:?\\s?"]
+			}
+		},
+		"Hydraulex": {
+			"INFO": {
+				"NICE_NAME": "Hydraulex"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Ref\\s?.?\\s?P\\.O\\..?\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice Date\\s?\\:?\\s?"]
+			}
+		},
+		"ZSi.Foster": {
+			"INFO": {
+				"NICE_NAME": "ZSi-Foster"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer PO Number\\n?\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice Date\\s?\\:?\\s?"]
+			}
+		},
+		"P.O.\\s?Box\\s?2483\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer\\s?P\\.?O\\.?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"MasterDrive\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Reference\\s?.?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"C &? R SUPPLY": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["PO Number\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["invoice date\\s?"]
+			}
+		},
+		"AAXION\\s*?I*?n*?c*?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["PO Number\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice Date\\s?"]
+			}
+		},
+		"ABC-Industries": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["PO Number\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Order Date\\s?"]
+			}
+		},
+		"Abco\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer PO\\s?.?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Ship Date\\s?"]
+			}
+		},
+		"(?i)4-?star\\s?hose\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["PO Number\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Orig Order Date\\:?\\s?"]
+			}
+		},
+		"(?i)ABB Motors and Mech.*\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ""
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"Aberdeen Dynamics\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Your Purchase Order\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["SHIP DATE\\:?\\s?"]
+			}
+		},
+		"Access\\s?Hose\\s?International\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["\\s?P.?o.?\\s\\#\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["date\\s?\\:?\\s?"]
+			}
+		},
+		"the total package\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["P\\.?O\\.?\\s?Number\\s? "]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date\\s?\\:?"]
+			}
+		},
+		"sealfast\\.?com": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["P\\.?O\\.?\\s?Number\\s? ", "Cust\\.?\\s?P\\.?O\\.?\\s?No\\s?\\:?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Order\\sDate\\s\\:?"]
+			}
+		},
+		"Seal\\s?Fast\\-?Bobo": {
+			"INFO": {
+				"NICE_NAME": "For Midwest Hose REPRINT POs"
+			},
+			"PO_SEARCH": {
+				"KEY": ["P\\.?O\\.?\\s?Number\\s? ", "Cust\\.?\\s?P\\.?O\\.?\\s?No\\s?\\:?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date\\s?Printed\\s?\\:?"]
+			}
+		},
+		"dixonvalve\\.com": {
+			"INFO": {
+				"NICE_NAME": "Dixon"
+			},
+			"PO_SEARCH": {
+				"KEY": ["PO.?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date\\s?Printed\\s?\\:?", "Entered\\s?\\:?"]
+			}
+		},
+		"Bestorq": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer\\sOrder\\s?.\\:?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice\\sDate\\s?.\\:?"]
+			}
+		},
+		"Kuriyama.com": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer\\sPO\\s?\\:?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"Industrial\\s?Valco\\s?Inc\\.?": {
+			"INFO": {
+				"NICE_NAME": "For Midwest Hose REPRINT POs"
+			},
+			"PO_SEARCH": {
+				"KEY": ["P\\.?O\\.?\\s?Number\\s? ", "Cust\\.?\\s?P\\.?O\\.?\\s?No\\s?\\:?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date\\s?Printed\\s?\\:?"]
+			}
+		},
+		"\\(?713\\)?\\s?472\\-?2900\\s?": {
+			"INFO": {
+				"NICE_NAME": "TROOP INDUSTRIAL"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer\\sPO\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Ordered\\sDate\\s?\\:?\\s?"]
+			}
+		},
+		"TESS\\sHose\\sManagement": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["PO Number"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date\\s?Printed\\s?\\:?"]
+			}
+		},
+		"dwyerindustries\\.?com": {
+			"INFO": {
+				"NICE_NAME": "dwyerindustries.com"
+			},
+			"PO_SEARCH": {
+				"KEY": ["CUST\\sPO\\sNUMBER\\s?\\:?", "Cust\\.?\\s?P\\.?O\\.?\\s?No\\s?\\:?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date\\s?Printed\\s?\\:?", "ORDER\\-?DTE\\s\\:?"]
+			}
+		},
+		"Campbell\\s?Fittings\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Bill\\sto\\sPO\\s?\\:?\\s?", "Cust\\.?\\s?P\\.?O\\.?\\s?No\\s?\\:?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Ordered\\s?\\:?"]
+			}
+		},
+		"pacificecho.com": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["P.O. Number"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"dodson": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer\\s?P\\.?O\\.?\\s?No\\.?\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Order Date\\s?\\:?\\s?"]
+			}
+		},
+		"ASC": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Purchase\\sOrder\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date\\sShipped\\s?\\:?\\s?"]
+			}
+		},
+		"ASC Engineered Solutions": {
+			"INFO": {
+				"NICE_NAME": "ASC Engineered Solutions"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer PO\\s?\\#?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice Date\\s?\\:?\\s?"]
+			}
+		},
+		"FORCE\\sAMERICA": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer\\sp.?o\\s.?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Order\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"zoro\\s?\\.?com": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["CUSTOMER\\s?P\\.?O\\.?\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date\\s?\\:?\\s?"]
+			}
+		},
+		"1.?[6-8]00.?255.?1008\\s?": {
+			"INFO": {
+				"NICE_NAME": "Tompkins 1"
+			},
+			"PO_SEARCH": {
+				"KEY": ["customer\\sP\\s?\\.?O\\s?\\.?\\s?Number\\s?\\:?\\s?", "P\\s?\\.?O\\s?\\.?Number\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Order\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"1-?[6-8]00-?645-?7270\\s?": {
+			"INFO": {
+				"NICE_NAME": "MSC"
+			},
+			"PO_SEARCH": {
+				"KEY": ["customer\\sorder\\sno.?\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Order\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"American\\s?Packing\\s?\\&?\\s?Gasket\\s?\\:?\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Cust\\.?o?m?e?r? P\\s?\\.?O\\.?\\s?\\:?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Pickup\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"250413\\s?Skyport\\s?\\:?\\s?": {
+			"INFO": {
+				"NICE_NAME": "Couplamatic Systems"
+			},
+			"PO_SEARCH": {
+				"KEY": ["P\\s?\\.?O\\s?\\.?\\s?Number\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Pickup\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"P.?T\\s?COUPLING\\s?\\:?\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Your\\s?Order\\s?Number\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Order\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"littlejohn\\s?\\:?\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer\\sPO\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Ordered\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"Brice\\sCompany\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["CUSTOMER\\sPURCHASE\\sORDER\\sNO\\.?\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"ors\\snasco\\s?\\:?\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Your\\sPO.\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Ordered\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"cnc\\shouston\\s?\\:?\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["C?u?s?t?o?m?e?r?\\s?Purchase Order\\s?I?D?\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Ship\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"sunsource": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["P\\.?O\\.?\\s?NO\\.?\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"STUCCHI\\s?\\:?\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer\\s?P\\.?o\\.?\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Ship\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"DLG\\s?Houston\\s?\\:?\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["PO\\s?Number\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Order\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"IRON\\sMULE\\s?": {
+			"INFO": {
+				"NICE_NAME": "IRON MULE PRODUCTS"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer P\\.?O\\.?.?Reference\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Order\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"Service\\sMetal\\s?\\:?\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer\\sPO\\s?number\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Order\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"Dynamic\\sFluid\\sComponents\\s?\\:?\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer\\s?PO.?\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Order\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"lenzinc\\.?com\\s?\\:?\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer\\sPurchase\\sOrder\\s?N?o?\\.?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Order\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"brennan\\s?\\:?\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer\\sOrder\\sNumber\\s?.?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"Ataram\\sOil\\sCompany": {
+			"INFO": {
+				"NICE_NAME": "Ataram Oil Company LLC"
+			},
+			"PO_SEARCH": {
+				"KEY": ["P\\.?O\\.? Number"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date"]
+			}
+		},
+		"A\\-?Tex Manufacturing": {
+			"INFO": {
+				"NICE_NAME": "A-Tex Manufacturing"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer order no"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date"]
+			}
+		},
+		"Buffalo Seal and Gasket": {
+			"INFO": {
+				"NICE_NAME": "Buffalo Seal and Gasket Company"
+			},
+			"PO_SEARCH": {
+				"KEY": ["P\\.?O\\.? No\\.?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date"]
+			}
+		},
+		"Cavco": {
+			"INFO": {
+				"NICE_NAME": "Cavco, Inc."
+			},
+			"PO_SEARCH": {
+				"KEY": ["Purchase Order"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice Date"]
+			}
+		},
+		"CBI Pipe": {
+			"INFO": {
+				"NICE_NAME": "CBI PIPE AND SUPPLY"
+			},
+			"PO_SEARCH": {
+				"KEY": ["P\\.?\\s?O\\.?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": [""]
+			}
+		},
+		"emjmetals.com": {
+			"INFO": {
+				"NICE_NAME": "EARLE M. JORGENSEN COMPANY"
+			},
+			"PO_SEARCH": {
+				"KEY": ["CUSTOMER PO"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["INVOICE DATE"]
+			}
+		},
+		"emetalsinc.com": {
+			"INFO": {
+				"NICE_NAME": "Energy Metals Inc."
+			},
+			"PO_SEARCH": {
+				"KEY": ["CUSTOMER PO"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["INVOICE DATE"]
+			}
+		},
+		"fuchs.com": {
+			"INFO": {
+				"NICE_NAME": "Fuchs Lubricants Co."
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer P.O."]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice Date"]
+			}
+		},
+		"grainger.com": {
+			"INFO": {
+				"NICE_NAME": "Grainger"
+			},
+			"PO_SEARCH": {
+				"KEY": ["PO NUMBER"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["INVOICE DATE"]
+			}
+		},
+		"Hose\\sMaster": {
+			"INFO": {
+				"NICE_NAME": "Hose Master"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Purchase Order", "Cust PO"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date"]
+			}
+		},
+		"hydradynellc.com": {
+			"INFO": {
+				"NICE_NAME": "Hydradyne, LLC"
+			},
+			"PO_SEARCH": {
+				"KEY": ["PO Number"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Order Date"]
+			}
+		},
+		"jgbhose.com": {
+			"INFO": {
+				"NICE_NAME": "JGB Hose"
+			},
+			"PO_SEARCH": {
+				"KEY": ["CUSTOMER P.O.", "Cust Purchase Order No"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date"]
+			}
+		},
+		"Kelly Pipe Co": {
+			"INFO": {
+				"NICE_NAME": "Kelly Pipe Co., LLC"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer PO"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice Date"]
+			}
+		},
+		"KINETIC FLUIDS": {
+			"INFO": {
+				"NICE_NAME": "KINETIC FLUIDS"
+			},
+			"PO_SEARCH": {
+				"KEY": ["REFERENCE"]
+			},
+			"DATE_SEARCH": {
+				"KEY": [""]
+			}
+		},
+		"M . G Development": {
+			"INFO": {
+				"NICE_NAME": "M & G Development"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Ref. No"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date of Service"]
+			}
+		},
+		"MIKALOR CLAMPS$": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"TXTG": ["customer\\n?\\s*order\\n?\\s*(0?0?[5-7][0-9]{5})"]
+			},
+			"DATE_SEARCH": {
+				"KEY": [""]
+			}
+		},
+		"PEACH SPECIALTY PRODUCTS": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer PO"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice Date"]
+			}
+		},
+		"2069 South 700 West": {
+			"INFO": {
+				"NICE_NAME": "Peterson Plumbing Supply"
+			},
+			"PO_SEARCH": {
+				"KEY": ["CUSTOMER P\\.?O\\.?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["ORDER DATE"]
+			}
+		},
+		"Rite Choice Ducting": {
+			"INFO": {
+				"NICE_NAME": "Rite Choice Ducting, LLC"
+			},
+			"PO_SEARCH": {
+				"KEY": ["PO"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Ship Date"]
+			}
+		},
+		"Shannon Hardware": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["PO Number"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Order Date"]
+			}
+		},
+		"Spears Manufacturing": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["PURCHASE ORDER NO"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["ORDER DATE"]
+			}
+		},
+		"sun-source.com": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["P\\.?\\s?O\\.?\\s?NO\\.?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["P\\.?O\\.? DATE"]
+			}
+		},
+		"865 Lockwood Drive": {
+			"INFO": {
+				"NICE_NAME": "Texas Iron & Metal"
+			},
+			"PO_SEARCH": {
+				"KEY": ["CUST\\s?P\\.?O\\.?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["DATE"]
+			}
+		},
+		"P.O. Box 1299": {
+			"INFO": {
+				"NICE_NAME": "UIP International"
+			},
+			"PO_SEARCH": {
+				"KEY": ["PURCHASE ORDER"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["DATE"]
+			}
+		},
+		"george\\smyer": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["PO\\s?Number\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"713.?675-8888\\s?": {
+			"INFO": {
+				"NICE_NAME": "Hose & Accessory Sales"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Purchase Order Number"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"FLEX.?TECH": {
+			"INFO": {
+				"NICE_NAME": "FLEX-TECH"
+			},
+			"PO_SEARCH": {
+				"KEY": ""
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"myfui\\.?com": {
+			"INFO": {
+				"NICE_NAME": "Fittings Unlimited"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer PO"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"texcel": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["PO\\s?Number\\s?\\s?\\:?\\s?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"Sunbelt Supply": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["PO .\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"thermoid": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["CUSTOMER\\s?REFERENCE\\s?\\s?\\:?\\s?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"nudraulix": {
+			"INFO": {
+				"NICE_NAME": "nudraulix"
+			},
+			"PO_SEARCH": {
+				"KEY": ["CUST\\sPO\\sNUMBER\\s?\\:?", "Cust\\.?\\s?P\\.?O\\.?\\s?No\\s?\\:?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date\\s?Printed\\s?\\:?", "ORDER\\-?DTE\\s\\:?"]
+			}
+		},
+		"Adl\\s?insulflex": {
+			"INFO": {
+				"NICE_NAME": "ADL Insulflex"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer\\s?P\\.?O\\.?\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"ryco": {
+			"INFO": {
+				"NICE_NAME": "RYCO"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer\\sOrder\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"poconfirmations.midwesthose\\.com": {
+			"INFO": {
+				"NICE_NAME": "For Midwest Hose REPRINT POs"
+			},
+			"PO_SEARCH": {
+				"KEY": ""
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"poconfirmations.m.*se\\.com": {
+			"INFO": {
+				"NICE_NAME": "For Midwest Hose REPRINT POs"
+			},
+			"PO_SEARCH": {
+				"KEY": ""
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		".*\\n": {
+			"INFO": {
+				"NICE_NAME": "",
+				"NOTES": "CATCH ALL! DO NOT DELETE!"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Bill\\sto\\sPO", "C?u?s?t?o?m?e?r?\\s?Purchase Order\\s?I?D?", "CUSTOMER ORDER", "CUSTOMER ORDER NO\\.", "CUSTOMER P.O.", "CUSTOMER PO", "CUSTOMER PO NUMBER", "CUSTOMER PO", "CUSTOMER P\\.?O\\.?", "CUSTOMER\\s?P\\.?O\\.?", "CUSTOMER\\s?REFERENCE\\s?\\s?", "CUSTOMER\\sPURCHASE\\sORDER\\sNO\\.?", "CUST\\s?P\\.?O\\.?", "CUST\\sPO\\sNUMBER\\s?", "Cust PO", "Cust PO. .\\s?", "Cust PO.", "Cust\\.?\\s?P\\.?O\\.?\\s?No\\s?", "Cust\\.?o?m?e?r? P\\s?\\.?O\\.?\\s?", "Customer P.O.", "Customer PO", "Customer PO Number", "Customer PO Number", "Customer PO\\s?.?\\s?", "Customer PO\\s?.?", "Customer PO\\s?\\#?", "Customer PO", "Customer P\\.?O\\.?.?Reference\\s?", "Customer order no", "CustomerPO\\s?.?\\s?", "Customer\\s?PO.?", "Customer\\s?P\\.?O\\.?", "Customer\\s?P\\.?O\\.?\\s?No\\.?", "Customer\\s?P\\.?O\\.?", "Customer\\s?P\\.?o\\.?", "Customer\\s?Purchase\\s?Order\\s?No\\.?", "Customer\\sOrder\\s?.", "Customer\\sOrder", "Customer\\sOrder\\sNumber\\s?.?\\s?", "Customer\\sPO\\s?.?", "Customer\\sPO\\s?", "Customer\\sPO", "Customer\\sPO\\s?number", "Customer\\sPO\\sNo\\.?", "Customer\\sPurchase\\sOrder\\s?N?o?\\.?\\s?", "Customer\\sp.?o\\s.?", "ORDER", "P.O. Number", "PO", "PO .", "PO NUMBER", "PO Number", "PO Number\\s?", "PO Number", "PO.?", "PO.", "PONumber\\s?", "PO\\s?.?\\s?", "PO\\s?Number", "PO\\s?Number\\s?\\s?", "PO\\sNumber", "PURCHASE ORDER", "PURCHASE ORDER NO", "PURCHASE ORDER NUMBER", "PURCHASE ORDER", "P\\.?O\\.? No\\.?", "P\\.?O\\.? Number", "P\\.?O\\.?\\s?NO\\.?", "P\\.?O\\.?\\s?Number\\s?", "P\\.?O\\.?\\s?Number\\s?\\s?", "P\\.?\\s?O\\.?", "P\\.?\\s?O\\.?\\s?NO\\.?", "P\\.O\\.\\s?.?", "P\\s?\\.?O\\s?\\.?Number", "P\\s?\\.?O\\s?\\.?\\s?Number", "Purchase Order", "Purchase Order Number", "Purchase Order", "Purchase\\sOrder", "Purchase\\sOrder\\sNumber", "REFERENCE", "Ref. No", "Ref\\s?.?\\s?P\\.O\\..?", "Reference\\s?.?\\s?", "TestPO", "Your PO", "Your Purchase Order", "YourPurchaseOrder", "Your\\s?Order\\s?Number", "Your\\sPO.", "\\s?P.?o.?\\s\\#", "customer\\sP\\s?\\.?O\\s?\\.?\\s?Number", "customer\\sorder\\sno.?", "customer\\sp\\.?o\\.?\\sno\\.?", "customer\\sp\\.?o\\.?\\snumber", "p.?o\\s?.?", "p\\.?o\\.?\\s?info", "p\\/o\\s?.?", "release#"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"PO\\.?\\#?\\s?|Purchase|P\\.?o\\.?\\s?": {
+			"INFO": {
+				"NICE_NAME": "",
+				"NOTES": "CATCH ALL! DO NOT DELETE!"
+			},
+			"PO_SEARCH": {
+				"KEY": ["release#", "TestPO", "customer\\sP\\s?\\.?O\\s?\\.?\\s?Number\\s?\\:?\\s?", "PO\\s?.?\\s?", "p\\/o\\s?.?\\s?\\:?\\s?", "p\\.?o\\.?\\s?info\\s?\\:?\\s?", "customer\\sp\\.?o\\.?\\snumber\\s?\\:?\\s?", "customer\\sp\\.?o\\.?\\sno\\.?\\s?\\:?\\s?", "Purchase\\sOrder\\sNumber\\s?\\:?\\s?", "Customer\\s?Purchase\\s?Order\\s?No\\.?\\s?\\:?\\s?", "PONumber\\s?", "CustomerPO\\s?.?\\s?", "YourPurchaseOrder\\:?\\s?", "\\s?P.?o.?\\s\\#\\:?\\s?", "P\\.?O\\.?\\s?Number\\s?\\s?", "Cust\\.?\\s?P\\.?O\\.?\\s?No\\s?\\:?", "Customer\\sPO\\s?.?\\:?\\s?", "Customer\\sPO\\s?\\:?\\s?", "PO\\sNumber\\s?\\:?\\s?", "CUST\\sPO\\sNUMBER\\s?\\:?", "Bill\\sto\\sPO\\s?\\:?\\s?", "Purchase\\sOrder\\s?\\:?\\s?", "CUSTOMER\\s?P\\.?O\\.?\\s?\\:?\\s?", "P\\s?\\.?O\\s?\\.?\\s?Number\\s?\\:?\\s?", "Your\\s?Order\\s?Number\\s?\\:?\\s?", "Your\\sPO.\\s?\\:?\\s?", "C?u?s?t?o?m?e?r?\\s?Purchase Order\\s?I?D?\\s?\\:?\\s?", "Customer P\\.?O\\.?.?Reference\\s?", "Customer\\sPO\\s?number\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		}
+	},
+	"INVOICE": {
+		"KEYWORDS": ["texas\\spipe\\sworks", "605\\-338\\-7210", "americanblock.com", "Ataram\\sOil\\sCompany", "TESS\\sHose\\sManagement", "A\\-?Tex Manufacturing", "Buffalo Seal and Gasket", "Cavco", "CBI Pipe", "emjmetals.com", "emetalsinc.com", "fuchs.com", "grainger.com", "Hose\\sMaster", "hydradynellc.com", "jgbhose.com", "Kelly Pipe Co", "KINETIC FLUIDS", "M . G Development", "MIKALOR CLAMPS$", "PEACH SPECIALTY PRODUCTS", "2069 South 700 West", "Rite Choice Ducting", "Shannon Hardware", "Spears Manufacturing", "sun-source.com", "865 Lockwood Drive", "P.O. Box 1299", "afp\\s?industries", "5553\\sMurray\\sRoad", "BESTORQ", "American\\sPacking\\s.\\sGasket", "CSI, Inc.", "Harvill Industries", "Womack Machine", "CORONET PARTS", "Fittings Export", "Gulf Coast Rubber and Gasket", "adspipe.com", "Donaldson", "Hydraquip.com", "masportpump.com", "MOTION INDUSTRIES", "Superior Supply", "fluidynefp.com", "800.821.5725", "B\\-Line Filter", "CHANDLER\\s?EQUIPMENT", "FMC\\s?Technologies", "brakequip", "UTEX\\s?INDUSTRIES", "Superior Supply", "INDUSTRIAL\\s?RUBBER\\s?.\\s?Supply", "meritbrass.com", "GULF COAST RUBBER", "National Vacuum", "B.J\\s?AIR\\s?AND\\s?PUMP", "Champion\\s?Hi-Tech\\s?Mfg", "Consolidated Pipe\\s?.\\s?Supply", "www.janessupply.com", "www.siliconehose.com", "\\(708\\)\\s?836\\-1105", "HOSE & ACCESSORY SALES", "Hosehangers Inc.", "INDUSTRIAL VALCO", "MTO Hose of Texas", "MunacoSealing.com", "OM INDUSTRIAL PRODUCTS", "P\\s?.\\s?W\\s?SALES", "pacificecho.com", "\\(412\\)\\s?221\\-5711", "texaspipe.com", "The Gauge House", "TRIANGLE METALS", "Werts Welding", "ContiTech USA", "hpsperformanceproducts.com", "Hydraulex", "ZSi.Foster", "anvil\\sinternational", "708-534-1414", "durachoice", "dodson", "dallaiamerica.com", "tompkins\\s?", "1.?[6-8]00.?255.?1008\\s?", "brennan", "brennan", "SPM\\sOil\\s\\&?\\sGas", "Roughneck\\sSupply", "Kroy", "Novaflex\\sHose", "Motion\\s\\&\\sFlow\\sControl", "MFC\\sSouth\\sSt", "Lonestar\\s?Sealing", "megadyne\\s?america", "BASF\\sCORP", "ORS\\sNasco", "sunsource", "250413\\s?Skyport\\s?\\:?\\s?", "Wolf Creek", "Southeastern hose", "P.?T\\s?COUPLING\\s?\\:?\\s?", "PO\\sBOX\\s843634\\s?\\:?\\s?", "DWYER INDUSTRIES", "nudraulix", "Valves\\s?.\\s?Fittings\\sof", "texcel", "shinbergtool.com", "ASC\\s?Engineered\\s?Solutions", "hagen.?s fasteners", "Thermoid", "Dixon", "Bando\\s?USA", "matco.?norca\\s?\\:?\\s?", "matcoz.?norca\\s?\\:?\\s?", "KeywordTest2", "Texas\\s?air\\s?Hydraulic", "MasterDrive\\s?", "C &? R SUPPLY", "AAXION\\s*?I*?n*?c*?", "ABC-Industries", "Abco\\s?", "DJ.?s\\s?Industrial\\s?Rubber", "(?i)4-?star\\s?hose\\s?", "(?i)ABB Motors and Mech.*\\s?", "Aberdeen Dynamics\\s?", "Access\\s?Hose\\s?International\\s?", "the total package\\s?", "sealfast\\.?com", "sealfast\\.?com", "seal fast", "Seal\\s?Fast\\-?Bobo", "dixonvalve\\.com", "Bestorq", "Kuriyama.com", "Industrial\\s?Valco\\s?Inc\\.?", "\\(?713\\)?\\s?475\\-?6100\\s?", "Lifco Hydraulics", "LOCKWOOD PARTNERS", "FibrXL\\s?Performance", "dwyerindustries\\.?com", "Campbell\\s?Fittings\\s?", "Anvil International", "FORCE\\sAMERICA", "zoro\\s?\\.?com", "1.?[6-8]00.?255.?1008\\s?", "1-?[6-8]00-?645-?7270\\s?", "American\\s?Packing\\s?\\&?\\s?Gasket\\s?\\:?\\s?", "250413\\s?Skyport\\s?\\:?\\s?", "P.?T\\s?COUPLING\\s?\\:?\\s?", "littlejohn\\s?\\:?\\s?", "Brice\\sCompany\\s?", "ors\\snasco\\s?\\:?\\s?", "cnc\\shouston\\s?\\:?\\s?", "STUCCHI\\s?\\:?\\s?", "DLG\\s?Houston\\s?\\:?\\s?", "www.ironmuleproducts.com", "Service\\sMetal\\s?\\:?\\s?", "Dynamic\\sFluid\\sComponents\\s?\\:?\\s?", "lenzinc\\.?com\\s?\\:?\\s?", "brennan\\s?\\:?\\s?", "Val-Matic", "Troyer\\s?Products", "Titan\\s?Flow\\s?Control", "Speciality\\s?Sales\\s?\\,\\s?Inc", "Shipyard\\s?Supply", "Stainless\\s?.\\s?Nickel\\s?Alloy\\s?Piping\\s?Products", "Source\\s?One\\s?Supply", "psispecialtiesllc.com", "M\\.?\\s?M\\.?\\s?Plastics", "Bray\\s?Process", "Avient\\s?Corp", "swnippleco.com", "Harrington\\s?Industrial\\s?Plastics", "northern\\s?safety", "rectorseal.com", "South\\s?Coast\\s?Products", "2901\\s?St\\.\\s?Louis\\s?Ave", "Page\\s?wire\\s?rope", "713.?675-8888\\s?", "Val.?matic\\s?valve", "Nudraulix", "Adl\\s?insulflex", "Steel\\s?Thinking", "All-Tex\\s?pipe", "Bearing Service\\s?\\&?\\s?Supply", "Curry\\s?Fluid\\s?power", "194 Hurricane Shoals","432-561-8711","adspipe\\.com","Arrow Bolt\\s?.\\s?Electric","Cohn\\s?.\\s?Gregory","KILGORE\\s?HOSE\\s?.\\s?SPECIALTY","OILFIELD EQUIPMENTS","permco\\.com","Republic Enterprise","shfinc.com","tvfinc\\.com", "Fresno\\s?Valves\\s?.\\s?Castings", "Fiske\\s?Brothers\\s?Refining\\s", "Federal\\s?Hose\\s?Man.*\\s", "gasketservice.com", "gasketresources.com", "Lafayette\\s?Threaded\\s?Products", "Mettler\\-?Toledo", "US Hose Corp", "J\\.?C.\\.?\\s?WHITLAM MANUFACTURING", "POST OFFICE BOX 73565", "FLEX.?TECH", "myfui\\.?com", "george\\smyer", "texcel", "ryco", ".*\\n", "PO\\.?\\#?\\s?|Purchase|P\\.?o\\.?\\s?", "Auto Print"],
+		"texas\\spipe\\sworks": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["customer\\spo\\s?.?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"605\\-338\\-7210": {
+			"INFO": {
+				"NICE_NAME": "A and M Industries"
+			},
+			"PO_SEARCH": {
+				"KEY": ["PO Number"]
+			},
+			"DATE_SEARCH": {
+				"KEY": [""]
+			}
+		},
+		"432-561-8711":{"INFO":{"NICE_NAME":"GSS Construction"},"PO_SEARCH":{"KEY":["P\\.O\\."]},"DATE_SEARCH":{"KEY":["Date$"]}},
+		"adspipe\\.com":{"INFO":{"NICE_NAME":"Advanced Drainage Systems"},"PO_SEARCH":{"KEY":["CUST P\\.O\\. NO"]},"DATE_SEARCH":{"KEY":["SHIP DATE"]}},
+		"Arrow Bolt\\s?.\\s?Electric":{"INFO":{"NICE_NAME":""},"PO_SEARCH":{"KEY":["Customer PO"]},"DATE_SEARCH":{"KEY":["Ordered Date"]}},
+		"Cohn\\s?.\\s?Gregory":{"INFO":{"NICE_NAME":""},"PO_SEARCH":{"KEY":["PO Number"]},"DATE_SEARCH":{"KEY":[""]}},
+		"KILGORE\\s?HOSE\\s?.\\s?SPECIALTY":{"INFO":{"NICE_NAME":""},"PO_SEARCH":{"KEY":["Customer PO"]},"DATE_SEARCH":{"KEY":["Invoice Date"]}},
+		"OILFIELD EQUIPMENTS":{"INFO":{"NICE_NAME":""},"PO_SEARCH":{"KEY":["PO Number"]},"DATE_SEARCH":{"KEY":[""]}},
+		"permco\\.com":{"INFO":{"NICE_NAME":""},"PO_SEARCH":{"KEY":["Reference No"]},"DATE_SEARCH":{"KEY":[""]}},
+		"Republic Enterprise":{"INFO":{"NICE_NAME":""},"PO_SEARCH":{"KEY":["TRACKING NO"]},"DATE_SEARCH":{"KEY":[""]}},
+		"shfinc.com":{"INFO":{"NICE_NAME":""},"PO_SEARCH":{"KEY":["P\\.?\\s?O\\.?\\s?\\s?Number"]},"DATE_SEARCH":{"KEY":[""]}},
+		"tvfinc\\.com":{"INFO":{"NICE_NAME":""},"PO_SEARCH":{"KEY":["Customer P\\.?\\s?O\\.\\s?"]},"DATE_SEARCH":{"KEY":[""]}},
+		"www.ironmuleproducts.com": {
+			"INFO": {
+				"NICE_NAME": "IRON MULE PRODUCTS"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer P\\.?O\\.?.?Reference\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Order\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"americanblock.com": {
+			"INFO": {
+				"NICE_NAME": "American Block"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer PO"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Order Date"]
+			}
+		},
+		"Ataram\\sOil\\sCompany": {
+			"INFO": {
+				"NICE_NAME": "Ataram Oil Company LLC"
+			},
+			"PO_SEARCH": {
+				"KEY": ["P\\.?O\\.? Number"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date"]
+			}
+		},
+		"A\\-?Tex Manufacturing": {
+			"INFO": {
+				"NICE_NAME": "A-Tex Manufacturing"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer order no"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date"]
+			}
+		},
+		"Buffalo Seal and Gasket": {
+			"INFO": {
+				"NICE_NAME": "Buffalo Seal and Gasket Company"
+			},
+			"PO_SEARCH": {
+				"KEY": ["P\\.?O\\.? No\\.?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date"]
+			}
+		},
+		"Cavco": {
+			"INFO": {
+				"NICE_NAME": "Cavco, Inc."
+			},
+			"PO_SEARCH": {
+				"KEY": ["Purchase Order"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice Date"]
+			}
+		},
+		"CBI Pipe": {
+			"INFO": {
+				"NICE_NAME": "CBI PIPE AND SUPPLY"
+			},
+			"PO_SEARCH": {
+				"KEY": ["P\\.?\\s?O\\.?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": [""]
+			}
+		},
+		"emjmetals.com": {
+			"INFO": {
+				"NICE_NAME": "EARLE M. JORGENSEN COMPANY"
+			},
+			"PO_SEARCH": {
+				"KEY": ["CUSTOMER PO"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["INVOICE DATE"]
+			}
+		},
+		"emetalsinc.com": {
+			"INFO": {
+				"NICE_NAME": "Energy Metals Inc."
+			},
+			"PO_SEARCH": {
+				"KEY": ["CUSTOMER PO"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["INVOICE DATE"]
+			}
+		},
+		"fuchs.com": {
+			"INFO": {
+				"NICE_NAME": "Fuchs Lubricants Co."
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer P.O."]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice Date"]
+			}
+		},
+		"grainger.com": {
+			"INFO": {
+				"NICE_NAME": "Grainger"
+			},
+			"PO_SEARCH": {
+				"KEY": ["PO NUMBER"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["INVOICE DATE"]
+			}
+		},
+		"Hose\\sMaster": {
+			"INFO": {
+				"NICE_NAME": "Hose Master"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Purchase Order"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date"]
+			}
+		},
+		"hydradynellc.com": {
+			"INFO": {
+				"NICE_NAME": "Hydradyne, LLC"
+			},
+			"PO_SEARCH": {
+				"KEY": ["PO Number"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Order Date"]
+			}
+		},
+		"jgbhose.com": {
+			"INFO": {
+				"NICE_NAME": "JGB Hose"
+			},
+			"PO_SEARCH": {
+				"KEY": ["CUSTOMER P.O."]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date"]
+			}
+		},
+		"Kelly Pipe Co": {
+			"INFO": {
+				"NICE_NAME": "Kelly Pipe Co., LLC"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer PO"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice Date"]
+			}
+		},
+		"KINETIC FLUIDS": {
+			"INFO": {
+				"NICE_NAME": "KINETIC FLUIDS"
+			},
+			"PO_SEARCH": {
+				"KEY": ["REFERENCE"]
+			},
+			"DATE_SEARCH": {
+				"KEY": [""]
+			}
+		},
+		"M . G Development": {
+			"INFO": {
+				"NICE_NAME": "M & G Development"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Ref. No"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date of Service"]
+			}
+		},
+		"MIKALOR CLAMPS": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"TXTG": ["customer order\\s*(0?0?[5-7][0-9]{5})"]
+			},
+			"DATE_SEARCH": {
+				"KEY": [""]
+			}
+		},
+		"PEACH SPECIALTY PRODUCTS": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer PO"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice Date"]
+			}
+		},
+		"2069 South 700 West": {
+			"INFO": {
+				"NICE_NAME": "Peterson Plumbing Supply"
+			},
+			"PO_SEARCH": {
+				"KEY": ["CUSTOMER P\\.?O\\.?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["ORDER DATE"]
+			}
+		},
+		"Rite Choice Ducting": {
+			"INFO": {
+				"NICE_NAME": "Rite Choice Ducting, LLC"
+			},
+			"PO_SEARCH": {
+				"KEY": ["PO"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Ship Date"]
+			}
+		},
+		"Shannon Hardware": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["PO Number"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Order Date"]
+			}
+		},
+		"Spears Manufacturing": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["PURCHASE ORDER NO"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["ORDER DATE"]
+			}
+		},
+		"sun-source.com": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["P\\.?\\s?O\\.?\\s?NO\\.?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["P\\.?O\\.? DATE"]
+			}
+		},
+		"865 Lockwood Drive": {
+			"INFO": {
+				"NICE_NAME": "Texas Iron & Metal"
+			},
+			"PO_SEARCH": {
+				"KEY": ["CUST\\s?P\\.?O\\.?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["DATE"]
+			}
+		},
+		"P.O. Box 1299": {
+			"INFO": {
+				"NICE_NAME": "UIP International"
+			},
+			"PO_SEARCH": {
+				"KEY": ["PURCHASE ORDER"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["DATE"]
+			}
+		},
+		"afp\\s?industries": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer\\sPO\\sNo\\.?\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"B.J\\s?AIR\\s?AND\\s?PUMP": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["CUSTOMER PO. NUMBER"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"Champion\\s?Hi-Tech\\s?Mfg": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["P.O. Number"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"Consolidated Pipe\\s?.\\s?Supply": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer Order No."]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"FibrXL\\s?Performance": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["P.O. Number"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"Bando\\s?USA": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer\\s?.?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"Piping\\s?Alloys\\s?USA": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Purchase Order"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"DJ.?s\\s?Industrial\\s?Rubber": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["P.O. Number"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"www.janessupply.com": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["CUSTOMER P.O."]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"www.siliconehose.com": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer PO"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"\\(708\\)\\s?836\\-1105": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["CUST. PO NO."]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"INDUSTRIAL VALCO": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["P.O. #"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"MTO Hose of Texas": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["P.O. Number"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"MunacoSealing.com": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Purchase Order No."]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"OM INDUSTRIAL PRODUCTS": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer PO"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"P\\s?.\\s?W\\s?SALES": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer P.O."]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"pacificecho.com": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["P.O. Number"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"\\(412\\)\\s?221\\-5711": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["PO\\s?#"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"texaspipe.com": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["CUSTOMER PO"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"The Gauge House": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["P.O. Number"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"TRIANGLE METALS": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer P\\.O\\..Reference"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"Werts Welding": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer P.O"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"5553\\sMurray\\sRoad": {
+			"INFO": {
+				"NICE_NAME": "Anchor Fluid"
+			},
+			"PO_SEARCH": {
+				"KEY": ["P\\.O\\.\\s.\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"Texas\\s?air\\s?Hydraulic": {
+			"INFO": {
+				"NICE_NAME": "Texas Air Hydraulic"
+			},
+			"PO_SEARCH": {
+				"KEY": ["PO\\s?\\#?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice Date"]
+			}
+		},
+		"Nudraulix": {
+			"INFO": {
+				"NICE_NAME": "Texas Air Hydraulic"
+			},
+			"PO_SEARCH": {
+				"KEY": ["P\\s?\\.?\\s?O\\s?\\.?\\s?No\\s?\\.?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date"]
+			}
+		},
+		"BESTORQ": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ""
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"American\\sPacking\\s.\\sGasket": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Purchase Order\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"CSI, Inc.": {
+			"INFO": {
+				"NICE_NAME": "Connector Specialists"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer PO\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"Harvill Industries": {
+			"INFO": {
+				"NICE_NAME": "Harvill Industries"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Purchase Order Number\\s?\\:?\\s?, PO Number"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"Womack Machine": {
+			"INFO": {
+				"NICE_NAME": "Womack Machine"
+			},
+			"PO_SEARCH": {
+				"KEY": ["PO\\s.\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"CORONET PARTS": {
+			"INFO": {
+				"NICE_NAME": "CORONET PARTS "
+			},
+			"PO_SEARCH": {
+				"KEY": ["CUSTOMER PO NUMBER\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"Fittings Export": {
+			"INFO": {
+				"NICE_NAME": "Fittings Export "
+			},
+			"PO_SEARCH": {
+				"KEY": ["PURCHASE ORDER NUMBER\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"Gulf Coast Rubber and Gasket": {
+			"INFO": {
+				"NICE_NAME": "Gulf Coast Rubber and Gasket"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer PO\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"adspipe.com": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["CUSTOMER PO\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"Donaldson": {
+			"INFO": {
+				"NICE_NAME": "Donaldson"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer PO Number\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"Hydraquip.com": {
+			"INFO": {
+				"NICE_NAME": "Hydraguip"
+			},
+			"PO_SEARCH": {
+				"KEY": ["PO Number\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"masportpump.com": {
+			"INFO": {
+				"NICE_NAME": "MASPORT"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer PO Number\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"SPM\\sOil\\s\\&?\\sGas": {
+			"INFO": {
+				"NICE_NAME": "SPM Oil & Gas Inc."
+			},
+			"PO_SEARCH": {
+				"KEY": ["Purchase Order\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date"]
+			}
+		},
+		"Valves\\s?.\\s?Fittings\\sof": {
+			"INFO": {
+				"NICE_NAME": "Valves and Fittings of"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Cust\\.?\\s?Order\\s?No\\.?\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice Date"]
+			}
+		},
+		"MOTION INDUSTRIES": {
+			"INFO": {
+				"NICE_NAME": "MOTION INDUSTRIES"
+			},
+			"PO_SEARCH": {
+				"KEY": ["PO.?RELEASE\\s?.?\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"fluidynefp.com": {
+			"INFO": {
+				"NICE_NAME": "Fluidyne"
+			},
+			"PO_SEARCH": {
+				"KEY": ["CUSTOMER PO NUMBER\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"800.821.5725": {
+			"INFO": {
+				"NICE_NAME": "Midland"
+			},
+			"PO_SEARCH": {
+				"KEY": ["ORDER\\s?\\:?\\s?", "PO Number\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["DATE\\s?\\:?\\s?"]
+			}
+		},
+		"B\\-Line Filter": {
+			"INFO": {
+				"NICE_NAME": "B-Line"
+			},
+			"PO_SEARCH": {
+				"KEY": ["PO Number\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"CHANDLER\\s?EQUIPMENT": {
+			"INFO": {
+				"NICE_NAME": "CHANDLER EQUIPMENT"
+			},
+			"PO_SEARCH": {
+				"KEY": ["PO Number\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"Steel\\s?Thinking": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"TXT": ["(?<=p.o. number)?0?0?[5-7][0-9]{5}\\s"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date\\s?\\:?\\s?"]
+			}
+		},
+		"All-Tex\\s?pipe": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"TXT": ["(?<=customer p.o.)?0?0?[5-7][0-9]{5}\\s"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice Date\\s?\\:?\\s?"]
+			}
+		},
+		"Bearing Service\\s?\\&?\\s?Supply": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["CUSTOMER P\/O NUMBER"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date\\s?\\:?\\s?"]
+			}
+		},
+		"Curry\\s?Fluid\\s?power": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"TXT": ["(?<=customer po number)?0?0?[5-7][0-9]{5}\\s"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date\\s?\\:?\\s?"]
+			}
+		},
+		"194 Hurricane Shoals": {
+			"INFO": {
+				"NICE_NAME": "Consolidated Pipe & Supply Co"
+			},
+			"PO_SEARCH": {
+				"TXT": ["(?<=customer Order No)\\.??0?0?[5-7][0-9]{5}\\s"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice Date\\s?\\:?\\s?"]
+			}
+		},
+		"Fresno\\s?Valves\\s?.\\s?Castings": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["P\\.O\\. Number"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date\\s?\\:?\\s?"]
+			}
+		},
+		"Fiske\\s?Brothers\\s?Refining\\s": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["P\\.O\\. Number"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice Date\\s?\\:?\\s?"]
+			}
+		},
+		"Federal\\s?Hose\\s?Man.*\\s": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["PO Number"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice Date\\s?\\:?\\s?"]
+			}
+		},
+		"gasketservice.com": {
+			"INFO": {
+				"NICE_NAME": "Gasket Service, Inc."
+			},
+			"PO_SEARCH": {
+				"KEY": ["P\\.O\\."]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date\\s?\\:?\\s?"]
+			}
+		},
+		"gasketresources.com": {
+			"INFO": {
+				"NICE_NAME": "Gasket Resources, Inc."
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer Purchase"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date\\s?\\:?\\s?"]
+			}
+		},
+		"Lafayette\\s?Threaded\\s?Products": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"TXT": ["(?<=cust po number)\\s?0?0?[5-7][0-9]{5}\\s"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date\\s?\\:?\\s?"]
+			}
+		},
+		"Mettler\\-?Toledo": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer PO No"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice Date\\s?\\:?\\s?"]
+			}
+		},
+		"US Hose Corp": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["REFERENCE"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date\\s?\\:?\\s?"]
+			}
+		},
+		"J\\.?C.\\.?\\s?WHITLAM MANUFACTURING": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["CUSTOMER P\\.O\\. NUMBER"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date\\s?\\:?\\s?"]
+			}
+		},
+		"POST OFFICE BOX 73565": {
+			"INFO": {
+				"NICE_NAME": "WRC MArketing, LLC"
+			},
+			"PO_SEARCH": {
+				"KEY": ["PURCHASE ORDER NUMBER\\:"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date ORDERED\\s?\\:?\\s?"]
+			}
+		},
+		"FMC\\s?Technologies": {
+			"INFO": {
+				"NICE_NAME": "FMC Technologies"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Purchase Order\\n?\\s?No.?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"UTEX\\s?INDUSTRIES": {
+			"INFO": {
+				"NICE_NAME": "UTEX INDUSTRIES"
+			},
+			"PO_SEARCH": {
+				"KEY": ["CUSTOMER ORDER"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"Superior Supply": {
+			"INFO": {
+				"NICE_NAME": "Superior Supply"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer.?s PO.?\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Ship\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"INDUSTRIAL\\s?RUBBER\\s?.\\s?Supply": {
+			"INFO": {
+				"NICE_NAME": "INDUSTRIAL RUBBER .? Supply"
+			},
+			"PO_SEARCH": {
+				"KEY": ""
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"meritbrass.com": {
+			"INFO": {
+				"NICE_NAME": "MERIT BRASS"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer PO\\s?.?\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Pack date\\s?\\:?\\s?"]
+			}
+		},
+		"GULF COAST RUBBER": {
+			"INFO": {
+				"NICE_NAME": "GULF COAST RUBBER"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer PO\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["date\\s?\\:?\\s?"]
+			}
+		},
+		"National Vacuum": {
+			"INFO": {
+				"NICE_NAME": "National Vacuum"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Your PO\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["date\\s?\\:?\\s?"]
+			}
+		},
+		"ContiTech USA": {
+			"INFO": {
+				"NICE_NAME": "CONTI TECH"
+			},
+			"PO_SEARCH": {
+				"KEY": ["PURCHASE ORDER\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["P.O. DATE\\s?\\:?\\s?"]
+			}
+		},
+		"hpsperformanceproducts.com": {
+			"INFO": {
+				"NICE_NAME": "hpsperformanceproducts.com"
+			},
+			"PO_SEARCH": {
+				"KEY": ["P\\.O\\.\\s?.?\\s?\\:?\\s?", "Ref\\s?.?\\s?P.O..?\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice Date\\s?\\:?\\s?"]
+			}
+		},
+		"Hydraulex": {
+			"INFO": {
+				"NICE_NAME": "Hydraulex"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Ref\\s?.?\\s?P\\.O\\..?\\s?\\:?\\s?", "P\\.O\\.\\s?.\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice Date\\s?\\:?\\s?"]
+			}
+		},
+		"ZSi.Foster": {
+			"INFO": {
+				"NICE_NAME": "ZSi-Foster"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer PO Number\\n?\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice Date\\s?\\:?\\s?"]
+			}
+		},
+		"anvil\\sinternational": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"TXT": ["(?<=customer po #:)\\s?0?0?[5-7][0-9]{5}"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Order\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"708-534-1414": {
+			"INFO": {
+				"NICE_NAME": "Anvil International, Inc."
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer\\sP\\.?O\\.?\\s?.?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Order\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"durachoice": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["po\\s.?\\s?\\:?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Ship\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"dodson": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer\\s?P\\.?O\\.?\\s?No\\.?\\s?\\:?\\s?", "CUSTOMER\\s?PO.?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Order Date\\s?\\:?\\s?"]
+			}
+		},
+		"dallaiamerica.com": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["CUSTOMER\\s?PO.?\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date\\s?\\:?\\s?"]
+			}
+		},
+		"tompkins\\s?": {
+			"INFO": {
+				"NICE_NAME": "Tompkins 2"
+			},
+			"PO_SEARCH": {
+				"KEY": ["customer\\sP\\s?\\.?O\\s?\\.?\\s?Number\\s?\\:?\\s?", "P\\s?\\.?O\\s?\\.?Number\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Order\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"brennan": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["customer\\s?p\\.?o\\.?\\s?no\\.\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"Roughneck\\sSupply": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer\\sPO\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"BASF\\sCORP": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer\\sPO\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"ORS\\sNasco": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["CUSTOMER\\s?P\\.?O\\.?\\s?NUMBER\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"ASC\\s?Engineered\\s?Solutions": {
+			"INFO": {
+				"NICE_NAME": "ASC Engineered Solutions"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer PO\\s?\\#?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice Date\\s?\\:?\\s?"]
+			}
+		},
+		"sunsource": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["P\\.?O\\.?\\s?NO\\.?\\s?\\:?\\s?", "P.O.NO."]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"Wolf Creek": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["CUSTOMER\\s?P\\.?O\\.?\\s?NUMBER\\s?\\:?\\s?", "PO NUMBER\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Order\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"Southeastern hose": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["PO\\s?Number\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Pickup\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"PO\\sBOX\\s843634\\s?\\:?\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Your\\s?Order\\s?Number\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Order\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"DWYER INDUSTRIES": {
+			"INFO": {
+				"NICE_NAME": "dwyerindustries.com"
+			},
+			"PO_SEARCH": {
+				"KEY": ["customer\\s?p.?o\\s?\\:?\\s?", "CUST\\s?PO\\s?NUMBER\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date\\s?Received\\s?\\:?\\s?"]
+			}
+		},
+		"nudraulix": {
+			"INFO": {
+				"NICE_NAME": "nudraulix"
+			},
+			"PO_SEARCH": {
+				"KEY": ["CUST\\sPO\\sNUMBER\\s?\\:?", "Cust\\.?\\s?P\\.?O\\.?\\s?No\\s?\\:?", "PO #"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date\\s?Printed\\s?\\:?", "ORDER\\-?DTE\\s\\:?"]
+			}
+		},
+		"texcel": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["PO\\s?Number\\s?\\s?\\:?\\s?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"HOSE & ACCESSORY SALES": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Purchase Order Number"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"Hosehangers Inc.": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["P.O. No."]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"shinbergtool.com": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer\\sP.?O\\s?.?\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice Date\\s?\\:?\\s?"]
+			}
+		},
+		"hagen.?s fasteners": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer\\s?PO\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice Date\\s?\\:?\\s?"]
+			}
+		},
+		"Thermoid": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["CUSTOMER REFERENCE"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"Dixon": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"TXTG": ["purchase Order No\\.?.*(0?0?[5-7][0-9]{5})"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice Date"]
+			}
+		},
+		"matco.?norca\\s?\\:?\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ""
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"matcoz.?norca\\s?\\:?\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["p.?o\\s?.?\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Order\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"KeywordTest2": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["TestPO"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["TestDate"]
+			}
+		},
+		"MasterDrive\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Reference\\s?.?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"C &? R SUPPLY": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["PO Number\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["invoice date\\s?"]
+			}
+		},
+		"AAXION\\s*?I*?n*?c*?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["PO Number\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice Date\\s?"]
+			}
+		},
+		"ABC-Industries": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["PO Number\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Order Date\\s?"]
+			}
+		},
+		"Abco\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer PO\\s?.?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Ship Date\\s?"]
+			}
+		},
+		"(?i)4-?star\\s?hose\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["PO Number\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Orig Order Date\\:?\\s?"]
+			}
+		},
+		"(?i)ABB Motors and Mech.*\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ""
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"Aberdeen Dynamics\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Your Purchase Order\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["SHIP DATE\\:?\\s?"]
+			}
+		},
+		"Access\\s?Hose\\s?International\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["\\s?P.?o.?\\s\\#\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["date\\s?\\:?\\s?"]
+			}
+		},
+		"the total package\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["P\\.?O\\.?\\s?Number\\s? "]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date\\s?\\:?"]
+			}
+		},
+		"sealfast\\.?com": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["P\\.?O\\.?\\s?Number\\s? ", "Cust\\.?\\s?P\\.?O\\.?\\s?No\\s?\\:?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Order\\sDate\\s\\:?"]
+			}
+		},
+		"seal fast": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["P\\.?O\\.?\\s?Number\\s? ", "Cust\\.?\\s?P\\.?O\\.?\\s?No\\s?\\:?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Order\\sDate\\s\\:?"]
+			}
+		},
+		"Seal\\s?Fast\\-?Bobo": {
+			"INFO": {
+				"NICE_NAME": "For Midwest Hose REPRINT POs"
+			},
+			"PO_SEARCH": {
+				"KEY": ["P\\.?O\\.?\\s?Number\\s? ", "Cust\\.?\\s?P\\.?O\\.?\\s?No\\s?\\:?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date\\s?Printed\\s?\\:?"]
+			}
+		},
+		"dixonvalve\\.com": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Purchase Order No"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date\\s?Printed\\s?\\:?", "Entered\\s?\\:?"]
+			}
+		},
+		"Bestorq": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer\\sOrder\\s?.\\:?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice\\sDate\\s?.\\:?"]
+			}
+		},
+		"Kuriyama.com": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["CUSTOMER PO NO"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"Industrial\\s?Valco\\s?Inc\\.?": {
+			"INFO": {
+				"NICE_NAME": "For Midwest Hose REPRINT POs"
+			},
+			"PO_SEARCH": {
+				"KEY": ["P\\.?O\\.?\\s?Number\\s? ", "Cust\\.?\\s?P\\.?O\\.?\\s?No\\s?\\:?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date\\s?Printed\\s?\\:?"]
+			}
+		},
+		"\\(?713\\)?\\s?475\\-?6100\\s?": {
+			"INFO": {
+				"NICE_NAME": "TROOP INDUSTRIAL"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer\\sPO\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Ordered\\sDate\\s?\\:?\\s?"]
+			}
+		},
+		"Lifco Hydraulics": {
+			"INFO": {
+				"NICE_NAME": "Lifco Hydraulics"
+			},
+			"PO_SEARCH": {
+				"KEY": ["CUSTOMER\\sPO\\sNO\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["INVOICE DATE\\s?\\:?\\s?"]
+			}
+		},
+		"LOCKWOOD PARTNERS": {
+			"INFO": {
+				"NICE_NAME": "LOCKWOOD PARTNERS"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer\\sPO\\s?\\:?\\s?", "P\\.O\\. No"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["DATE\\s?\\:?\\s?"]
+			}
+		},
+		"TESS\\sHose\\sManagement": {
+			"INFO": {
+				"NICE_NAME": "For Midwest Hose REPRINT POs"
+			},
+			"PO_SEARCH": {
+				"KEY": ["P\\.?O\\.?\\s?Number\\s? ", "Cust\\.?\\s?P\\.?O\\.?\\s?No\\s?\\:?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date\\s?Printed\\s?\\:?"]
+			}
+		},
+		"dwyerindustries\\.?com": {
+			"INFO": {
+				"NICE_NAME": "dwyerindustries.com"
+			},
+			"PO_SEARCH": {
+				"KEY": ["CUST\\sPO\\sNUMBER\\s?\\:?", "Cust\\.?\\s?P\\.?O\\.?\\s?No\\s?\\:?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date\\s?Printed\\s?\\:?", "ORDER\\-?DTE\\s\\:?"]
+			}
+		},
+		"Campbell\\s?Fittings\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Bill\\sto\\sPO.?\\s?\\:?\\s?", "Cust\\.?\\s?P\\.?O\\.?\\s?No\\s?\\:?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Ordered\\s?\\:?"]
+			}
+		},
+		"Anvil International": {
+			"INFO": {
+				"NICE_NAME": "ASC"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Purchase\\sOrder\\s?\\:?\\s?", "Customer\\sPO\\s.?\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date\\sShipped\\s?\\:?\\s?"]
+			}
+		},
+		"FORCE\\sAMERICA": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer\\sp.?o\\s.?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Order\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"zoro\\s?\\.?com": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["CUSTOMER\\s?P\\.?O\\.?\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date\\s?\\:?\\s?"]
+			}
+		},
+		"1.?[6-8]00.?255.?1008\\s?": {
+			"INFO": {
+				"NICE_NAME": "Tompkins 1"
+			},
+			"PO_SEARCH": {
+				"KEY": ["customer\\sP\\s?\\.?O\\s?\\.?\\s?Number\\s?\\:?\\s?", "P\\s?\\.?O\\s?\\.?Number\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Order\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"1-?[6-8]00-?645-?7270\\s?": {
+			"INFO": {
+				"NICE_NAME": "MSC"
+			},
+			"PO_SEARCH": {
+				"KEY": ["customer\\sorder\\sno.?\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Order\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"American\\s?Packing\\s?\\&?\\s?Gasket\\s?\\:?\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Cust\\.?o?m?e?r? P\\s?\\.?O\\.?\\s?\\:?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Pickup\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"250413\\s?Skyport\\s?\\:?\\s?": {
+			"INFO": {
+				"NICE_NAME": "Couplamatic Systems"
+			},
+			"PO_SEARCH": {
+				"KEY": ["P\\s?\\.?O\\s?\\.?\\s?Number\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Pickup\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"P.?T\\s?COUPLING\\s?\\:?\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Your\\s?Order\\s?Number\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Order\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"littlejohn\\s?\\:?\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer\\sPO\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Ordered\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"Brice\\sCompany\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["CUSTOMER\\sPURCHASE\\sORDER\\sNO\\.?\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"ors\\snasco\\s?\\:?\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Your\\sPO.\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Ordered\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"cnc\\shouston\\s?\\:?\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["C?u?s?t?o?m?e?r?\\s?Purchase Order\\s?I?D?\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Ship\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"STUCCHI\\s?\\:?\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer\\s?P\\.?o\\.?\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Ship\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"DLG\\s?Houston\\s?\\:?\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["PO\\s?Number\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Order\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"IRON\\sMULE\\s?\\:?\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer P\\.?O\\.?.?Reference\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Order\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"Service\\sMetal\\s?\\:?\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer\\sPO\\s?number\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Order\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"Dynamic\\sFluid\\sComponents\\s?\\:?\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer\\s?PO.?\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Order\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"lenzinc\\.?com\\s?\\:?\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer\\sPurchase\\sOrder\\s?N?o?\\.?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Order\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"brennan\\s?\\:?\\s?": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer\\sOrder\\sNumber\\s?.?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"713.?675-8888\\s?": {
+			"INFO": {
+				"NICE_NAME": "Hose & Accessory Sales"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Purchase Order Number"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"Val.?matic\\s?valve": {
+			"INFO": {
+				"NICE_NAME": "Val.?matics?valve"
+			},
+			"PO_SEARCH": {
+				"KEY": ["P\\.?O\\.?\\s?NUMBER\\s?.?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"Adl\\s?insulflex": {
+			"INFO": {
+				"NICE_NAME": "ADL Insulflex"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer\\s?P\\.?O\\.?\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"FLEX.?TECH": {
+			"INFO": {
+				"NICE_NAME": "FLEX-TECH"
+			},
+			"PO_SEARCH": {
+				"KEY": ""
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"myfui\\.?com": {
+			"INFO": {
+				"NICE_NAME": "Fittings Unlimited"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer\\s?PO\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"george\\smyer": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["PO\\s?Number\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"ryco": {
+			"INFO": {
+				"NICE_NAME": "RYCO"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer\\sOrder\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"Kroy": {
+			"INFO": {
+				"NICE_NAME": "Kroy Industries Inc."
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer\\sP\/O\\#\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Order date"]
+			}
+		},
+		"Lonestar\\s?Sealing": {
+			"INFO": {
+				"NICE_NAME": "LoneStar Sealing Tech."
+			},
+			"PO_SEARCH": {
+				"KEY": ["PO Number\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Ordered\\s?\\:?\\s?"]
+			}
+		},
+		"MFC\\sSouth\\sSt": {
+			"INFO": {
+				"NICE_NAME": "MFC South St Paul"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer PO\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice Date\\s?"]
+			}
+		},
+		"Motion\\s\\&\\sFlow\\sControl": {
+			"INFO": {
+				"NICE_NAME": "Motion and Flow Control Products Inc."
+			},
+			"PO_SEARCH": {
+				"KEY": ["PO Number\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice Date\\s?"]
+			}
+		},
+		"Novaflex\\sHose": {
+			"INFO": {
+				"NICE_NAME": "NovaFlex Hose Inc"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Your PO NO\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date\\s?"]
+			}
+		},
+		"megadyne\\s?america": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Cust\\s?PO\\.?\\s?\\.?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date\\s?\\:?\\s?"]
+			}
+		},
+		"Val-Matic": {
+			"INFO": {
+				"NICE_NAME": "Val-Matic Valve and Mfg."
+			},
+			"PO_SEARCH": {
+				"KEY": ["P\\.?\\s?O\\.?\\s?Number\\s?\\.?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date\\s?\\:?\\s?"]
+			}
+		},
+		"Troyer\\s?Products": {
+			"INFO": {
+				"NICE_NAME": "Troyer Products"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Our\\s?Order\\s?Number\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"Titan\\s?Flow\\s?Control": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer\\s?PO\\#?\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date\\s?\\:?\\s?"]
+			}
+		},
+		"Speciality\\s?Sales\\s?\\,\\s?Inc": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["P\\.?\\s?O\\.?\\s?Number\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date\\s?\\:?\\s?"]
+			}
+		},
+		"Shipyard\\s?Supply": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Purchase\\s?Order\\s?\\#?\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice Date\\s?\\:?\\s?"]
+			}
+		},
+		"Stainless\\s?.\\s?Nickel\\s?Alloy\\s?Piping\\s?Products": {
+			"INFO": {
+				"NICE_NAME": "SNAPP"
+			},
+			"PO_SEARCH": {
+				"KEY": ["PO Number\\s?\\:?\\s?", "PO Number"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice Date\\s?\\:?\\s?"]
+			}
+		},
+		"South\\s?Coast\\s?Products": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer PO\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice Date\\s?\\:?\\s?"]
+			}
+		},
+		"Source\\s?One\\s?Supply": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["P\\.?\\s?O\\.?\\s?\\#?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date\\s?\\:?\\s?"]
+			}
+		},
+		"northern\\s?safety": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"TXT": ["(?=your purchase order number)?^0?0?[5-7][0-9]{5}|(?<!\\s)0?0?[5-7][0-9]{5}"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice Date\\s?\\:?\\s?"]
+			}
+		},
+		"rectorseal.com": {
+			"INFO": {
+				"NICE_NAME": "RectorSeal"
+			},
+			"PO_SEARCH": {
+				"KEY": ["P\\.?\\s?O\\.?\\s?No\\.?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date\\s?\\:?\\s?"]
+			}
+		},
+		"psispecialtiesllc.com": {
+			"INFO": {
+				"NICE_NAME": "PSI Specialties"
+			},
+			"PO_SEARCH": {
+				"TXT": ["(?<=po number)?^0?0?[5-7][0-9]{5}|(?<!\\s)0?0?[5-7][0-9]{5}"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date\\s?\\:?\\s?"]
+			}
+		},
+		"swnippleco.com": {
+			"INFO": {
+				"NICE_NAME": "Southwest Nipple Company"
+			},
+			"PO_SEARCH": {
+				"KEY": [""]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date\\s?\\:?\\s?"]
+			}
+		},
+		"Harrington\\s?Industrial\\s?Plastics": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"TXT": ["(?<=custp\/o.)?\\s?^0?0?[5-7][0-9]{5}|(?<!\\s)0?0?[5-7][0-9]{5}"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date\\s?\\:?\\s?"]
+			}
+		},
+		"M\\.?\\s?M\\.?\\s?Plastics": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"TXT": ["(?<=p.o.\\snumber)?\\s?^0?0?[5-7][0-9]{5}|(?<!\\s)0?0?[5-7][0-9]{5}"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date\\s?\\:?\\s?"]
+			}
+		},
+		"2901\\s?St\\.\\s?Louis\\s?Ave": {
+			"INFO": {
+				"NICE_NAME": "Hydraulic and Mechanical Supply, Inc."
+			},
+			"PO_SEARCH": {
+				"TXT": ["(?<=customer ord\\.no\\.)?\\s?^0?0?[5-7][0-9]{5}|(?<!\\s)0?0?[5-7][0-9]{5}"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice Date\\s?\\:?\\s?"]
+			}
+		},
+		"Page\\s?wire\\s?rope": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"TXT": ["(?<=customer po number)??^0?0?[5-7][0-9]{5}|(?<!\\s)0?0?[5-7][0-9]{5}"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invce-Date\\s?\\:?\\s?"]
+			}
+		},
+		"Bray\\s?Process": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ["customer po\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice Date\\s?\\:?\\s?"]
+			}
+		},
+		"Avient\\s?Corp": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"TXT": ["(?<=purchase order)??^0?0?[5-7][0-9]{5}|(?<!\\s)0?0?[5-7][0-9]{5}"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice Date\\s?\\:?\\s?"]
+			}
+		},
+		"brakequip": {
+			"INFO": {
+				"NICE_NAME": "BrakeQuip LLC."
+			},
+			"PO_SEARCH": {
+				"KEY": ["Customer Order No\\.?\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Transaction Date\\s?\\:?\\s?"]
+			}
+		},
+		".*\\n": {
+			"INFO": {
+				"NICE_NAME": "",
+				"NOTES": "CATCH ALL! DO NOT DELETE!"
+			},
+			"PO_SEARCH": {
+				"KEY": ["Bill\\sto\\sPO", "C?u?s?t?o?m?e?r?\\s?Purchase Order\\s?I?D?", "CUSTOMER ORDER", "CUSTOMER ORDER NO\\.", "CUSTOMER P.O.", "CUSTOMER PO", "CUSTOMER PO NUMBER", "CUSTOMER PO", "CUSTOMER P\\.?O\\.?", "CUSTOMER\\s?P\\.?O\\.?", "CUSTOMER\\s?REFERENCE\\s?\\s?", "CUSTOMER\\sPURCHASE\\sORDER\\sNO\\.?", "CUST\\s?P\\.?O\\.?", "CUST\\sPO\\sNUMBER\\s?", "Cust PO", "Cust PO. .\\s?", "Cust PO.", "Cust\\.?\\s?P\\.?O\\.?\\s?No\\s?", "Cust\\.?o?m?e?r? P\\s?\\.?O\\.?\\s?", "Customer P.O.", "Customer PO", "Customer PO Number", "Customer PO Number", "Customer PO\\s?.?\\s?", "Customer PO\\s?.?", "Customer PO\\s?\\#?", "Customer PO", "Customer P\\.?O\\.?.?Reference\\s?", "Customer order no", "CustomerPO\\s?.?\\s?", "Customer\\s?PO.?", "Customer\\s?P\\.?O\\.?", "Customer\\s?P\\.?O\\.?\\s?No\\.?", "Customer\\s?P\\.?O\\.?", "Customer\\s?P\\.?o\\.?", "Customer\\s?Purchase\\s?Order\\s?No\\.?", "Customer\\sOrder\\s?.", "Customer\\sOrder", "Customer\\sOrder\\sNumber\\s?.?\\s?", "Customer\\sPO\\s?.?", "Customer\\sPO\\s?", "Customer\\sPO", "Customer\\sPO\\s?number", "Customer\\sPO\\sNo\\.?", "Customer\\sPurchase\\sOrder\\s?N?o?\\.?\\s?", "Customer\\sp.?o\\s.?", "ORDER", "P.O. Number", "PO", "PO .", "PO NUMBER", "PO Number", "PO Number\\s?", "PO Number", "PO.?", "PO.", "PONumber\\s?", "PO\\s?.?\\s?", "PO\\s?Number", "PO\\s?Number\\s?\\s?", "PO\\sNumber", "PURCHASE ORDER", "PURCHASE ORDER NO", "PURCHASE ORDER NUMBER", "PURCHASE ORDER", "P\\.?O\\.? No\\.?", "P\\.?O\\.? Number", "P\\.?O\\.?\\s?NO\\.?", "P\\.?O\\.?\\s?Number\\s?", "P\\.?O\\.?\\s?Number\\s?\\s?", "P\\.?\\s?O\\.?", "P\\.?\\s?O\\.?\\s?NO\\.?", "P\\.O\\.\\s?.?", "P\\s?\\.?O\\s?\\.?Number", "P\\s?\\.?O\\s?\\.?\\s?Number", "Purchase Order", "Purchase Order Number", "Purchase Order", "Purchase\\sOrder", "Purchase\\sOrder\\sNumber", "REFERENCE", "Ref. No", "Ref\\s?.?\\s?P\\.O\\..?", "Reference\\s?.?\\s?", "TestPO", "Your PO", "Your Purchase Order", "YourPurchaseOrder", "Your\\s?Order\\s?Number", "Your\\sPO.", "\\s?P.?o.?\\s\\#", "customer\\sP\\s?\\.?O\\s?\\.?\\s?Number", "customer\\sorder\\sno.?", "customer\\sp\\.?o\\.?\\sno\\.?", "customer\\sp\\.?o\\.?\\snumber", "p.?o\\s?.?", "p\\.?o\\.?\\s?info", "p\\/o\\s?.?", "release#"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice\\s?Date\\s?\\:?\\s?"]
+			}
+		},
+		"PO\\.?\\#?\\s?|Purchase|P\\.?o\\.?\\s?": {
+			"INFO": {
+				"NICE_NAME": "",
+				"NOTES": "CATCH ALL! DO NOT DELETE!"
+			},
+			"PO_SEARCH": {
+				"KEY": ["release#", "TestPO", "customer\\sP\\s?\\.?O\\s?\\.?\\s?Number\\s?\\:?\\s?", "PO\\s?.?\\s?", "p\\/o\\s?.?\\s?\\:?\\s?", "p\\.?o\\.?\\s?info\\s?\\:?\\s?", "customer\\sp\\.?o\\.?\\snumber\\s?\\:?\\s?", "customer\\sp\\.?o\\.?\\sno\\.?\\s?\\:?\\s?", "Purchase\\sOrder\\sNumber\\s?\\:?\\s?", "Customer\\s?Purchase\\s?Order\\s?No\\.?\\s?\\:?\\s?", "PONumber\\s?", "CustomerPO\\s?.?\\s?", "YourPurchaseOrder\\:?\\s?", "\\s?P.?o.?\\s\\#\\:?\\s?", "P\\.?O\\.?\\s?Number\\s?\\s?", "Cust\\.?\\s?P\\.?O\\.?\\s?No\\s?\\:?", "Customer\\sPO\\s?.?\\:?\\s?", "Customer\\sPO\\s?\\:?\\s?", "PO\\sNumber\\s?\\:?\\s?", "CUST\\sPO\\sNUMBER\\s?\\:?", "Bill\\sto\\sPO\\s?\\:?\\s?", "Purchase\\sOrder\\s?\\:?\\s?", "CUSTOMER\\s?P\\.?O\\.?\\s?\\:?\\s?", "P\\s?\\.?O\\s?\\.?\\s?Number\\s?\\:?\\s?", "Your\\s?Order\\s?Number\\s?\\:?\\s?", "Your\\sPO.\\s?\\:?\\s?", "C?u?s?t?o?m?e?r?\\s?Purchase Order\\s?I?D?\\s?\\:?\\s?", "Customer P\\.?O\\.?.?Reference\\s?", "Customer\\sPO\\s?number\\s?\\:?\\s?"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		},
+		"Auto Print": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ""
+			},
+			"DATE_SEARCH": {
+				"KEY": ""
+			}
+		}
+	},
+	"INVEXP": {
+		"KEYWORDS": ["713-923-7943", "web site\\s+?att.com", "Southern Milling","Dba Ben.s Courier","Johnson Controls Security","Allied Fence","ALSCO","APACHE SALES","Brewington.s Towing","Nesco Resource","dawsonlogistics.com","DENNIS WILLIAMS","DHL","FavorsforaPrice.com","whittonsupply.com","FUEL MARK INC","FLORIDA LIFT GAS","MERIDIAN PROPANE","dispatchit.com","RUSCO PACKAGING","KLAD Services","Locke Supply","Mission Uniform Service","mscdirect","800-492-8377","CITY OF ALICE","WM\\s?CORPORATE","INNOVATIVE\\s?SECURITY\\s?OF\\s?OKLAHOMA","DIRECTV","405-235-6331","Comcast\\s?Business","Bright\\s?Delivery\\s?Service","DELL\\s?FINANCIAL\\s?SERVICES","EUREKA\\s?WATER","CULLIGAN","MUSIC\\s?MOUNTAIN\\s?WATER","timco-mti.com","ROOT ENTERPRISES","405-670-1234","SUBURBAN PROPANE","1140 Black Gold Rd","oge.com","CENTERPOINT","WASTE\\s?CONNECTIONS","WESTAIR GASES","cpsenergy.com","saws.org","entergy-louisiana.com","Relevant Industrial","OKLAHOMA NATURAL GAS","ADT COMMERCIAL","PURE WATER PARTNERS","PAYTHEATOLLS.COM","THE HARTLINE ALARM","thesweeper.com","AT.T\\s?MOBILITY","Oklahoma Hauling","ROCKY MTN POWER","BARNES WELDING","thompson-safety.com","H.M International","TQL.com","\\(863\\)\\s?577-LIFT","Coastal Staffing Services","COASTAL WELDING SUPPLY","Spice Logistics","wagnersupply.com","UniFirst","SupplyOne","CHICKASHA INDUSTRIAL","Summit Supply","Lone Star Temp Services","TBS Factoring Service","FORCE TRANSPORTATION ","American Welding . Gas","West End Cleaners","Globaltranz Enterprises", "coxbusiness.com", "AIRGAS USA", "P\\.?O\\.? Box 660481", "PO BOX 740407", "International Package Services Invoice", "Buildingstars Operations,", "uline.com", "johnsoncrating.com", "hugghallequipment", "First Choice Coffee", "Houston Forklift Service", "TTS\\,\\s?LLC", "SOUTHEASTERN FREIGHT LINES", "customersolutions@fedex.com", "People Source Staffing", "\\(?ODFL\\)?","Florida Labor Solutions", "Lictusoilandpropane.com", "customerservice@mdu.com", "PENNSYLVANIA AMERICAN WATER", "Gexa Energy", "fedex.com", "OLD DOMINION FREIGHT", "engieresources.com", "SouthernCarlson", "swepco.com", "SpectrumBusiness.net", "D . L TRANSPORT", "Stanley Convergent Security", "suddenlink.com", "lakelandelectric.com", "WestPenn", "grainger.com", "directv \\- po bOX 5006", "AREA-WIDE", "City of Evans", "Corry Lumber", "epumpsok.com", "CINTAS", "Double D", "priority1.com","Dba Ben.s Courier", "benscourier@gmail.com", "metroweld.com", "\\w+", ".*", ".*\\n"],
+		".*": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ""
+			},
+			"TOTAL_SEARCH":{
+				"KEY":["TOTAL AMOUNT","Grand Total","AMOUNT DUE","AMOUNT DUE$","INV TOTAL","BALANCE DUE","Balance Due\\s{0,}\\:?","Total\\s{0,}\\:?$", "Prebill","Total\\s{0,}\\:?$","AMOUNT THIS INVOICE INCLUDING TAX","Total ...\\s{0,}","INVOICE AMOUNT","Please Pay This Amount","Total\\s{0,}$","Total Due","Invoice Total","AMOUNT THIS INVOICE","Total"]
+			},
+			"INV_NUMBER": {
+				"KEY": ["Invoice \\#\\s{0,}$","Customer No","INVOICE\\s{0,}$","Invoice \\#","Invoice\\#","Invoice","Invoice No","INVOICE\\s{0,}\\:?$","INVOICE\\s{0,}\\:?$","Customer P.O","Invoice Number","Invoice \\#"]
+			},
+			"DATE_SEARCH": {
+				"KEY": [".*date.*?\\s?:\\s?\\s?", ".*\\n", "^(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\\d\\d", "^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\\d\\d"]
+			}
+
+		},
+		"\\w+": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"PO_SEARCH": {
+				"KEY": ""
+			},
+			"TOTAL_SEARCH":{
+				"KEY":["TOTAL AMOUNT","Grand Total","AMOUNT DUE","AMOUNT DUE$","INV TOTAL","BALANCE DUE","Balance Due\\s{0,}\\:?","Total\\s{0,}\\:?$", "Prebill","Total\\s{0,}\\:?$","AMOUNT THIS INVOICE INCLUDING TAX","Total ...\\s{0,}","INVOICE AMOUNT","Please Pay This Amount","Total\\s{0,}$","Total Due","Invoice Total","AMOUNT THIS INVOICE","Total"]
+			},
+			"INV_NUMBER": {
+				"KEY": ["Invoice \\#\\s{0,}$","Customer No","INVOICE\\s{0,}$","Invoice \\#","Invoice\\#","Invoice","Invoice No","INVOICE\\s{0,}\\:?$","INVOICE\\s{0,}\\:?$","Customer P.O","Invoice Number","Invoice \\#"]
+			},
+			"DATE_SEARCH": {
+				"KEY": [".*date.*?\\s?:\\s?\\s?", "^(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\\d\\d", "^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\\d\\d"]
+			}
+
+		},
+		"800-492-8377":{"INFO":{"NICE_NAME":"Sparkletts Water - Crystal Springs"},"INV_NUMBER":{"KEY":["Account Number"]},"DATE_SEARCH":{"KEY":["Invoice Date"]},"TOTAL_SEARCH":{"KEY":["Pay This Amount"]}},
+		"CITY OF ALICE":{"INFO":{"NICE_NAME":""},"INV_NUMBER":{"KEY":["Invoice Number"]},"DATE_SEARCH":{"KEY":["Billing Date"]},"TOTAL_SEARCH":{"KEY":["AMOUNT DUE\\s{0,}$"]}},
+		"WM\\s?CORPORATE":{"INFO":{"NICE_NAME":""},"INV_NUMBER":{"KEY":["Invoice Number"]},"DATE_SEARCH":{"KEY":["Invoice Date"]},"TOTAL_SEARCH":{"KEY":["Total Due\\s{0,}$"]}},
+		"INNOVATIVE\\s?SECURITY\\s?OF\\s?OKLAHOMA":{"INFO":{"NICE_NAME":""},"INV_NUMBER":{"KEY":["Invoice Number"]},"DATE_SEARCH":{"KEY":["Invoice Date"]},"TOTAL_SEARCH":{"KEY":["Amount"]}},
+		"DIRECTV":{"INFO":{"NICE_NAME":""},"INV_NUMBER":{"KEY":["Account Number"]},"DATE_SEARCH":{"KEY":["Statement Date"]},"TOTAL_SEARCH":{"KEY":["Amount Due"]}},
+		"405-235-6331":{"INFO":{"NICE_NAME":"EMSCO ELECTRIC SUPPLY"},"INV_NUMBER":{"KEY":["INVOICE NUMBER"]},"DATE_SEARCH":{"KEY":["Invoice Date"]},"TOTAL_SEARCH":{"KEY":["AMOUNT DUE\\s{0,}$"]}},
+		"Comcast\\s?Business":{"INFO":{"NICE_NAME":""},"INV_NUMBER":{"KEY":["Account Number"]},"DATE_SEARCH":{"KEY":[""]},"TOTAL_SEARCH":{"KEY":["AMOUNT DUE\\s{0,}$"]}},
+		"Bright\\s?Delivery\\s?Service":{"INFO":{"NICE_NAME":""},"INV_NUMBER":{"KEY":["Invoice \\#"]},"DATE_SEARCH":{"KEY":["Invoice Date"]},"TOTAL_SEARCH":{"KEY":["Invoice Total"]}},
+		"DELL\\s?FINANCIAL\\s?SERVICES":{"INFO":{"NICE_NAME":""},"INV_NUMBER":{"KEY":["Invoice Number"]},"DATE_SEARCH":{"KEY":["Invoice Date"]},"TOTAL_SEARCH":{"KEY":["Current Charges"]}},
+		"EUREKA\\s?WATER":{"INFO":{"NICE_NAME":""},"INV_NUMBER":{"KEY":["Account No"]},"DATE_SEARCH":{"KEY":["Invoice Date"]},"TOTAL_SEARCH":{"KEY":["TOTAL\\s{0,}$"]}},
+		"CULLIGAN":{"INFO":{"NICE_NAME":""},"INV_NUMBER":{"KEY":["Invoice Number"]},"DATE_SEARCH":{"KEY":["Date\\s{0,}\\:?$"]},"TOTAL_SEARCH":{"KEY":["PAY THIS AMOUNT"]}},
+		"MUSIC\\s?MOUNTAIN\\s?WATER":{"INFO":{"NICE_NAME":""},"INV_NUMBER":{"KEY":["Account \\#"]},"DATE_SEARCH":{"KEY":["Statement Date"]},"TOTAL_SEARCH":{"KEY":["Amount Due"]}},
+		"timco-mti.com":{"INFO":{"NICE_NAME":"Timco Machine Tools"},"INV_NUMBER":{"KEY":["Invoice Nu"]},"DATE_SEARCH":{"KEY":["Invoice Date"]},"TOTAL_SEARCH":{"KEY":["Total Invoice"]}},
+		"ROOT ENTERPRISES":{"INFO":{"NICE_NAME":""},"INV_NUMBER":{"KEY":["Invoice\\s{0,}\\:?$"]},"DATE_SEARCH":{"KEY":["Date\\s{0,}\\:?$"]},"TOTAL_SEARCH":{"KEY":["Invoice Total"]}},
+		"405-670-1234":{"INFO":{"NICE_NAME":"J and E SUPPLY  and FASTENER"},"INV_NUMBER":{"KEY":["Ref\\.?\\s?No"]},"DATE_SEARCH":{"KEY":["Date\\s{0,}\\:?$"]},"TOTAL_SEARCH":{"KEY":["TOTAL\\s{0,}$"]}},
+		"SUBURBAN PROPANE":{"INFO":{"NICE_NAME":""},"INV_NUMBER":{"KEY":["Account Number"]},"DATE_SEARCH":{"KEY":["Invoice Date"]},"TOTAL_SEARCH":{"KEY":["Amount Due"]}},
+		"1140 Black Gold Rd":{"INFO":{"NICE_NAME":"HOLDERS - CA"},"INV_NUMBER":{"KEY":["Account No"]},"DATE_SEARCH":{"KEY":["Date\\s{0,}\\:?$"]},"TOTAL_SEARCH":{"KEY":["Number\\s{0,}\\:?$"]}},
+		"oge.com":{"INFO":{"NICE_NAME":"OGandE"},"INV_NUMBER":{"KEY":["Account Number"]},"DATE_SEARCH":{"KEY":["TO\\s{0,}"]},"TOTAL_SEARCH":{"KEY":["TOTAL AMOUNT DUE"]}},
+		"CENTERPOINT":{"INFO":{"NICE_NAME":"CENTERPOINT ENERGY"},"INV_NUMBER":{"KEY":["Account Number"]},"DATE_SEARCH":{"KEY":["DATE DUE"]},"TOTAL_SEARCH":{"KEY":["AMOUNT DUE"]}},
+		"WASTE\\s?CONNECTIONS":{"INFO":{"NICE_NAME":""},"INV_NUMBER":{"KEY":["Invoice No"]},"DATE_SEARCH":{"KEY":["STATEMENT DATE"]},"TOTAL_SEARCH":{"KEY":["Total Due\\s{0,}\\:?$"]}},
+		"WESTAIR GASES":{"INFO":{"NICE_NAME":""},"INV_NUMBER":{"KEY":["Invoice Number"]},"DATE_SEARCH":{"KEY":["Invoice Date"]},"TOTAL_SEARCH":{"KEY":["Invoice Total"]}},
+		"cpsenergy.com":{"INFO":{"NICE_NAME":"CPS Energy"},"INV_NUMBER":{"KEY":[""]},"DATE_SEARCH":{"KEY":["Billing Date"]},"TOTAL_SEARCH":{"KEY":["Total Account Balance"]}},
+		"saws.org":{"INFO":{"NICE_NAME":"San Antonio Water System"},"INV_NUMBER":{"KEY":[""]},"DATE_SEARCH":{"KEY":[""]},"TOTAL_SEARCH":{"KEY":["AMOUNT DUE NOW"]}},
+		"entergy-louisiana.com":{"INFO":{"NICE_NAME":"Entergy Louisiana"},"INV_NUMBER":{"KEY":["Invoice \\#?"]},"DATE_SEARCH":{"KEY":[""]},"TOTAL_SEARCH":{"KEY":["Amount Due by"]}},
+		"Relevant Industrial":{"INFO":{"NICE_NAME":""},"INV_NUMBER":{"KEY":[""]},"DATE_SEARCH":{"KEY":[""]},"TOTAL_SEARCH":{"KEY":[""]}},
+		"OKLAHOMA NATURAL GAS":{"INFO":{"NICE_NAME":""},"INV_NUMBER":{"KEY":["Account Number"]},"DATE_SEARCH":{"KEY":["Statement Date"]},"TOTAL_SEARCH":{"KEY":["Amount Due"]}},
+		"ADT COMMERCIAL":{"INFO":{"NICE_NAME":""},"INV_NUMBER":{"KEY":["Your account number"]},"DATE_SEARCH":{"KEY":["Invoice date"]},"TOTAL_SEARCH":{"KEY":["Your total due"]}},
+		"PURE WATER PARTNERS":{"INFO":{"NICE_NAME":""},"INV_NUMBER":{"KEY":["Invoice Number"]},"DATE_SEARCH":{"KEY":[""]},"TOTAL_SEARCH":{"KEY":["TOTAL AMOUT DUE"]}},
+		"PAYTHEATOLLS.COM":{"INFO":{"NICE_NAME":"TOLL COLLECTION"},"INV_NUMBER":{"KEY":["Notice Number"]},"DATE_SEARCH":{"KEY":["Notice Date"]},"TOTAL_SEARCH":{"KEY":["AMOUNT DUE\\s{0,}\\:?$"]}},
+		"THE HARTLINE ALARM":{"INFO":{"NICE_NAME":""},"INV_NUMBER":{"KEY":["Invoice Number"]},"DATE_SEARCH":{"KEY":["Sale Date"]},"TOTAL_SEARCH":{"KEY":["Due This Inv"]}},
+		"thesweeper.com":{"INFO":{"NICE_NAME":"Factory Cleaning Equip by Jon-Don"},"INV_NUMBER":{"KEY":["Invoice\\s?\\#\\:?"]},"DATE_SEARCH":{"KEY":["Invoice date"]},"TOTAL_SEARCH":{"KEY":["INVOICE TOTAL"]}},
+		"AT.T\\s?MOBILITY":{"INFO":{"NICE_NAME":""},"INV_NUMBER":{"KEY":["Invoice\\s?\\:?"]},"DATE_SEARCH":{"KEY":["Issue Date"]},"TOTAL_SEARCH":{"KEY":["Total due"]}},
+		"Oklahoma Hauling":{"INFO":{"NICE_NAME":""},"INV_NUMBER":{"KEY":["Invoice\\s?\\:?"]},"DATE_SEARCH":{"KEY":["Invoice Date"]},"TOTAL_SEARCH":{"KEY":["TOTAL DUE"]}},
+		"ROCKY MTN POWER":{"INFO":{"NICE_NAME":""},"INV_NUMBER":{"KEY":["ACCOUNT NUMBER"]},"DATE_SEARCH":{"KEY":["BILLING DATE"]},"TOTAL_SEARCH":{"KEY":["AMOUNT DUE"]}},
+		"Southern Milling":{"INFO":{"NICE_NAME":"Southern Milling and Lumber"},"INV_NUMBER":{"KEY":["Invoice Number"]},"DATE_SEARCH":{"KEY":["INVOICE DATE"]},"TOTAL_SEARCH":{"KEY":["TOTAL AMOUNT"]}},
+		"Johnson Controls Security":{"INFO":{"NICE_NAME":"Johnson Controls Security Solutions"},"INV_NUMBER":{"KEY":["Invoice \\#\\s{0,}$"]},"DATE_SEARCH":{"KEY":["Invoice Date"]},"TOTAL_SEARCH":{"KEY":["Invoice Amount"]}},
+		"Allied Fence":{"INFO":{"NICE_NAME":""},"INV_NUMBER":{"KEY":["Invoice \\#\\s{0,}$"]},"DATE_SEARCH":{"KEY":["Date"]},"TOTAL_SEARCH":{"KEY":["Total\\s{0,}$"]}},
+		"ALSCO":{"INFO":{"NICE_NAME":""},"INV_NUMBER":{"KEY":["Customer No"]},"DATE_SEARCH":{"KEY":["Invoice Date"]},"TOTAL_SEARCH":{"KEY":["Invoice Total"]}},
+		"APACHE SALES":{"INFO":{"NICE_NAME":""},"INV_NUMBER":{"KEY":["INVOICE\\s{0,}$"]},"DATE_SEARCH":{"KEY":["INVOICE DATE"]},"TOTAL_SEARCH":{"KEY":["Total Due"]}},
+		"Brewington.s Towing":{"INFO":{"NICE_NAME":"Brewingtons Towing  and  Recovery"},"INV_NUMBER":{"KEY":["Invoice \\#"]},"DATE_SEARCH":{"KEY":["Date\/Time Requested"]},"TOTAL_SEARCH":{"KEY":["Grand Total"]}},
+		"Nesco Resource":{"INFO":{"NICE_NAME":""},"INV_NUMBER":{"KEY":["INVOICE NUMBER"]},"DATE_SEARCH":{"KEY":["DATE"]},"TOTAL_SEARCH":{"KEY":["AMOUNT DUE$"]}},
+		"dawsonlogistics.com":{"INFO":{"NICE_NAME":"Dawson Logistics"},"INV_NUMBER":{"KEY":["Invoice Number"]},"DATE_SEARCH":{"KEY":["Invoice Date"]},"TOTAL_SEARCH":{"KEY":["Total\\s{0,}$"]}},
+		"DENNIS WILLIAMS":{"INFO":{"NICE_NAME":"DENNIS WILLIAMS and CO"},"INV_NUMBER":{"KEY":["Invoice \\#"]},"DATE_SEARCH":{"KEY":["Date\\s{0,}$"]},"TOTAL_SEARCH":{"KEY":["Total\\s{0,}$"]}},
+		"DHL":{"INFO":{"NICE_NAME":""},"INV_NUMBER":{"KEY":["Invoice Number"]},"DATE_SEARCH":{"KEY":["Invoice Date"]},"TOTAL_SEARCH":{"KEY":["Total Due"]}},
+		"FavorsforaPrice.com":{"INFO":{"NICE_NAME":"Favors for a Price"},"INV_NUMBER":{"KEY":["Invoice \\#"]},"DATE_SEARCH":{"KEY":["Date"]},"TOTAL_SEARCH":{"KEY":["BALANCE DUE"]}},
+		"whittonsupply.com":{"INFO":{"NICE_NAME":"Whitton Supply"},"INV_NUMBER":{"KEY":["INVOICE\\s{0,}\\:?"]},"DATE_SEARCH":{"KEY":["INVOICE\\s{0,}\\:?"]},"TOTAL_SEARCH":{"KEY":["INV TOTAL"]}},
+		"FUEL MARK INC":{"INFO":{"NICE_NAME":""},"INV_NUMBER":{"KEY":["Invoice \\#"]},"DATE_SEARCH":{"KEY":["Date"]},"TOTAL_SEARCH":{"KEY":["Total\\s{0,}$"]}},
+		"FLORIDA LIFT GAS":{"INFO":{"NICE_NAME":""},"INV_NUMBER":{"KEY":["INVOICE\\s{0,}\\:?$"]},"DATE_SEARCH":{"KEY":["Date"]},"TOTAL_SEARCH":{"KEY":["Invoice Total"]}},
+		"MERIDIAN PROPANE":{"INFO":{"NICE_NAME":""},"INV_NUMBER":{"KEY":["Invoice \\#"]},"DATE_SEARCH":{"KEY":["Date"]},"TOTAL_SEARCH":{"KEY":["Invoice Total"]}},
+		"dispatchit.com":{"INFO":{"NICE_NAME":"Dispatch Delivery"},"INV_NUMBER":{"KEY":["Invoice Number"]},"DATE_SEARCH":{"KEY":["Invoice Date"]},"TOTAL_SEARCH":{"KEY":["BALANCE DUE"]}},
+		"RUSCO PACKAGING":{"INFO":{"NICE_NAME":""},"INV_NUMBER":{"KEY":["INVOICE\\s{0,}\\:?$"]},"DATE_SEARCH":{"KEY":["Order Date"]},"TOTAL_SEARCH":{"KEY":["Total"]}},
+		"KLAD Services":{"INFO":{"NICE_NAME":""},"INV_NUMBER":{"KEY":["Invoice \\#"]},"DATE_SEARCH":{"KEY":["Date"]},"TOTAL_SEARCH":{"KEY":["Total\\s{0,}$"]}},
+		"Locke Supply":{"INFO":{"NICE_NAME":""},"INV_NUMBER":{"KEY":["Invoice Number"]},"DATE_SEARCH":{"KEY":["Invoice Date"]},"TOTAL_SEARCH":{"KEY":["Balance Due\\s{0,}\\:?"]}},
+		"Mission Uniform Service":{"INFO":{"NICE_NAME":""},"INV_NUMBER":{"KEY":["Invoice \\#"]},"DATE_SEARCH":{"KEY":["Date"]},"TOTAL_SEARCH":{"KEY":["Total\\s{0,}\\:?$", "Prebill"]}},
+		"mscdirect":{"INFO":{"NICE_NAME":"MSC INDUSTRIAL SUPPLY"},"INV_NUMBER":{"KEY":["Invoice Number"]},"DATE_SEARCH":{"KEY":["Order Date"]},"TOTAL_SEARCH":{"KEY":["Total\\s{0,}\\:?$"]}},
+		"BARNES WELDING":{"INFO":{"NICE_NAME":"FRESNO OXYGEN - BARNES WELDING"},"INV_NUMBER":{"KEY":["Invoice Number"]},"DATE_SEARCH":{"KEY":["Date"]},"TOTAL_SEARCH":{"KEY":["AMOUNT THIS INVOICE INCLUDING TAX"]}},
+		"thompson-safety.com":{"INFO":{"NICE_NAME":"Thompson Safety"},"INV_NUMBER":{"KEY":["Invoice Number"]},"DATE_SEARCH":{"KEY":["Date\\s{0,}\\:?$"]},"TOTAL_SEARCH":{"KEY":["Total Due"]}},
+		"H.M International":{"INFO":{"NICE_NAME":"H  and  M International"},"INV_NUMBER":{"KEY":["Invoice\\#"]},"DATE_SEARCH":{"KEY":["Invoice Date"]},"TOTAL_SEARCH":{"KEY":["Please Pay This Amount"]}},
+		"TQL.com":{"INFO":{"NICE_NAME":"Total Quality Logistics"},"INV_NUMBER":{"KEY":["INVOICE\\s{0,}\\:?$"]},"DATE_SEARCH":{"KEY":["Date"]},"TOTAL_SEARCH":{"KEY":["Total ...\\s{0,}"]}},
+		"\\(863\\)\\s?577-LIFT":{"INFO":{"NICE_NAME":"RAYMOND HANDLING CONSULTANTS"},"INV_NUMBER":{"KEY":["Invoice"]},"DATE_SEARCH":{"KEY":["Date"]},"TOTAL_SEARCH":{"KEY":[""]}},
+		"Coastal Staffing Services":{"INFO":{"NICE_NAME":""},"INV_NUMBER":{"KEY":["Invoice No"]},"DATE_SEARCH":{"KEY":["Date"]},"TOTAL_SEARCH":{"KEY":["Invoice Amount"]}},
+		"COASTAL WELDING SUPPLY":{"INFO":{"NICE_NAME":""},"INV_NUMBER":{"KEY":["INVOICE\\s{0,}\\:?$"]},"DATE_SEARCH":{"KEY":["INV DATE"]},"TOTAL_SEARCH":{"KEY":["INVOICE AMOUNT"]}},
+		"Spice Logistics":{"INFO":{"NICE_NAME":""},"INV_NUMBER":{"KEY":["INVOICE\\s{0,}\\:?$"]},"DATE_SEARCH":{"KEY":["Date\\s{0,}\\:?$"]},"TOTAL_SEARCH":{"KEY":["PLEASE PAY THIS AMOUNT"]}},
+		"wagnersupply.com":{"INFO":{"NICE_NAME":"Wagner Supply"},"INV_NUMBER":{"KEY":["Customer P.O"]},"DATE_SEARCH":{"KEY":["Invoice Date"]},"TOTAL_SEARCH":{"KEY":["Total\\s{0,}$"]}},
+		"UniFirst":{"INFO":{"NICE_NAME":""},"INV_NUMBER":{"KEY":["Invoice Number"]},"DATE_SEARCH":{"KEY":["Invoice Date"]},"TOTAL_SEARCH":{"KEY":["Invoice Total"]}},
+		"SupplyOne":{"INFO":{"NICE_NAME":""},"INV_NUMBER":{"KEY":["Invoice \\#"]},"DATE_SEARCH":{"KEY":["Invoice Date"]},"TOTAL_SEARCH":{"KEY":["Please Pay This Amount"]}},
+		"CHICKASHA INDUSTRIAL":{"INFO":{"NICE_NAME":"CHICKASHA INDUSTRIAL"},"INV_NUMBER":{"KEY":[""]},"DATE_SEARCH":{"KEY":["Date\\s{0,}\\:?$"]},"TOTAL_SEARCH":{"KEY":[""]}},
+		"Summit Supply":{"INFO":{"NICE_NAME":""},"INV_NUMBER":{"KEY":["Invoice \\#"]},"DATE_SEARCH":{"KEY":["Date\\s{0,}\\:?$"]},"TOTAL_SEARCH":{"KEY":["Total\\s{0,}$"]}},
+		"Lone Star Temp Services":{"INFO":{"NICE_NAME":""},"INV_NUMBER":{"KEY":["Invoice Number"]},"DATE_SEARCH":{"KEY":["Date\\s{0,}\\:?$"]},"TOTAL_SEARCH":{"KEY":["Total Due"]}},
+		"TBS Factoring Service":{"INFO":{"NICE_NAME":""},"INV_NUMBER":{"KEY":["Invoice Number"]},"DATE_SEARCH":{"KEY":[""]},"TOTAL_SEARCH":{"KEY":["Invoice Total"]}},
+		"FORCE TRANSPORTATION ":{"INFO":{"NICE_NAME":""},"INV_NUMBER":{"KEY":["Invoice \\#"]},"DATE_SEARCH":{"KEY":["Date\\s{0,}\\:?$"]},"TOTAL_SEARCH":{"KEY":["Invoice Total"]}},
+		"American Welding . Gas":{"INFO":{"NICE_NAME":"American Welding  and  Gas"},"INV_NUMBER":{"KEY":["Invoice Number"]},"DATE_SEARCH":{"KEY":["Date\\s{0,}\\:?$"]},"TOTAL_SEARCH":{"KEY":["AMOUNT THIS INVOICE"]}},
+		"West End Cleaners":{"INFO":{"NICE_NAME":""},"INV_NUMBER":{"KEY":["Invoice \\#"]},"DATE_SEARCH":{"KEY":["Date\\s{0,}\\:?$"]},"TOTAL_SEARCH":{"KEY":["Total"]}},
+		"Globaltranz Enterprises": {
+			"INFO": {
+				"NICE_NAME": "CORE Logistics"
+			},
+			"INV_NUMBER": {
+				"KEY": ["Invoice No"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date"]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["Amount Due"]
+			}
+		},
+		"coxbusiness.com": {
+			"INFO": {
+				"NICE_NAME": "COX Business"
+			},
+			"INV_NUMBER": {
+				"KEY": ["Account Number"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["New Charges"]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["Total Due"]
+			}
+		},
+		"AIRGAS USA": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"INV_NUMBER": {
+				"KEY": ["INVOICE NO"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["INVOICE DATE"]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["PAY THIS AMOUNT"]
+			}
+		},
+		"metroweld.com": {
+			"INFO": {
+				"NICE_NAME": "METROPLEX WELDING SUPPLY"
+			},
+			"INV_NUMBER": {
+				"KEY": [""]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date"]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["Total"]
+			}
+		},
+		"P\\.?O\\.? Box 660481": {
+			"INFO": {
+				"NICE_NAME": "FedEx"
+			},
+			"INV_NUMBER": {
+				"KEY": ["Invoice Number"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice Date"]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["Invoice Amount"]
+			}
+		},
+		"PO BOX 740407": {
+			"INFO": {
+				"NICE_NAME": "Frontier Comms"
+			},
+			"INV_NUMBER": {
+				"KEY": ["Account Number"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Billing Date"]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["Total Amount Due"]
+			}
+		},
+		"priority1.com": {
+			"INFO": {
+				"NICE_NAME": "PriorityOne"
+			},
+			"INV_NUMBER": {
+				"KEY": ["PRO\\s+$"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice Date"]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["Total Amount Due"]
+			}
+		},
+		"International Package Services Invoice": {
+			"INFO": {
+				"NICE_NAME": "UPS International"
+			},
+			"INV_NUMBER": {
+				"KEY": ["Invoice No"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice Date"]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["Total Charges", "USD"]
+			}
+		},
+		"Dba Ben.s Courier": {
+			"INFO": {
+				"NICE_NAME": "D and D TRANSPORT - DBA BENS COURIER"
+			},
+			"INV_NUMBER": {
+				"KEY": ["Invoice \\#"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["DATE"]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["BALANCE DUE"]
+			}
+		},
+		"benscourier@gmail.com": {
+			"INFO": {
+				"NICE_NAME": "D and D TRANSPORT - DBA BENS COURIER"
+			},
+			"INV_NUMBER": {
+				"KEY": ["Invoice \\#"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["DATE"]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["BALANCE DUE"]
+			}
+		},
+		"\\(?ODFL\\)?": {
+			"INFO": {
+				"NICE_NAME": "OLD DOMINION FREIGHT"
+			},
+			"INV_NUMBER": {
+				"KEY": ["INVOICE NUMBER"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["PRO DATE"]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["PAY THIS AMOUNT"]
+			}
+		},
+		"Buildingstars Operations,": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"INV_NUMBER": {
+				"KEY": ["Invoice ."]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["DUE DATE"]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["Total"]
+			}
+		},
+		"uline.com": {
+			"INFO": {
+				"NICE_NAME": "ULINE"
+			},
+			"INV_NUMBER": {
+				"KEY": ["INVOICE NUMBER"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["INVOICE DATE"]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["AMOUNT DUE"]
+			}
+		},
+		"johnsoncrating.com": {
+			"INFO": {
+				"NICE_NAME": "JOHNSON CRATING"
+			},
+			"INV_NUMBER": {
+				"KEY": ["Johnson Crating Services"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["DATE"]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["TOTAL DUE"]
+			}
+		},
+		"CINTAS": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"INV_NUMBER": {
+				"KEY": ["INV.ICE \\#"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["INV.ICE DATE"]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["T.TAL USD"]
+			}
+		},
+		"Double D": {
+			"INFO": {
+				"NICE_NAME": "Double D Transport"
+			},
+			"INV_NUMBER": {
+				"KEY": ["INVOICE ."]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["DATE"]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["TOTAL DUE"]
+			}
+		},
+		"hugghallequipment": {
+			"INFO": {
+				"NICE_NAME": "Hugg Hall Equipment"
+			},
+			"INV_NUMBER": {
+				"KEY": ["INVOICE \\#"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Order Date"]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["total\\s+?$"]
+			}
+		},
+		"First Choice Coffee": {
+			"INFO": {
+				"NICE_NAME": "First Choice Bev"
+			},
+			"INV_NUMBER": {
+				"KEY": ["INVOICE \\#"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["DATE"]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["TOTAL"]
+			}
+		},
+		"Houston Forklift Service": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"INV_NUMBER": {
+				"KEY": ["INVOICE \\#"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["DATE"]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["TOTAL"]
+			}
+		},
+		"TTS\\,\\s?LLC": {
+			"INFO": {
+				"NICE_NAME": "TTS LLC"
+			},
+			"INV_NUMBER": {
+				"KEY": ["INVOICE \\#"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["INVOICE DATE"]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["TOTAL"]
+			}
+		},
+		"SOUTHEASTERN FREIGHT LINES": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"INV_NUMBER": {
+				"KEY": ["Account Number"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Statement Date", "Invoice Date"]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["Total Amount Due"]
+			}
+		},
+		"customersolutions@fedex.com": {
+			"INFO": {
+				"NICE_NAME": "FEDEX"
+			},
+			"INV_NUMBER": {
+				"KEY": ["Freight Bill Number"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice Date"]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["Total Amount Due"]
+			}
+		},
+		"fedex.com": {
+			"INFO": {
+				"NICE_NAME": "FEDEX"
+			},
+			"INV_NUMBER": {
+				"KEY": ["Freight Bill Number"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice Date"]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["Total Amount Due"]
+			}
+		},
+		"People Source Staffing": {
+			"INFO": {
+				"NICE_NAME": "People Source Staf fing"
+			},
+			"INV_NUMBER": {
+				"KEY": ["Invoice No"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice Date"]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["Invoice Amount"]
+			}
+		},
+		"Florida Labor Solutions": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"INV_NUMBER": {
+				"KEY": ["Invoice No"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Invoice Date"]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["Invoice Amount"]
+			}
+		},
+		"Lictusoilandpropane.com": {
+			"INFO": {
+				"NICE_NAME": "Lictus Oil and Propane"
+			},
+			"INV_NUMBER": {
+				"KEY": ["INVOICE \\#"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Transaction Date"]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["Invoice Total"]
+			}
+		},
+		"customerservice@mdu.com": {
+			"INFO": {
+				"NICE_NAME": "MONTANA-DAKOTA UTILITES"
+			},
+			"INV_NUMBER": {
+				"KEY": ["ACCOUNT NUMBER"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["BILL DATE"]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["AMOUNT DUE"]
+			}
+		},
+		"PENNSYLVANIA AMERICAN WATER": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"INV_NUMBER": {
+				"KEY": ["Account No"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Billing Date"]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["Total Amount Due"]
+			}
+		},
+		"Gexa Energy": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"INV_NUMBER": {
+				"KEY": ["Invoice Number"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Billing Date"]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["Current Charges"]
+			}
+		},
+		"OLD DOMINION FREIGHT": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"INV_NUMBER": {
+				"KEY": ["Pro\\#"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["PRO DATE"]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["PAY THIS AMOUNT"]
+			}
+		},
+		"engieresources.com": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"INV_NUMBER": {
+				"KEY": ["STATEMENT ID"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Due Date"]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["Total Current Charges"]
+			}
+		},
+		"SouthernCarlson": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"INV_NUMBER": {
+				"KEY": ["Invoice Number"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Order Date"]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["Invoice Total"]
+			}
+		},
+		"swepco.com": {
+			"INFO": {
+				"NICE_NAME": "SOUTHWESTERN ELECTRIC POWER"
+			},
+			"INV_NUMBER": {
+				"KEY": ["Account"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Billing from"]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["Pay"]
+			}
+		},
+		"SpectrumBusiness.net": {
+			"INFO": {
+				"NICE_NAME": "Spectrum Business"
+			},
+			"INV_NUMBER": {
+				"KEY": ["Invoice Number"]
+			},
+			"DATE_SEARCH": {
+				"KEY": [""]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["Total Due"]
+			}
+		},
+		"Stanley Convergent Security": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"INV_NUMBER": {
+				"KEY": ["INVOICE NO"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["INVOICE DATE"]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["TOTAL"]
+			}
+		},
+		"suddenlink.com": {
+			"INFO": {
+				"NICE_NAME": "SuddenLink"
+			},
+			"INV_NUMBER": {
+				"KEY": ["Account Number"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Billing Period"]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["Total Amount Due"]
+			}
+		},
+		"lakelandelectric.com": {
+			"INFO": {
+				"NICE_NAME": "CITY OF LAKELAND"
+			},
+			"INV_NUMBER": {
+				"KEY": ["Account \\#"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Billing Date"]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["Total Current Charges"]
+			}
+		},
+		"WestPenn": {
+			"INFO": {
+				"NICE_NAME": "WESTPENN"
+			},
+			"INV_NUMBER": {
+				"KEY": ["Account Number"]
+			},
+			"DATE_SEARCH": {
+				"KEY": [""]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["Amount Due"]
+			}
+		},
+		"grainger.com": {
+			"INFO": {
+				"NICE_NAME": "GRAINGER"
+			},
+			"INV_NUMBER": {
+				"KEY": ["INVOICE NUMBER"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["INVOICE DATE"]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["AMOUNT DUE"]
+			}
+		},
+		"directv \\- po bOX 5006": {
+			"INFO": {
+				"NICE_NAME": "DirecTV"
+			},
+			"INV_NUMBER": {
+				"KEY": ["INVOICE NUMBER"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Statement Date"]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["Current Charges"]
+			}
+		},
+		"AREA-WIDE": {
+			"INFO": {
+				"NICE_NAME": "AREA-WIDE Phonebook"
+			},
+			"INV_NUMBER": {
+				"KEY": ["ACCOUNT NUMBER"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["DATE"]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["TOTAL DUE "]
+			}
+		},
+		"City of Evans": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"INV_NUMBER": {
+				"KEY": ["Account \\#"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["BILL DATE"]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["CURRENT CHARGES"]
+			}
+		},
+		"Corry Lumber": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"INV_NUMBER": {
+				"KEY": ["Transaction\\#"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Date"]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["TOTAL"]
+			}
+		},
+		"epumpsok.com": {
+			"INFO": {
+				"NICE_NAME": "E PUMPS"
+			},
+			"INV_NUMBER": {
+				"KEY": ["INVOICE"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Order Date"]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": [""]
+			}
+		},
+		"D . L TRANSPORT": {
+			"INFO": {
+				"NICE_NAME": "D  and  L TRANSPORT"
+			},
+			"INV_NUMBER": {
+				"KEY": ["INVOICE \\#", "PRO"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["INVOICE DATE"]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["TOTAL"]
+			}
+		},
+		"713-923-7943": {
+			"INFO": {
+				"NICE_NAME": "AmeriGas"
+			},
+			"INV_NUMBER": {
+				"KEY": ["INVOICE NO"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["INVOICE DATE"]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["Amount Due"]
+			}
+		},
+		"web site\\s+?att.com": {
+			"INFO": {
+				"NICE_NAME": "ATT"
+			},
+			"INV_NUMBER": {
+				"KEY": ["Account Number"]
+			},
+			"DATE_SEARCH": {
+				"KEY": ["Billing Date"]
+			},
+			"TOTAL_SEARCH": {
+				"KEY": ["Total Amount Due"]
+			}
+		},
+		".*\\n": {
+			"INFO": {
+				"NICE_NAME": ""
+			},
+			"TOTAL_SEARCH":{
+				"KEY":["TOTAL AMOUNT","Grand Total","AMOUNT DUE","AMOUNT DUE$","INV TOTAL","BALANCE DUE","Balance Due\\s{0,}\\:?","Total\\s{0,}\\:?$", "Prebill","Total\\s{0,}\\:?$","AMOUNT THIS INVOICE INCLUDING TAX","Total ...\\s{0,}","INVOICE AMOUNT","Please Pay This Amount","Total\\s{0,}$","Total Due","Invoice Total","AMOUNT THIS INVOICE","Total"]
+			},
+			"INV_NUMBER": {
+				"KEY": ["Invoice \\#\\s{0,}$","Customer No","INVOICE\\s{0,}$","Invoice \\#","Invoice\\#","Invoice","Invoice No","INVOICE\\s{0,}\\:?$","INVOICE\\s{0,}\\:?$","Customer P.O","Invoice Number","Invoice \\#"]
+			},
+			"PO_SEARCH": {
+				"KEY": ""
+			},
+			"DATE_SEARCH": {
+				"KEY": [".*date.*?\\s?:\\s?\\s?", ".*\\n", "^(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\\d\\d", "^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\\d\\d"]
+			}
+
+		}
+	}
+}
