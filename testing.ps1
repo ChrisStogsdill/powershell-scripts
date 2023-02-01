@@ -1,6 +1,5 @@
-$accounts = Get-WmiObject Win32_UserAccount -filter "LocalAccount=True and SIDType=1"
-foreach ($account in $accounts) {
-    if ($account.Name -ne "mwhadmin") {
-        write-host $account
-    }
+$Users = Get-MsolUser | Where-Object {$_.IsLicensed -eq $false -and $_.EmailAddress -ne $null}
+foreach ($User in $Users)
+{
+    Write-Output "User: $($User.UserPrincipalName) does not have an Office license but has a mailbox."
 }
