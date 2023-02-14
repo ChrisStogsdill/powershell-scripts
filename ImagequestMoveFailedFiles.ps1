@@ -36,7 +36,7 @@ foreach ($folder in $folders) {
 }
 
 Write-Host "Waiting, then re-checking the folder..."
-$total = 10
+$total = 60
 for ($i = 1; $i -le $total; $i++) {
   Write-Progress -Activity "Waiting" -Status "Time remaining: $($total-$i) seconds" -PercentComplete (($i / $total) * 100)
   Start-Sleep -Seconds 1
