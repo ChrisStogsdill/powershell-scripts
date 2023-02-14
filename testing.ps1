@@ -1,5 +1,9 @@
-$Users = Get-MsolUser | Where-Object {$_.IsLicensed -eq $false -and $_.EmailAddress -ne $null}
-foreach ($User in $Users)
-{
-    Write-Output "User: $($User.UserPrincipalName) does not have an Office license but has a mailbox."
+$inputCSV = Import-Csv -Path .\ignored\licenseoutput.csv
+$inputCSV | ForEach-Object {
+    $userName = $_.username
+    $currentUser = Get-ADUser $userName -Properties Description
+    $description = "Disabled 2023-02-08 - " + $currentUser.Description 
+    Set-ADUser $userName -Enabled $false
+    Set-ADUser $username -Description $description
+
 }
