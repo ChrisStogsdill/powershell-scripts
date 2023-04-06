@@ -22,9 +22,9 @@ foreach ($Subscription in $Subscriptions) {
     foreach ($parametervalue in $Subscription.DeliverySettings.ParameterValues){
         if ($parametervalue.Value -like "*$User*"){
             # get the folder it is located in
-            Write-Host $Subscription.Path
+            Write-Host "Path " $Subscription.Path
             # get the date it was last run
-            Write-Host $Subscription.LastExecuted
+            Write-Host "Last run: " $Subscription.LastExecuted
             # get the name of the subscription
             Write-Host "$($parametervalue.Value) In $($Subscription.Description) `n" 
         }
