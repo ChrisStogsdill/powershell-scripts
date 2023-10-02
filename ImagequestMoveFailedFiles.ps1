@@ -35,29 +35,29 @@ foreach ($folder in $folders) {
   Write-Host -ForegroundColor Green "Files moved successfully."
 }
 
-Write-Host "Waiting, then re-checking the folder..."
-$total = 60
-for ($i = 1; $i -le $total; $i++) {
-  Write-Progress -Activity "Waiting" -Status "Time remaining: $($total-$i) seconds" -PercentComplete (($i / $total) * 100)
-  Start-Sleep -Seconds 1
-}
+# Write-Host "Waiting, then re-checking the folder..."
+# $total = 60
+# for ($i = 1; $i -le $total; $i++) {
+#   Write-Progress -Activity "Waiting" -Status "Time remaining: $($total-$i) seconds" -PercentComplete (($i / $total) * 100)
+#   Start-Sleep -Seconds 1
+# }
 
-Write-Host "Re-checking folders..."
-foreach ($folder in $folders) {
-  Write-Host "Files in $($folder)..:"
-  $files = Get-ChildItem $folder
-  Write-Output $files
+# Write-Host "Re-checking folders..."
+# foreach ($folder in $folders) {
+#   Write-Host "Files in $($folder)..:"
+#   $files = Get-ChildItem $folder
+#   Write-Output $files
 
-  if ($files) {
-    $deletePrompt = Read-Host -Prompt "Do you want to delete the files in $($folder.TrimEnd('\'))\..? (y/n) [default: n]"
-    if ($deletePrompt -eq "y") {
-      Write-Host "Deleting files..."
-      $files | ForEach-Object { Remove-Item $_.FullName -Force }
-      Write-Host -ForegroundColor Green "Files deleted successfully."
-    }
-  } else {
-    Write-Host "Folder is empty, no files to delete."
-  }
-}
-Write-Host "Press Enter to close."
-$null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+#   if ($files) {
+#     $deletePrompt = Read-Host -Prompt "Do you want to delete the files in $($folder.TrimEnd('\'))\..? (y/n) [default: n]"
+#     if ($deletePrompt -eq "y") {
+#       Write-Host "Deleting files..."
+#       $files | ForEach-Object { Remove-Item $_.FullName -Force }
+#       Write-Host -ForegroundColor Green "Files deleted successfully."
+#     }
+#   } else {
+#     Write-Host "Folder is empty, no files to delete."
+#   }
+# }
+# Write-Host "Press Enter to close."
+# $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")

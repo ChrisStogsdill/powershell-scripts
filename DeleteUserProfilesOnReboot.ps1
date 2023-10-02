@@ -6,7 +6,7 @@ try {
     # list of accounts we do NOT want to delete
     $profilesToKeep = 'NetworkService','LocalService','systemprofile', 'Administrator'
 
-    "Attempting to remove the following accounts" >> ".\logs\$logFileName"
+    "Users before deletion" >> ".\logs\$logFileName"
     Get-CimInstance -Class Win32_UserProfile | Where-Object { $_.LocalPath.split('\')[-1] -notin $profilesToKeep } | Select-Object -Property LocalPath | Out-File -FilePath ".\logs\$logFileName" -Append
 
     # Delete profiles that are not in profilesToKeep
@@ -16,8 +16,12 @@ try {
     $today = Get-Date -Format "yyyy-MM-dd"
     $logFileName = "$today.log"
 
-
+    # Delete profiles while appending output to the log
     $deletedProfiles | Out-File -FilePath ".\logs\$logFileName" -Append
+
+    "Users after deletion" >> ".\logs\$logFileName"
+    Get-CimInstance -Class Win32_UserProfile | Where-Object { $_.LocalPath.split('\')[-1] -notin $profilesToKeep } | Select-Object -Property LocalPath | Out-File -FilePath ".\logs\$logFileName" -Append
+
 
 
     # cleanup the logs folder. 
