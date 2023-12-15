@@ -1,79 +1,50 @@
 #!/bin/bash
-DATABASE=lockbox
-DATEF=$(date +'%m%d%Y')
-DATENOW=$(date +'%d%b%Y')
-LOGTIME=$(date +'%d%b%Y %T%z')
-FILETIME=$(date +'%m%d%y')
-LOG=/var/log/lockbox/$DATENOW-$DATABASE.log
-i=0
-RETRY_ATTEMPTS=5
-timestamp (){
-	LOGTIME=$(date +'%d%b%Y %T%z')
-}
-getFiles (){
-			timestamp
-			#send \"get /$DATEF*.zip /datadrive_01/lockbox/input/tmp/\r\"
-			printf "[$LOGTIME] Start SFTP download from 'BANCFIRST'\n ----" >> $LOG
-			/usr/bin/expect -c "
-			spawn sshpass -f "/usr/local/sbin/assets/bancfirst.txt" sftp MidwestHose@as2.bancfirst.com
-			expect \"sftp>\" 
-		    
-			send \"get /$DATEF*.zip /datadrive_01/lockbox/input/tmp/\r\"
-			expect \"sftp>\"
-			send \"ls\r\"
-			expect \"sftp>\"
-			send \"exit\r\"" >> $LOG
-
-			timestamp
-			printf "[$LOGTIME] END SFTP download from 'BANCFIRST'\n ----" >> $LOG
-			sleep 5
-
-}
-
-if ! ls "/datadrive_01/lockbox/output/old/$FILETIME"*;
-then
-	getFiles
-	sleep 10
-else
-	echo "[$LOGTIME] Today's Lockbox processed..."
-fi
-
-while [ $i -le $RETRY_ATTEMPTS ] 
-do
-	if ls "/datadrive_01/lockbox/input/tmp/$DATEF"*.zip 1> /dev/null 2>&1;
-	#if ls "/datadrive_01/lockbox/input/tmp/Midwest.zip" 1> /dev/null 2>&1;
-	then
-		#bash /usr/local/sbin/WatchLockbox.sh
-		unzip -j -o "/datadrive_01/lockbox/input/tmp/$DATEF*.zip" -d "/datadrive_01/lockbox/input/" 
-		sleep 10s
-		bash /usr/local/sbin/WatchLockbox.sh
-		#unzip -j -o "/datadrive_01/lockbox/input/tmp/Midwest.zip" -d "/datadrive_01/lockbox/input/" | bash /usr/local/sbin/WatchLockbox.sh
-		timestamp
-		echo "[$LOGTIME] Starting Lockbox Processing..." >> $LOG
-		
-		i=5
-	elif [[ $i -eq RETRY_ATTEMPTS ]]; then
-		echo "Max Attempts ($i)" >> $LOG
-		exit 1
-	else
-		echo "Reattempting (attempt $i)" >> $LOG
-		i=$((i+1))
-		sleep 5
-		if ! ls "/datadrive_01/lockbox/output/old/$FILETIME"*;
-		then
-			getFiles
-		else
-			echo "[$LOGTIME] Today's Lockbox processed..."
-		fi
-
-		#getFiles
-	fi
-
-done
-
-# elif [ $i -eq 5 ]
-# 	then
-# 		
 
 
-				
+# Script Logic Description:
+# 1) Login to Azure with the Service Principal and do IP Whitelisting for MSSQL
+# 2) Run the EbayListingsRetrieval script to get the active Ebay listings
+# 3) Run the EbayListingsUpload script to update the active Ebay listings to the database
+# 4) Run the EbayListingsDiff script to get the diff between the desired state and the current state
+# 5) Run the EbayListingsPatch script to apply all the diffs to get to the desired state (C/U/D)
+# 6?) possibly send out a notification or something, or enter a new row in a special
+#     table that would be more like a signing sheet, with each entry representing an 
+#     instance that ran, letting us know the date/time it ran, whether or not it made 
+#     any changes, and possibly also a list of changes applied
+
+# Step #1: Login to Azure with the Service Principal and do IP Whitelisting for MSSQL
+
+CLIENT_ID="---"
+CLIENT_SECRET="---"
+TENANT_ID="---"
+SQL_SERVER_NAME="testing-trulinx"
+RESOURCE_GROUP="aztomwh"
+
+public_ip=$(curl -s ifconfig.me)
+
+az login --service-principal -u $CLIENT_ID -p $CLIENT_SECRET --tenant $TENANT_ID
+az sql server firewall-rule create -g $RESOURCE_GROUP -s $SQL_SERVER_NAME -n AllowEbayScriptIP --start-ip-address $public_ip --end-ip-address $public_ip
+
+pip install -r requirements.txt
+
+# Step #2: Run the EbayListingsRetrieval script to get the active Ebay listings
+
+# Generate `ebay-listings.json` with data from the Ebay API
+python EbayListingsRetrieval.py
+
+# Step #3: Run the EbayListingsUpload script to upload the active Ebay listings to the database
+
+# Upload `ebay-listings.json` content to the Shadow DB in the EbayItems table
+python EbayListingsUpload.py
+
+# Step #4: Run the EbayListingsDiff script to get the diff between the desired state and the current state
+
+python EbayListingsDiff.py
+
+# Step #5: Run the EbayListingsPatch script to apply all the diffs to get to the desired state (C/U/D)
+
+python EbayListingsPatch.py
+
+# Step #6: possibly send out a notification or something
+
+python EbayListingsNotification.py

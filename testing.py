@@ -1,226 +1,316 @@
-import re
+
+import pyodbc 
+import pdb
+import datetime
+import random
 import json
-import logging
-from time import sleep
-from datetime import datetime
-from typing import List, Dict, Union, Optional
-from ebaysdk.exception import ConnectionError
-from ebaysdk.trading import Connection as Trading
+import os
+import csv
+import re
+import sys
 
-logging.basicConfig(level=logging.INFO)
+def getRecordsDict(rows, columns):
+    records = []
+    for row in rows:
+        records.append(dict(zip(columns, row)))
+    return(records)
+    #print(records)
 
-class Price:
-    def __init__(self, currencyID: str, value: str):
-        self.currencyID = currencyID
-        self.value = value
+def getVendors(records):
+    vendors = []
+    for i in records:
+        vendors.append(i["vend-Vendor"])
+   
+    vendors = list(set(vendors))
+    vendors.sort()
+    #print(vendors+"/n--EXIT FUNCTION/n")
+    return vendors
 
-class ListingDetails:
-    def __init__(self, StartTime: datetime, ViewItemURL: str, ViewItemURLForNaturalSearch: str):
-        self.StartTime = StartTime
-        self.ViewItemURL = ViewItemURL
-        self.ViewItemURLForNaturalSearch = ViewItemURLForNaturalSearch
+def getVendorRecordNo(vendors_input, records_input):
+    vendorRows = {}
+    for vendor in vendors_input:
+        vendorsRowNo = []
+        ix = 0
+        for record in records_input:
+            if record["vend-Vendor"] == vendor:
+                vendorsRowNo.append(ix)
+                vendorRows[vendor] = vendorsRowNo
+            ix += 1 
+    return vendorRows
 
-class SellingStatus:
-    def __init__(self, CurrentPrice: Price):
-        self.CurrentPrice = CurrentPrice
+def getCheckNobyVendor(vendors_input, vendorsRecord_input, records_input):
+    #import pdb; pdb.set_trace()
+    checkNoDict = {}
+    for vendor in vendors_input:
+        #print("On Vendor:" + vendor) #For DEBUG/DEV
+        checksNoList = []
+        for x in vendorsRecord_input[vendor]:
+            #print("Maybe Line No:" + str(x))
+            checksNoList.append (records_input[x]["vp-CheckNumber"])
+        checkNoList2 = list(set(checksNoList))
+        checkNoDict[vendor] = checkNoList2
+        #print("CheckNoDict: /n")
+        #print(checkNoDict)
+    return checkNoDict
 
-class ShippingDetails:
-    def __init__(self, ShippingServiceOptions: Optional[str], ShippingType: str):
-        self.ShippingServiceOptions = ShippingServiceOptions
-        self.ShippingType = ShippingType
+def getDistributionRecords(vendors_input, vendorsRecord_input, records_input, batchno, accountsList, classList, config_dict):
+    #import pdb; pdb.set_trace()
+    #checkNoDict_input = {}
+    errored_spm = ["Bad Check List"]
+    checkNoDict_input = getCheckNobyVendor(vendors_input, vendorsRecord_input, records_input)
+    full_iff_file = ""
+    bad_trns_file = ""
+    final_void_print = ""
+    full_iff_file += ("""!TRNS\tTRNSID\tTRNSTYPE\tDATE\tACCNT\tNAME\tCLASS\tAMOUNT\tDOCNUM\tCLEAR\tTOPRINT\tADDR1\n!SPL\tSPLID\tTRNSTYPE\tDATE\tACCNT\tNAME\tCLASS\tAMOUNT\tDOCNUM\n!ENDTRNS\n""")
+    for vendor in vendors_input:
+        #print("vendor "+str(vendor))
+        trnsid = 1
+        recordno = vendorsRecord_input[vendor][0]
+        #print("recordno", recordno)
+        row = records_input[recordno]
+        #print("row", row)
+        #print("")
+        tx_line_check_amount = row["cr-Amount"]
+        spm_line_check_amount = []
+        final_tx_print = ""
+        final_void_print = ""
+        transaction_line= "TRNS\t{txID}\tCHECK\t{date}\t{account}\t{payee}\t{check_class}\t{check_amnt:.2f}\t{checkno}\tY\tN\t{vendor_address}\n"
+        if check_IfVoid(row) == False:
+            vendor_address_config = (str(row["vend-AddressLine1"]))+" "+(str(row["vend-AddressLine2"]))
+            print((transaction_line.format(txID=str(random.randint(100000,999999)), \
+                date=str((row["cr-CheckDate"]).strftime("%-m/%-d/%Y" )), \
+                account=str(searchShortCodes(accountsList, "1001")).strip(), \
+                payee=str(row["cr-Payee"]), \
+                check_class="", \
+                check_amnt=row["cr-Amount"], \
+                checkno= str(row["cr-CheckNumber"]), \
+                vendor_address=str(row["vend-AddressLine1"])+" "+str(row["vend-AddressLine2"]\
+                    )))) # For Debug
+            final_tx_print += (transaction_line.format(txID=str(random.randint(100000,999999)), \
+                date=str((row["cr-CheckDate"]).strftime("%-m/%-d/%Y" )), \
+                account=(str(1001).strip()), \
+                payee=str(row["cr-Payee"]), \
+                check_class="", \
+                check_amnt=row["cr-Amount"], \
+                checkno= int(row["cr-CheckNumber"]), \
+                vendor_address= vendor_address_config[:40]
+                ))
+            for row2 in vendorsRecord_input[vendor]:
+                trnsid = random.randint(100000,999999) 
+                #spl_class_breakdown = 
+                spm_line = "SPL\t{SPLID}\t{SPL_TRNSTYPE}\t{SPL_DATE}\t{SPL_ACCNT}\t{SPL_NAME}\t{SPL_CLASS}\t{SPL_AMOUNT:.2f}\t{SPL_DOCNUM}\n"
+                spm_line_check_amount.append(records_input[row2]["th-TxAmount"])
+                if str(records_input[row2]["cr-CheckNumber"]) == str(row["cr-CheckNumber"]):
+                    """print(spm_line.format(
+                        SPLID = str(trnsid), \
+                        SPL_TRNSTYPE = "CHECK", \
+                        SPL_DATE = ((records_input[row2]["cr-CheckDate"]).strftime("%-m/%-d/%Y" )), \
+                        SPL_ACCNT =  str(records_input[row2]["th-QBClass"]), \
+                        SPL_NAME = "",\
+                        SPL_CLASS =  str(searchShortCodes(classList,str(classSplit(".", records_input[row2]["th-QBClass"])))).strip(), \
+                        SPL_AMOUNT = records_input[row2]["th-TxAmount"], \
+                        SPL_DOCNUM = str(records_input[row2]["th-VoucherNumber"])
+                        #SPL_REIMBEXP = "NONEED"
+                        ))"""
 
-class Profile:
-    def __init__(self, ID: str, Name: str):
-        self.ID = ID
-        self.Name = Name
+                    #write Error/Exceptions for .strip() functions. 
 
-class SellerProfiles:
-    def __init__(self, SellerShippingProfile: Profile, SellerReturnProfile: Profile, SellerPaymentProfile: Profile):
-        self.SellerShippingProfile = SellerShippingProfile
-        self.SellerReturnProfile = SellerReturnProfile
-        self.SellerPaymentProfile = SellerPaymentProfile
+                    class_output = ""
+                    #If Class is empty then fall back on original output class
+                    if (records_input[row2]["th-QBClass"] == None) or (records_input[row2]["th-QBClass"] == ""):
+                        account_output = records_input[row2]["th-Class"]
+                        account_output = classCheckandCorrect(account_output, str(records_input[row2]["th-Location"]), config_dict)
+                    else:
+                        account_output = records_input[row2]["th-QBClass"] 
+                        account_output = classCheckandCorrect(account_output, str(records_input[row2]["th-Location"]), config_dict)
 
-class Listing:
-    def __init__(self, BuyItNowPrice: Price, ItemID: str, ListingDetails: ListingDetails, 
-                 ListingDuration: str, ListingType: str, Quantity: str, SellingStatus: SellingStatus,
-                 ShippingDetails: ShippingDetails, TimeLeft: str, Title: str, QuantityAvailable: str,
-                 SKU: str, ClassifiedAdPayPerLeadFee: Price, SellerProfiles: Optional[SellerProfiles] = None,
-                 WatchCount: Optional[str] = None):
-        self.BuyItNowPrice = BuyItNowPrice
-        self.ItemID = ItemID
-        self.ListingDetails = ListingDetails
-        self.ListingDuration = ListingDuration
-        self.ListingType = ListingType
-        self.Quantity = Quantity
-        self.SellingStatus = SellingStatus
-        self.ShippingDetails = ShippingDetails
-        self.TimeLeft = TimeLeft
-        self.Title = Title
-        self.QuantityAvailable = QuantityAvailable
-        self.SKU = SKU
-        self.ClassifiedAdPayPerLeadFee = ClassifiedAdPayPerLeadFee
-        self.SellerProfiles = SellerProfiles
-        self.WatchCount = WatchCount
-
-class EbayListingsRetriever:
-
-    def __init__(self, app_id: str, dev_id: str, cert_id: str, token: str):
-        self.api = Trading(
-            appid=app_id,
-            devid=dev_id,
-            certid=cert_id,
-            token=token,
-            config_file=None
-        )
-        self.items: List[Dict] = []
-
-    def map_api_to_listing(self, item_data):
-        BuyItNowPrice_obj = Price(item_data.BuyItNowPrice._currencyID if hasattr(item_data, 'BuyItNowPrice') else None, 
-                                item_data.BuyItNowPrice.value if hasattr(item_data, 'BuyItNowPrice') else None)
-        ListingDetails_obj = ListingDetails(self.datetime_to_str(str(item_data.ListingDetails.StartTime)),
-                                            item_data.ListingDetails.ViewItemURL if hasattr(item_data.ListingDetails, 'ViewItemURL') else None, 
-                                            item_data.ListingDetails.ViewItemURLForNaturalSearch if hasattr(item_data.ListingDetails, 'ViewItemURLForNaturalSearch') else None)
-        SellingStatus_obj = SellingStatus(Price(item_data.SellingStatus.CurrentPrice._currencyID, 
-                                                item_data.SellingStatus.CurrentPrice.value))
-        ShippingDetails_obj = ShippingDetails(item_data.ShippingDetails.ShippingServiceOptions, 
-                                            item_data.ShippingDetails.ShippingType)
-        ClassifiedAdPayPerLeadFee_obj = Price(item_data.ClassifiedAdPayPerLeadFee._currencyID, 
-                                            item_data.ClassifiedAdPayPerLeadFee.value)
-
-        if hasattr(item_data, 'SellerProfiles') and item_data.SellerProfiles:
-            SellerShippingProfile_obj = Profile(item_data.SellerProfiles.SellerShippingProfile.ShippingProfileID, 
-                                                item_data.SellerProfiles.SellerShippingProfile.ShippingProfileName)
-            SellerReturnProfile_obj = Profile(item_data.SellerProfiles.SellerReturnProfile.ReturnProfileID, 
-                                            item_data.SellerProfiles.SellerReturnProfile.ReturnProfileName)
-            SellerPaymentProfile_obj = Profile(item_data.SellerProfiles.SellerPaymentProfile.PaymentProfileID, 
-                                            item_data.SellerProfiles.SellerPaymentProfile.PaymentProfileName)
-            SellerProfiles_obj = SellerProfiles(SellerShippingProfile_obj, SellerReturnProfile_obj, SellerPaymentProfile_obj)
-        else:
-            SellerProfiles_obj = None
-
-        SKU_value = item_data.SKU if hasattr(item_data, 'SKU') else None
-        WatchCount_value = item_data.WatchCount if hasattr(item_data, 'WatchCount') else None
-
-        return Listing(BuyItNowPrice_obj, item_data.ItemID, ListingDetails_obj, 
-                    item_data.ListingDuration if hasattr(item_data, 'ListingDuration') else None, 
-                    item_data.ListingType if hasattr(item_data, 'ListingType') else None, 
-                    item_data.Quantity if hasattr(item_data, 'Quantity') else None, 
-                    SellingStatus_obj, ShippingDetails_obj, 
-                    item_data.TimeLeft if hasattr(item_data, 'TimeLeft') else None, 
-                    item_data.Title if hasattr(item_data, 'Title') else None, 
-                    item_data.QuantityAvailable if hasattr(item_data, 'QuantityAvailable') else None, 
-                    SKU_value, ClassifiedAdPayPerLeadFee_obj, SellerProfiles_obj, 
-                    WatchCount_value)
-
-
-    def fetch_page(self, page_number: int, entries_per_page: int = 100) -> Optional[Dict]:
-        """Fetch a single page of eBay listings."""
-        try:
-            response = self.api.execute('GetMyeBaySelling', {
-                'ActiveList': {
-                    'Include': True,
-                    'Pagination': {
-                        'EntriesPerPage': entries_per_page,
-                        'PageNumber': page_number
-                    }
-                },
-                "SoldList": {
-                    "Include": False
-                },
-                "UnsoldList": {
-                    "Include": False
-                }
-            })
-
-            if response.reply.Ack == 'Success':
-                return response.reply.ActiveList
+                    final_tx_print += (spm_line.format(
+                        SPLID = str(trnsid), \
+                        SPL_TRNSTYPE = "CHECK", \
+                        SPL_DATE = ((records_input[row2]["cr-CheckDate"]).strftime("%-m/%-d/%Y" )), \
+                        SPL_ACCNT =  str(searchShortCodes(accountsList, str(account_output))).strip(), \
+                        SPL_NAME = "",\
+                        SPL_CLASS =  str(searchShortCodes(classList,str(classSplit(".", account_output)))).strip(), \
+                        SPL_AMOUNT = records_input[row2]["th-TxAmount"], \
+                        SPL_DOCNUM = str(records_input[row2]["th-VoucherNumber"])
+                        #SPL_REIMBEXP = "NONEED"
+                        ))
+                    #print(str(classSplit(".", class_output)))
+                else:
+                    errored_spm.append(str(records_input[row2]["th-VoucherNumber"])
+                        )
+            final_tx_print += "ENDTRNS\n"
+            if checkCheckSum(tx_line_check_amount, spm_line_check_amount) == True:
+                full_iff_file += final_tx_print
             else:
-                logging.error(f"Error fetching items on page {page_number}: {response.reply.Errors}")
-                return None
-
-        except Exception as e:
-            logging.error(f"Exception on page {page_number}: {e}")
-            return None
-
-    def fetch_all_listings(self, max_retry_attempts: int = 3, backoff_factor: float = 3.0):
-        """Fetch all eBay listings with retries and exponential backoff."""
-        page_number = 1
-        entries_per_page = 200
-        retry_attempts = max_retry_attempts
-
-        while True:
-            active_list_data = self.fetch_page(page_number, entries_per_page)
-
-            if active_list_data is None:
-                if retry_attempts > 0:
-                    logging.warning(f"active_list_data is None for page {page_number}. Retrying...")
-                    sleep(backoff_factor)
-                    backoff_factor *= 2
-                    retry_attempts -= 1
-                    continue
-                else:
-                    logging.error("Max retry attempts reached for active_list_data being None.")
-                    break
-
-            items = active_list_data.ItemArray.Item
-            total_number_of_entries = int(active_list_data.PaginationResult.TotalNumberOfEntries)
-
-            if items:
-                for item in items:
-                    mapped_item = self.map_api_to_listing(item)
-                    self.items.append(mapped_item)
-
-                if len(self.items) >= int(total_number_of_entries):
-                    break
-                else:
-                    page_number += 1
-                    retry_attempts = max_retry_attempts
-                    backoff_factor = 3.0
-            else:
-                if retry_attempts > 0:
-                    logging.warning(f"No items found on page {page_number}. Retrying...")
-                    sleep(backoff_factor)
-                    backoff_factor *= 2
-                    retry_attempts -= 1
-                    continue
-                else:
-                    logging.error("Max retry attempts reached for no items found.")
-                    break
-
-    def datetime_to_str(self, date_str: str) -> str:
-        """Convert datetime string to formatted string."""
-        matches = re.match(r'datetime.datetime\((\d{4}), (\d+), (\d+), (\d+), (\d+), (\d+)\)', date_str)
-        if matches:
-            year, month, day, hour, minute, second = matches.groups()
-            return f"{year}/{month.zfill(2)}/{day.zfill(2)}-{hour.zfill(2)}:{minute.zfill(2)}:{second.zfill(2)}"
-        return date_str
-
-    def save_to_json(self, filename: str):
-        """Save items to a JSON file."""
-        if not self.items:
-            logging.warning("No items to save.")
-            return
+                bad_trns_file += row["cr-CheckNumber"] +"\n"
+                print(str(row["cr-CheckNumber"]), "did not match see bad iff file for more info")
         
-        items_data = [vars(item) for item in self.items]
+        else:
+            bad_trns_file += "Voided Checks:\n" +\
+                            "!TRNS\tTRNSID\tTRNSTYPE\tDATE\tACCNT\tNAME\tCLASS\tAMOUNT\tDOCNUM\tCLEAR\tADDR1\tADDR2\n"
+            bad_trns_file += (transaction_line.format(txID=str(random.randint(100000,999999)), \
+                date=str((row["cr-CheckDate"]).strftime("%-m/%-d/%Y" )), \
+                account=str(searchShortCodes(accountsList, "1001")).strip(), \
+                payee=str(row["cr-Payee"]), \
+                check_class="", \
+                check_amnt=row["cr-Amount"], \
+                checkno= str(row["cr-CheckNumber"]), \
+                vendor_address=str(row["vend-AddressLine1"])+" "+str(row["vend-AddressLine2"]\
+                    )))
+            print(bad_trns_file)
+    print("end of vendors")
+    if bad_trns_file != "":
+        writeToFile(bad_trns_file, config_dict['PATHS']['finalPath']+"voidChecks_"+batchno+".csv")    
+    return full_iff_file, bad_trns_file
 
-        with open(filename, 'w') as jsonfile:
-            json.dump(items_data, jsonfile, indent=4, sort_keys=True, default=complex_encoder)
-
-def complex_encoder(obj):
-    """
-    A utility function to help serialize complex objects into JSON
-    """
-    if hasattr(obj, "__dict__"):
-        return obj.__dict__
+def classSplit(delimiter, string):
+    x = string.split(delimiter)
+    print("x is", x)
+    if len(x) >= 2:
+        if x[0] == "6681" and x[1] != 99:
+            return str(int(x[1])-10).zfill(2)
+        if x[0] == "6681" and x[1] == 99:
+            return str("95")
+        else:
+            return x[1]
     else:
-        raise TypeError(f"Object of type {obj.__class__.__name__} is not JSON serializable")
+        print("Failed Class Number is:", string)
+        print("Split Failed")
+        return string
+
+def checkCheckSum(checksum, distline_list):
+    if checksum == sum(distline_list):
+        return True
+        print("diff: ", checksum , "-", sum(distline_list),"=", str(checksum - sum(distline_list)))
+        print("True", "Vouchers does match the Check!")
+    else:
+        print("diff: ", checksum , "-", sum(distline_list),"=", str(checksum - sum(distline_list)))
+        print("False", "Vouchers does not match the Check! The Check May be Void?")
+        #full_iff_file += ("False"+ " Vouchers does not match the Check! The Check May be Void?")
+        return False
+
+def writeToFile(string, filename):
+    file1 = open(filename,"w")#write mode
+    file1.write(string)
+    file1.close()
+
+def check_IfVoid(row):
+    if row["cr-Void"] == 1:
+        return True
+    else:
+        return False
+
+def csvToListofDict(filepath):
+    table = []
+    with open(filepath, 'r') as f:
+        csv_reader = csv.DictReader(f, delimiter='\t')
+        next(csv_reader)
+        for line in csv_reader:
+            table.append(dict(line))
+    return table
+
+def getConfig(filePath):
+    #PASSED, MC, 2JUN2021
+    with open(filePath, "r") as read_file:
+        data = json.load(read_file)
+        config = data
+    return config
+
+def searchShortCodes(listofDict, shortcode):
+    shortcode_small = ""
+    acctname = ""
+   # print("shortcode is", shortcode)
+    if "." in shortcode:
+        codesplit = shortcode.split(".")
+        shortcode_small = codesplit[0]
+    for line in listofDict:
+        if line['shortCode'].strip() == shortcode.strip():
+            acctname = line['name']
+            break
+        if (shortcode_small != "") and (line['shortCode'].strip() == shortcode_small):
+                acctname = line['name']
+    return acctname
+
+def classCheckandCorrect(class_input, location, config):
+    x = ""
+    if location != None:
+     location = location.strip()
+     #import pdb; pdb.set_trace()
+    else:
+        #print("location is empty, for some reason")
+        return class_input
+
+    if "." in class_input:
+        #print("classC&C:", "Starting if period IS found")
+        x = class_input.split(".")
+        if len(x) >= 2:
+            x = x[0]
+
+    else:
+       # print("classC&C:", "Starting if period IS NOT found")
+
+        x = class_input
+        #print("classC&C:", "x is", str(x), type(x))
+
+    #print("what is config output",type(config['CUSTOM']['CLASS CHANGE']['Accounts']))
+    if x in config['CUSTOM']['CLASS CHANGE']['Accounts']: 
+        #print("classC&C:", "X is in config")
+        for i in config['CUSTOM']['CLASS CHANGE']['Accounts']:
+            if x == i:
+                return str(x +"."+config['CUSTOM']['CLASS CHANGE'][i][location])
+    else:
+        #print("classC&C:", "X is NOT in config")
+        return class_input
+
+"""
+def searchShortCodes(listofDict, shortcode):
+    shortcode_small = ""
+    acctname = ""
+    if "." in shortcode:
+        codesplit = shortcode.split(".")
+        shortcode_small = codesplit[0]
+    for line in listofDict:
+        if line['shortCode'].strip() == shortcode.strip():
+            acctname = line['name']
+            if acctname == None or acctname == "":
+                if (shortcode_small != "") and (line['shortCode'].strip() == shortcode_small):
+                    acctname = line['name']
+    return acctname
+"""
+                
+
+def main(x):
+    x = x.strip()
+    config = getConfig('/datadrive_01/SQLtoIIF/src/config.json')
+    batchno = x
+    server = config['DBCONNECTIONS']['server']
+    database = config['DBCONNECTIONS']['database'] 
+    username = config['DBCONNECTIONS']['username']
+    password = config['DBCONNECTIONS']['password'] 
+
+    #Load QB Accounts and Classes
+    accountsList = csvToListofDict(config['PATHS']['QB Accounts File'])
+    classList = csvToListofDict(config['PATHS']['QB Class File'])
+
+    
+    inputcheck = re.match(r"^\d{4,8}$", x)
+    if (bool(inputcheck) == True):
+        cnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
+        cursor = cnxn.cursor()
+        rows = cursor.execute("exec MWH_QB_spGetChecksFromRegisterNumber " + batchno).fetchall()
+        columns = [column[0] for column in cursor.description]
+        records = getRecordsDict(rows, columns)
+        #print(records)
+        vendors = getVendors(records)
+        print("This is Vendors",vendors)
+        vendorRecords = getVendorRecordNo(vendors, records)
+        #print(vendorRecords)
+        getCheckNobyVendor(vendors, vendorRecords, records)
+        final_iif_file, final_void_print = getDistributionRecords(vendors, vendorRecords, records, batchno, accountsList, classList, config)
+        writeToFile(final_iif_file, config['PATHS']['finalPath']+"iif_import_"+batchno+"_"+str(random.randint(100000,999999))+".iif")  
+    else:
+        print("Input may be wrong, please make sure it has between 4 and 8 digits and the batch no exists.")
 
 if __name__ == "__main__":
-    APP_ID = 'Midwesth-midwesth-PRD-9b1be8d60-1dc498d1'
-    DEV_ID = 'd4d042f7-fe9a-46a3-bfdb-0528f35981f9'
-    CERT_ID = 'PRD-b1be8d6003ae-fdf0-4f21-96fe-65b9'
-    TOKEN = 'v^1.1#i^1#p^3#f^0#I^3#r^1#t^Ul4xMF8xMTo1NDRGMkE3NTYzNkI4NzExMzRDNTQ5MzcyRDYyMkUwNF8zXzEjRV4yNjA='
-
-    retriever = EbayListingsRetriever(APP_ID, DEV_ID, CERT_ID, TOKEN)
-    retriever.fetch_all_listings()
-    retriever.save_to_json("ebay-listings.json")
+    main(sys.argv[1])

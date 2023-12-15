@@ -1,46 +1,32 @@
-Get-ADUser -Filter "EmployeeID -eq '1638'" | Set-ADUser -Manager MLockhart
-Get-ADUser -Filter "EmployeeID -eq '1705'" | Set-ADUser -Manager MLockhart
-Get-ADUser -Filter "EmployeeID -eq '1713'" | Set-ADUser -Manager MLockhart
-Get-ADUser -Filter "EmployeeID -eq '1724'" | Set-ADUser -Manager MLockhart
-Get-ADUser -Filter "EmployeeID -eq '1127'" | Set-ADUser -Manager KWyatt
-Get-ADUser -Filter "EmployeeID -eq '1731'" | Set-ADUser -Manager RReed
-Get-ADUser -Filter "EmployeeID -eq '1553'" | Set-ADUser -Manager RMyers
-Get-ADUser -Filter "EmployeeID -eq '557'" | Set-ADUser -Manager ESparkman
-Get-ADUser -Filter "EmployeeID -eq '749'" | Set-ADUser -Manager NElmer
-Get-ADUser -Filter "EmployeeID -eq '750'" | Set-ADUser -Manager KWyatt
-Get-ADUser -Filter "EmployeeID -eq '1337'" | Set-ADUser -Manager KWyatt
-Get-ADUser -Filter "EmployeeID -eq '1702'" | Set-ADUser -Manager NElmer
-Get-ADUser -Filter "EmployeeID -eq '1270'" | Set-ADUser -Manager FValley
-Get-ADUser -Filter "EmployeeID -eq '1621'" | Set-ADUser -Manager ECuellar
-Get-ADUser -Filter "EmployeeID -eq '1700'" | Set-ADUser -Manager CAguilar
-Get-ADUser -Filter "EmployeeID -eq '1580'" | Set-ADUser -Manager ECuellar
-Get-ADUser -Filter "EmployeeID -eq '1683'" | Set-ADUser -Manager ECuellar
-Get-ADUser -Filter "EmployeeID -eq '1685'" | Set-ADUser -Manager ECuellar
-Get-ADUser -Filter "EmployeeID -eq '1721'" | Set-ADUser -Manager ECuellar
-Get-ADUser -Filter "EmployeeID -eq '1522'" | Set-ADUser -Manager BSmith
-Get-ADUser -Filter "EmployeeID -eq '54'" | Set-ADUser -Manager ESparkman
-Get-ADUser -Filter "EmployeeID -eq '1704'" | Set-ADUser -Manager bbalak
-Get-ADUser -Filter "EmployeeID -eq '1706'" | Set-ADUser -Manager RMyers
-Get-ADUser -Filter "EmployeeID -eq '1710'" | Set-ADUser -Manager DUtchel
-Get-ADUser -Filter "EmployeeID -eq '1725'" | Set-ADUser -Manager bbalak
-Get-ADUser -Filter "EmployeeID -eq '1736'" | Set-ADUser -Manager MLopez
-Get-ADUser -Filter "EmployeeID -eq '462'" | Set-ADUser -Manager ABEATY
-Get-ADUser -Filter "EmployeeID -eq '903'" | Set-ADUser -Manager HHancock
-Get-ADUser -Filter "EmployeeID -eq '1041'" | Set-ADUser -Manager AShuck
-Get-ADUser -Filter "EmployeeID -eq '1268'" | Set-ADUser -Manager bbalak
-Get-ADUser -Filter "EmployeeID -eq '1509'" | Set-ADUser -Manager RBenoit
-Get-ADUser -Filter "EmployeeID -eq '1551'" | Set-ADUser -Manager CCarroll
-Get-ADUser -Filter "EmployeeID -eq '1592'" | Set-ADUser -Manager CCataldo
-Get-ADUser -Filter "EmployeeID -eq '1593'" | Set-ADUser -Manager AMoreno
-Get-ADUser -Filter "EmployeeID -eq '1598'" | Set-ADUser -Manager CCATALDO
-Get-ADUser -Filter "EmployeeID -eq '1641'" | Set-ADUser -Manager bbalak
-Get-ADUser -Filter "EmployeeID -eq '1649'" | Set-ADUser -Manager CAguilar
-Get-ADUser -Filter "EmployeeID -eq '1653'" | Set-ADUser -Manager RReed
-Get-ADUser -Filter "EmployeeID -eq '1659'" | Set-ADUser -Manager AMoreno
-Get-ADUser -Filter "EmployeeID -eq '1662'" | Set-ADUser -Manager bbalak
-Get-ADUser -Filter "EmployeeID -eq '1668'" | Set-ADUser -Manager TCryer
-Get-ADUser -Filter "EmployeeID -eq '1671'" | Set-ADUser -Manager TCryer
-Get-ADUser -Filter "EmployeeID -eq '1672'" | Set-ADUser -Manager AMoreno
-Get-ADUser -Filter "EmployeeID -eq '1689'" | Set-ADUser -Manager VMiller
-Get-ADUser -Filter "EmployeeID -eq '1703'" | Set-ADUser -Manager BSmith
-Get-ADUser -Filter "EmployeeID -eq '1712'" | Set-ADUser -Manager bbalak
+# Import the Active Directory module
+Import-Module ActiveDirectory
+
+# Specify the OUs to exclude 
+$excludedOUCorry = "OU=Corry,OU=MWH,DC=MidwestHose,DC=com" 
+$excludedOUDisabled = "OU=Disabled Resources,DC=MidwestHose,DC=com"
+
+# Get all disabled users except those in the excluded OUs
+
+$disabledUsers = Get-ADUser -Filter {Enabled -eq $false} -Properties DistinguishedName 
+
+# $disabledUsers = Get-ADUser -Filter {Enabled -eq $false} -Properties DistinguishedName |
+#     Where-Object { ($_.DistinguishedName -notlike "*OU=Disabled*" )`
+#         -AND ($_.DistinguishedName -notlike "*OU=Corry*")`
+#         -AND ($_.DistinguishedName -notlike "*OU=IT Department*")`
+#         -AND ($_.DistinguishedName -notlike "*CN=Builtin*")}
+
+# Display the results
+# $disabledUsers | Get-Mailbox -ErrorAction SilentlyContinue | Select-Object UserPrincipalName, RecipientTypeDetails
+
+# $disabledUsers | Select-Object UserPrincipalName
+
+ foreach ($user in $disabledUsers) {
+    if ($null -ne $user.UserPrincipalName) {
+     $userMailbox = Get-Mailbox -ErrorAction SilentlyContinue -Identity $user.UserPrincipalName | Select-Object RecipientTypeDetails, UserPrincipalName  |
+        Where-Object -Property RecipientTypeDetails -eq "UserMailbox" 
+        
+        if ($null -ne $userMailbox) {Set-Mailbox -Identity $userMailbox.UserPrincipalName -Type Shared }
+     
+    }
+ }
+
