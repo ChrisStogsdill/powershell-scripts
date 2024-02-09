@@ -31,7 +31,7 @@ catch {
 
 if ($ExchangeConnectSucceeded -eq $false) {
     Write-Host "ExchangeOnline is not connected. Connecting..."
-    Connect-ExchangeOnline -UserPrincipalName mwhsupport@midwesthose.com
+    Connect-ExchangeOnline
 }
 
 
