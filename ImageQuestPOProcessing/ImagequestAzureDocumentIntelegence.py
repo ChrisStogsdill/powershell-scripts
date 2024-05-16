@@ -59,6 +59,32 @@ def get_invoice_ocr_data(sourceDocument):
             invoice_total = str(invoice_total_result.value)
 
         print("----------------------------------------")
+
+    # If purchase order is still "", try to find it in the text matching 00NNNNNN
+    if purchase_order == "":
+        for page in invoices.pages:
+            for word in page.words:
+                cleanedResult = re.search(r"00\d{6}", word.content)
+                if cleanedResult is not None:
+                    purchase_order = cleanedResult.group()
+                    print(f"Purchase Order: {purchase_order} found in text")
+                    break
+            if purchase_order != "":
+                break
+    
+    # if purchase order is still "", try to find it in the text matching NNNNNN
+    if purchase_order == "":
+        for page in invoices.pages:
+            for word in page.words:
+                cleanedResult = re.search(r"\d{6}", word.content)
+                if cleanedResult is not None:
+                    purchase_order = cleanedResult.group()
+                    print(f"Purchase Order: {purchase_order} found in text")
+                    break
+            if purchase_order != "":
+                break
+
+
     # print(purchase_order, vendor_name, customer_name, invoice_id, invoice_total)
     return purchase_order, vendor_name, customer_name, invoice_id, invoice_total
 

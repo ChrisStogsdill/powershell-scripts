@@ -1,0 +1,473 @@
+**********************
+PowerShell transcript start
+Start time: 20240501155440
+Username: MIDWESTHOSE\cstogsdill
+RunAs User: MIDWESTHOSE\cstogsdill
+Configuration Name: 
+Machine: OKC-LAP-109 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7\pwsh.dll -NoProfile -ExecutionPolicy Bypass -Command Import-Module 'c:\Users\cstogsdill\.vscode\extensions\ms-vscode.powershell-2024.2.0\modules\PowerShellEditorServices\PowerShellEditorServices.psd1'; Start-EditorServices -HostName 'Visual Studio Code Host' -HostProfileId 'Microsoft.VSCode' -HostVersion '2024.2.0' -BundledModulesPath 'c:\Users\cstogsdill\.vscode\extensions\ms-vscode.powershell-2024.2.0\modules' -EnableConsoleRepl -StartupBanner "PowerShell Extension v2024.2.0
+Copyright (c) Microsoft Corporation.
+
+https://aka.ms/vscode-powershell
+Type 'help' to get help.
+" -LogLevel 'Normal' -LogPath 'c:\Users\cstogsdill\AppData\Roaming\Code\User\globalStorage\ms-vscode.powershell\logs\1713273541-7efa5152-293a-4095-b966-4848bf22437c1713204255127' -SessionDetailsPath 'c:\Users\cstogsdill\AppData\Roaming\Code\User\globalStorage\ms-vscode.powershell\sessions\PSES-VSCode-47568-836404.json' -FeatureFlags @() 
+Process ID: 35132
+PSVersion: 7.4.2
+PSEdition: Core
+GitCommitId: 7.4.2
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is ./logs/2024-05-01.log
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\1-Monthly Statement-2024-04-22-74103 AM.PDF
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\1014-PO-00705035 BO-2024-04-18-51008 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\105-Invoice_7632_from_Dallai_America-2024-04-19-21619 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\1071-Inv_75207_from_Access_Hose_Intl_Inc._5524-2024-04-19-91405 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\1097-3856015o-2024-04-19-123731 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\1108-367175__5251080_7160_-2024-04-22-72107 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\1114-105987_20240418_28215334_12721598402-2024-04-18-84409 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\1114-105987_20240418_28215334_12721599152-2024-04-18-84409 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\1114-105987_20240418_28215334_12721599452-2024-04-18-84409 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\1114-105987_20240418_28215334_12721599470-2024-04-18-84409 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\1261-3855916o-2024-04-19-115635 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\1281-PO-00713137 BO-2024-04-18-51009 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\136-CCE04192024_0002-2024-04-19-100929 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\1360-Estimate_7787_from_Dallai_America-2024-04-19-81704 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\1360-xerox scan_04192024082942-2024-04-19-81704 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\147-21042024-Account-62248-2024-04-21-43625 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\1473-Invoice_105652_from_UNITED_HOSE_INC-2024-04-19-105008 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\1475-ATR Payment Instructions-2024-04-19-22037 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\1492-AIP W9-2024-04-19-103726 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\1512-2024_001-2024-04-22-75642 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\1515-Invoice-new_20240419003557_5475886-2024-04-19-125147 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\1515-Sales-Invoice INV422397-2024-04-19-82508 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\1572-Invoice-new_20240420012233_5477384-2024-04-20-15146 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\1585-Sales-Invoice INV422516-2024-04-22-80722 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\1602-INVOICE 6255219901-2024-04-22-63827 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\1653-Invoice_105649_from_UNITED_HOSE_INC-2024-04-19-105005 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\166-Invoice_7634_from_Dallai_America-2024-04-19-33850 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\1793-e00010066-nschleter-2024-04-19-42728 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\1793-e00010108-nschleter-2024-04-19-42728 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\1793-e00010170-nschleter-2024-04-19-42728 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\1793-e00010185-nschleter-2024-04-19-42728 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\1793-e00010204-nschleter-2024-04-19-42728 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\1793-e00010247-nschleter-2024-04-19-42728 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\1793-e00010263-nschleter-2024-04-19-42728 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\1793-e00010276-nschleter-2024-04-19-42728 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\1793-e00010286-nschleter-2024-04-19-42728 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\1793-e00010290-nschleter-2024-04-19-42728 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\1854-2 invoices-2024-04-18-43603 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\1928-Inv 25583-2024-04-19-41945 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\197-Invoice_7619_from_Dallai_America-2024-04-19-102943 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\198-Invoice # 082074-2024-04-19-33512 PM.PDF
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\204-105987_20240419_28223866_12726611334-2024-04-19-83853 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\204-105987_20240419_28223866_12726611674-2024-04-19-83853 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\204-105987_20240419_28223866_12726611686-2024-04-19-83853 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\204-105987_20240419_28223866_12726611712-2024-04-19-83853 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\204-105987_20240419_28223866_12726611858-2024-04-19-83853 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\204-105987_20240419_28223866_12726611862-2024-04-19-83853 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\204-105987_20240419_28223866_12726612202-2024-04-19-83853 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\2094-hipco_130282_20240419_28215122_12721537840-2024-04-19-90124 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\2126-00MHS03_SO_0059584IN_20240419_000-2024-04-19-32846 PM.PDF
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\213-Inv3134699-2024-04-19-23313 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\2145-Email041924084741-2024-04-19-84748 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\2154-PO-00718634-2024-04-19-50920 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\2240-Invoice 24IN01223-2024-04-22-125909 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\2272-20564_70386_INVC977906-2024-04-19-73459 PM.PDF
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\2312-ISI_155813_20240422-2024-04-22-23329 AM.PDF
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\2313-Invoice_INV-152827_1713535847987-2024-04-19-91045 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\2354-H008730_20240419_28222896_12725962200-2024-04-19-75235 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\2380-INVOICE# 21648-2024-04-19-125711 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\2412-4O108144824 - 00719188-2024-04-19-101105 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\2429-I002350_012240-01_202404-2024-04-22-75802 AM.PDF
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\247-00MID7314_SO_0617431IN_20240419_000-2024-04-19-120711 PM.PDF
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\2486-Sales-Invoice INV422491-2024-04-19-82510 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\2527-Inv_27523_from_Uniflex_of_America_LLC_11120-2024-04-18-55053 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\2558-AIP W9-2024-04-19-103724 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\2629-invoice.392270-2024-04-19-110245 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\2667-SP7685818-2024-04-19-105248 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\2853-Invoice 24IN01222-2024-04-22-125907 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\2880-00651MWH_SO_0375033IN_20240419_000-2024-04-19-45046 PM.PDF
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\2890-50022522-2024-04-19-40626 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\2900-Invoice_7632_from_Dallai_America-2024-04-19-21617 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\2930-Inv_177660_from_F__R_Manufacturing_Inc._46564-2024-04-19-34610 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\2942-565868_CU00106-2024-04-21-40134 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\2962-ACH - FORM_000099-2024-04-19-101625 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\2980-PO-00718437-2024-04-19-50924 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\3-3855266o-2024-04-18-65955 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\3092-3854958o-2024-04-18-51626 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\31-Invoice for Customer MIDWEST HOSE & SPEC  SANTA FE SPRING 102879012-2024-04-19-101130 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\3106-153327-2024-04-18-82651 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\3174-Inv_20451_from_LB_SOLUTIONS_LLC_5888-2024-04-19-111740 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\3233-2024_001-2024-04-22-81837 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\338-83227-2024-04-19-101623 AM.PDF
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\3597-20563_70397_INVC977695-2024-04-18-74741 PM.PDF
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\3597-20563_70397_INVC977761-2024-04-18-74741 PM.PDF
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\3597-COLORADO-2024-04-18-74741 PM.PDF
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\3601-Inv7128932-2024-04-19-10229 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\3606-07P38050_20240419_110653-2024-04-19-120713 PM.PDF
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\3647-OrdAck5092695-2024-04-19-100753 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\3786-invoice_ MID606 0023 291461 18-04-24 -2024-04-18-63642 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\3798-155057-2024-04-20-113044 AM.PDF
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\3810-Sales Invoice PSI-1003346-2024-04-19-40008 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\3989-Inv_84582_from_AMERICAN_IRON_WORKS_19272-2024-04-19-73630 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\4095-Invoice # 082074-2024-04-19-33514 PM.PDF
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\4145-Invoice_3410432-00-2024-04-19-90711 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\4199-Midwest Hose Invoices 12653-12654 04172024-2024-04-22-80720 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\4219-233537-2024-04-19-110303 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\4325-00MHS_SO_0019421IN_20240419_000-2024-04-19-82033 AM.PDF
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\4370-Estimate_7787_from_Dallai_America-2024-04-19-81707 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\4370-xerox scan_04192024082942-2024-04-19-81707 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\462-91408-74855-3516 Pasadena Frwy 200 HVAC PM 1.23.24-2024-04-19-92642 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\462-Invoice 0000091408-2024-04-19-92642 AM.PDF
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\4655-Invoice # 81268-2024-04-19-35648 PM.PDF
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\4684-OPIP_24-0257931-00_20240419155100-2024-04-19-35228 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\4697-PO-00718656-2024-04-19-50919 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\477-Xerox Scan_04162024134750-2024-04-19-93621 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\477-Xerox Scan_04162024134800-2024-04-19-93621 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\477-Xerox Scan_04162024134812-2024-04-19-93621 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\477-Xerox Scan_04162024134821-2024-04-19-93621 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\4785-200115005-2024-04-19-15141 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\4785-Freight Issue Policy-2024-04-19-15141 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\4815-INV_G0008999-2024-04-19-23055 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\4979-Invoice_105648_from_UNITED_HOSE_INC-2024-04-19-105003 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\4990-PH_17_041924_72050318-2024-04-19-70041 PM.PDF
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\4994-Sales - Invoice-2024-04-18-44019 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\5064-~InC267-2024-04-19-90907 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\5097-Inv_21250_from_Aleum_USA_14964-2024-04-19-50124 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\5114-730549_240419_101509-2024-04-19-13405 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\5201-CustState22158-0422240951-2024-04-22-81517 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\5242-156361-2024-04-19-82154 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\5326-Statement_114_1713540973813-2024-04-19-103603 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\5450-Inv3443517-2024-04-19-90128 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\5459-3856658o-2024-04-19-42403 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\5465-Invoice_INV-152850_1713535829792-2024-04-19-91025 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\5505-INVP2621494-2024-04-22-55650 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\5617-invoice_ MID606 0014 291860 19-04-24 -2024-04-19-60745 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\5648-Invoice_INV3524390-2024-04-19-125709 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\5648-Invoice_INV3525611-2024-04-19-125709 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\5770-Inv_20380_from_LB_SOLUTIONS_LLC_5888-2024-04-19-101047 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\5896-565867_CU00106-2024-04-21-40132 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\5970-1207647-2024-04-19-74648 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\6016-3855016o-2024-04-18-55310 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\6154-INV_G0008987-2024-04-19-94039 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\6169-INV_15919446-2024-04-19-44916 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\6192-300038987-2024-04-19-100911 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\6323-3857253o-2024-04-19-65623 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\6364-020005355_SO_0359148IN_20240419_000-2024-04-22-81159 AM.PDF
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\6453-Inv_75207_from_Access_Hose_Intl_Inc._5524-2024-04-19-91403 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\6479-Invoice_INV-152824_1713535832668-2024-04-19-91027 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\6483-invoice_744143-001   DI-2024-04-18-82650 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\6500-e00009822-nschleter-2024-04-18-41849 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\6500-e00009867-nschleter-2024-04-18-41849 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\6500-e00009869-nschleter-2024-04-18-41849 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\6500-e00009870-nschleter-2024-04-18-41849 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\6500-e00009883-nschleter-2024-04-18-41849 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\6500-e00009986-nschleter-2024-04-18-41849 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\6522-dallai america po # 719760-2024-04-22-71146 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\6522-Estimate_7793_from_Dallai_America-2024-04-22-71146 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\6558-195514-2024-04-19-113258 AM.PDF
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\6597-AUTHORIZATION FORM-2024-04-19-90649 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\6597-Big City Banking Info 2023-2024-04-19-90649 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\6861-00MID7314_SO_0617501IN_20240419_000-2024-04-19-50122 PM.PDF
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\6871-Sales Invoice PSI-1003346-2024-04-19-40006 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\6968-dallai america po # 719760-2024-04-22-71149 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\6968-Estimate_7793_from_Dallai_America-2024-04-22-71149 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\7058-PO-00719494-2024-04-19-50922 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\7058-S3611149-001_8072-2024-04-19-91623 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\7134-SI_3176836_SO_00001_200_4334_4422_2024-04-19_2024-04-19_INV_2905184-2024-04-19-75117 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\728-Inv_84592_from_AMERICAN_IRON_WORKS_19272-2024-04-22-73127 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\7318-00MID7314_SO_0617382IN_20240418_000-2024-04-18-51943 PM.PDF
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\7365-SO Invoice INV 260435-2024-04-19-95835 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\7565-Sales-Invoice INV422514-2024-04-22-80941 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\7606-Invoice_1179_from_SUPREME_HOSE_SOLUTIONS-2024-04-21-25603 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\7660-Midwest Invoice #49945-2024-04-19-45304 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\7729-invoice_743631-002   DI-2024-04-19-82630 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\7781-invoices_grw.011072-2024-04-19-120440 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\7791-SP7685958-2024-04-19-105606 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\7894-ConsolidatedInvoicingDetailViewer_APG01_4770998-2024-04-18-91720 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\7911-3069 MIDWEST HOSE & SPECIALTY INC - Corp-2024-04-18-55313 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\7924-Invoice_922515-00-2024-04-22-74323 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\7977-invoices_grw.011072-2024-04-18-115707 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\8004-Estimate_7787_from_Dallai_America-2024-04-19-81713 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\8004-xerox scan_04192024082942-2024-04-19-81713 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\8032-doc24579920240422080044-2024-04-22-63709 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\8175-Water & All Sport Flyer-2024-04-19-104845 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\8307-Show invoice-2024-04-18-70311 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\8318-INVP2621111-2024-04-19-55535 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\834-Invoice # 24-2145-2024-04-19-72912 AM.PDF
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\8355-I_00388_002167_2024-04-21_11-59-55-2024-04-21-105947 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\8482-Invoice # 20507-2024-04-19-24731 PM.PDF
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\8509-72098-2024-04-19-84730 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\8509-72099-2024-04-19-84730 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\8528-Midwest Hose Invoices 12649-12652 04112024-2024-04-22-73745 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\8564-Inv_21251_from_Aleum_USA_14964-2024-04-19-50759 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\8652-0520789IN-2024-04-19-32028 PM.PDF
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\8720-1139591_SecondReminder_04.19.2024.12.54.36-2024-04-19-125450 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\8782-Inv_21246_from_Aleum_USA_14964-2024-04-18-63126 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\8789-OPIP_24-0258025-00_20240419155118-2024-04-19-35230 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\8804-Bank Letter 3-11-24-2024-04-19-94815 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\8843-A_R Invoice - 220804-2024-04-18-70929 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\8850-Dun & Bradstreet ACH information 2023 with ((signature))-2024-04-19-110722 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\8850-Inv 050010000314393-2024-04-19-110722 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\8890-003816-037997-2024-04-18-45252 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\8965-SP7685978-2024-04-19-105608 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\9023-Invoice_7634_from_Dallai_America-2024-04-19-33852 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\9041-367175__5251368_7160_-2024-04-22-72109 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\9115-I_00187_002350_2024-04-20_11-21-39-2024-04-20-102125 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\9207-Sales Invoice INV141155-2024-04-19-25949 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\9222-Inv5346532-2024-04-19-93300 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\9239-730598_240419_102106-2024-04-19-13347 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\9306-PO-00690797 BO-2024-04-18-51006 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\9336-ContiTech Remittance 4-18-24-2024-04-18-44835 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\9359-3855015o-2024-04-18-55312 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\9437-PO-00718474-2024-04-19-50925 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\9470-Invoice_105650_from_UNITED_HOSE_INC-2024-04-19-105006 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\9501-Estimate_7787_from_Dallai_America-2024-04-19-81710 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\9501-xerox scan_04192024082942-2024-04-19-81710 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\9617-Inv_46135_from_Diamond_Cutting_LLC_31024-2024-04-19-105527 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\9638-PO-00718526-2024-04-19-50917 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\9648-INVP2621587-2024-04-19-60153 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\9683-PAST DUE MIDWEST INV#30010-2024-04-19-32854 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\9683-PAST DUE MIDWEST INV#30084-2024-04-19-32854 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\9692-invoice_743631-001   DI-2024-04-19-82512 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\9782-Sales Invoice INV141179-2024-04-19-30609 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\979-I002350_012216-01_202404-2024-04-22-75800 AM.PDF
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\9793-Invoice 24IN01221-2024-04-22-125910 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\9811-SP7685798-2024-04-20-124127 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\9819-MIDWESTHOSESPECIALTYINC29_6141573-00-2024-04-18-81735 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\9836-invoices_grw.011072-2024-04-19-120323 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\9864-Inv4679258-2024-04-19-81345 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\9923-Inv3134503-2024-04-19-120153 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\9942-Invoice_7619_from_Dallai_America-2024-04-19-102945 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\9958-Sales - Invoice-2024-04-19-33732 PM.pdf
+
+**********************
+PowerShell transcript end
+End time: 20240501162637
+**********************

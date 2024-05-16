@@ -27,9 +27,10 @@ def make_sure_each_page_is_8_5_x_11(pdf_file):
 if __name__ == "__main__":
 
   # Loop through all files in the directory
+  # print(os.listdir("m:\\Unrestricted IT\\IQ Invoice Expense Processing\\Failure\\"))
   for file in os.listdir(documentPath):
-    fullDocumentPath = os.path.join(documentPath, file).
-    
+    fullDocumentPath = os.path.join(documentPath, file)
+
     print(f"Checking file: {file}")
 
     # go to next file if the current file is empty

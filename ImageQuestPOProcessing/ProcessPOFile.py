@@ -19,11 +19,16 @@ def ProcessPOFile(sourceFile, outputFolder):
     # Merge the cover page and the data pdf
     finishedFile = pdf_merge(coverPage=currentCoverPage, dataPDF=sourceFile)
 
-    # Archive Temp files
-    if os.path.exists(finishedFile):
-        print ("Archiving Temp files")
-        shutil.move(currentCoverPage, "./archive/")
-        shutil.move(sourceFile, "./archive/")
+
+    # Move finishedFile to output folder
+    print(outputFolder)
+    shutil.move(finishedFile, outputFolder)
+
+    # Delete Temp files
+    print ("Archiving Temp files")
+    os.remove(currentCoverPage)
+    os.remove(sourceFile)
+
 
 
 

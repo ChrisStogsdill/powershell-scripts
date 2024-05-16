@@ -1,0 +1,138 @@
+**********************
+PowerShell transcript start
+Start time: 20240503091806
+Username: MIDWESTHOSE\cstogsdill
+RunAs User: MIDWESTHOSE\cstogsdill
+Configuration Name: 
+Machine: OKC-LAP-109 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7\pwsh.dll -NoProfile -ExecutionPolicy Bypass -Command Import-Module 'c:\Users\cstogsdill\.vscode\extensions\ms-vscode.powershell-2024.2.0\modules\PowerShellEditorServices\PowerShellEditorServices.psd1'; Start-EditorServices -HostName 'Visual Studio Code Host' -HostProfileId 'Microsoft.VSCode' -HostVersion '2024.2.0' -BundledModulesPath 'c:\Users\cstogsdill\.vscode\extensions\ms-vscode.powershell-2024.2.0\modules' -EnableConsoleRepl -StartupBanner "PowerShell Extension v2024.2.0
+Copyright (c) Microsoft Corporation.
+
+https://aka.ms/vscode-powershell
+Type 'help' to get help.
+" -LogLevel 'Normal' -LogPath 'c:\Users\cstogsdill\AppData\Roaming\Code\User\globalStorage\ms-vscode.powershell\logs\1713273541-7efa5152-293a-4095-b966-4848bf22437c1713204255127' -SessionDetailsPath 'c:\Users\cstogsdill\AppData\Roaming\Code\User\globalStorage\ms-vscode.powershell\sessions\PSES-VSCode-47568-836404.json' -FeatureFlags @() 
+Process ID: 35132
+PSVersion: 7.4.2
+PSEdition: Core
+GitCommitId: 7.4.2
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is ./logs/2024-05-03.log
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\1-Monthly Statement-2024-04-22-74103 AM.PDF
+Vendor Name: ContiTech USA, Inc.
+Continental has confidence: 0.68
+Customer Name: MIDWEST HOSE & SPECIALTY
+CORPORATE HEADQUARTERS has confidence: 0.659
+Invoice Total: USD19324.91 has confidence: 0.675
+----------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\ProcessPOFile.py", line 35, in <module>
+    ProcessPOFile(sourceFile=sys.argv[1], outputFolder=sys.argv[2])
+  File "C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\ProcessPOFile.py", line 13, in ProcessPOFile
+    purchase_order, vendor_name, customer_name, invoice_id, invoice_total = get_invoice_ocr_data(sourceFile)
+                                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\ImagequestAzureDocumentIntelegence.py", line 81, in get_invoice_ocr_data
+    purchase_order = cleanedResult.group(1)
+                     ^^^^^^^^^^^^^^^^^^^^^^
+IndexError: no such group
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\1360-xerox scan_04192024082942-2024-04-19-81704 AM.pdf
+
+PS>TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5ccstogsdill\x5cDesktop\x5ccode\x5cpowershell-scripts\x5cImageQuestPOProcessingPS C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing> ]633;B
+]633;D]633;A]633;P;Cwd=C:\x5cUsers\x5ccstogsdill\x5cDesktop\x5ccode\x5cpowershell-scripts\x5cImageQuestPOProcessingPS C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing> ]633;B
+PS>. 'C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\start.ps1'
+Transcript started, output file is ./logs/2024-05-03.log
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\1-Monthly Statement-2024-04-22-74103 AM.PDF
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\1360-xerox scan_04192024082942-2024-04-19-81704 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\147-21042024-Account-62248-2024-04-21-43625 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\1475-ATR Payment Instructions-2024-04-19-22037 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\1492-AIP W9-2024-04-19-103726 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\1602-INVOICE 6255219901-2024-04-22-63827 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\2240-Invoice 24IN01223-2024-04-22-125909 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\2272-20564_70386_INVC977906-2024-04-19-73459 PM.PDF
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\2412-4O108144824 - 00719188-2024-04-19-101105 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\2558-AIP W9-2024-04-19-103724 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\2629-invoice.392270-2024-04-19-110245 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\2853-Invoice 24IN01222-2024-04-22-125907 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\2962-ACH - FORM_000099-2024-04-19-101625 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\3106-153327-2024-04-18-82651 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\3597-20563_70397_INVC977695-2024-04-18-74741 PM.PDF
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\3597-20563_70397_INVC977761-2024-04-18-74741 PM.PDF
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\3786-invoice_ MID606 0023 291461 18-04-24 -2024-04-18-63642 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\4370-xerox scan_04192024082942-2024-04-19-81707 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\462-91408-74855-3516 Pasadena Frwy 200 HVAC PM 1.23.24-2024-04-19-92642 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\462-Invoice 0000091408-2024-04-19-92642 AM.PDF
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\477-Xerox Scan_04162024134821-2024-04-19-93621 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\5201-CustState22158-0422240951-2024-04-22-81517 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\5326-Statement_114_1713540973813-2024-04-19-103603 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\5617-invoice_ MID606 0014 291860 19-04-24 -2024-04-19-60745 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\6522-dallai america po # 719760-2024-04-22-71146 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\6597-Big City Banking Info 2023-2024-04-19-90649 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\6968-dallai america po # 719760-2024-04-22-71149 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\7058-S3611149-001_8072-2024-04-19-91623 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\7781-invoices_grw.011072-2024-04-19-120440 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\7894-ConsolidatedInvoicingDetailViewer_APG01_4770998-2024-04-18-91720 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\7977-invoices_grw.011072-2024-04-18-115707 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\8004-xerox scan_04192024082942-2024-04-19-81713 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\8720-1139591_SecondReminder_04.19.2024.12.54.36-2024-04-19-125450 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\8804-Bank Letter 3-11-24-2024-04-19-94815 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\8843-A_R Invoice - 220804-2024-04-18-70929 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\8850-Dun & Bradstreet ACH information 2023 with ((signature))-2024-04-19-110722 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\8850-Inv 050010000314393-2024-04-19-110722 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\9336-ContiTech Remittance 4-18-24-2024-04-18-44835 PM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\9501-xerox scan_04192024082942-2024-04-19-81710 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\9793-Invoice 24IN01221-2024-04-22-125910 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\9836-invoices_grw.011072-2024-04-19-120323 AM.pdf
+
+C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\TestWatchFolder\9864-Inv4679258-2024-04-19-81345 AM.pdf
+
+Transcript stopped, output file is C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing\logs\2024-05-03.log
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5ccstogsdill\x5cDesktop\x5ccode\x5cpowershell-scripts\x5cImageQuestPOProcessingPS C:\Users\cstogsdill\Desktop\code\powershell-scripts\ImageQuestPOProcessing> ]633;B
