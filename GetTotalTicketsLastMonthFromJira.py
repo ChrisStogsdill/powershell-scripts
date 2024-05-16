@@ -12,40 +12,7 @@ headers = {
   "Accept": "application/json"
 }
 
-
-""" Query for the following locations:
-ALI
-BAK
-BAT
-CAS
-DAL
-DEN
-DKN
-DIL
-ELR
-LAK
-FTW
-GRE
-HOB
-HOU
-LAF
-KIL
-ODE
-OKC
-OKW
-POM
-PAS
-PIT
-SAN
-SLC
-VER
-WIL
-COR
-LAC
-MWH
-CHR
-CALAX
-"""
+# setup jql queries
 queries = {
     "DEN" : {'jql': 'createdDate < endOfMonth(-1) and createdDate >= startOfMonth(-1) AND "Store Location" = DEN'},
     "OKC" :{'jql': 'createdDate < endOfMonth(-1) and createdDate >= startOfMonth(-1) AND "Store Location" in (OKC, OKC-ACCT, OKC-CORP, OKC-CPIC, OKC-DIST, OKC-EXEC, OKC-HR, OKC-IT, OKC-MFG, OKC-SALES)'},
@@ -85,7 +52,7 @@ queries = {
 # setup csv column headers
 csv_columns = ['Location', 'Ticket Count']
 csv_rows = []
-csv_file = "TicketCountData.csv"
+csv_file = "TotalTicketsLastMonth.csv"
 
 for location in queries:
     response = requests.request(
@@ -102,7 +69,6 @@ for location in queries:
     csv_rows.append({'Location': location, 'Ticket Count': responseJson['total']})
 
 # export to csv file
-
 with open(csv_file, 'w', newline='') as csvfile:
     writer = csv.DictWriter(csvfile, fieldnames=csv_columns)
     writer.writeheader()
