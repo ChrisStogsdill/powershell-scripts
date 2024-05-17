@@ -4,6 +4,12 @@ import json
 import csv
 import ignored.JiraKey as jiraKey
 
+
+# setup csv column headers
+csv_columns = ['Location', 'Ticket Count']
+csv_rows = []
+csv_file = "TotalTicketsLastMonth.csv"
+
 url = "https://midwesthoseit.atlassian.net/rest/api/3/search"
 
 auth = HTTPBasicAuth("cstogsdill@midwesthose.com", jiraKey.apiKey)
@@ -45,15 +51,10 @@ queries = {
     "LAF" :{'jql': 'createdDate < endOfMonth(-1) and createdDate >= startOfMonth(-1) AND "Store Location" = LAF'},
     "KIL" :{'jql': 'createdDate < endOfMonth(-1) and createdDate >= startOfMonth(-1) AND "Store Location" = KIL'},
     "ODE" :{'jql': 'createdDate < endOfMonth(-1) and createdDate >= startOfMonth(-1) AND "Store Location" = ODE'},
-    "CHR" :{'jql': 'createdDate < endOfMonth(-1) and createdDate >= startOfMonth(-1) AND "Store Location" = CHR'},
-
+    "CHR" :{'jql': 'createdDate < endOfMonth(-1) and createdDate >= startOfMonth(-1) AND "Store Location" = CHR'}
 }
 
-# setup csv column headers
-csv_columns = ['Location', 'Ticket Count']
-csv_rows = []
-csv_file = "TotalTicketsLastMonth.csv"
-
+# run the queries
 for location in queries:
     response = requests.request(
     "GET",

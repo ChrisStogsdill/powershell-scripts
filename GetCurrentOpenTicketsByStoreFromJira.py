@@ -4,6 +4,11 @@ import json
 import csv
 import ignored.JiraKey as jiraKey
 
+# setup csv info
+csv_columns = ['Location', 'Ticket Count']
+csv_rows = []
+csv_file = "TotalTicketsPerStore.csv"
+
 url = "https://midwesthoseit.atlassian.net/rest/api/3/search"
 
 auth = HTTPBasicAuth("cstogsdill@midwesthose.com", jiraKey.apiKey)
@@ -47,10 +52,7 @@ queries = {
     "CALAX" : {'jql': 'status NOT IN ("Resolved", "Closed", "Canceled", "DONE")  AND "Store Location" = CALAX'}    
 }
 
-# setup csv info
-csv_columns = ['Location', 'Ticket Count']
-csv_rows = []
-csv_file = "TotalTicketsPerStore.csv"
+
 
 for location in queries:
     response = requests.request(
