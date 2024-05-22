@@ -20,6 +20,12 @@ if (Test-Path $directory -PathType Container) {
         # Script path will need to be adjusted for future use.
         #$scriptPath = Join-Path -Path $directory -ChildPath $pythonScript
         $filePath = Join-Path -Path $directory -ChildPath $file.Name
+
+        # if file size is 0, skip it
+        if ($file.Length -eq 0) {
+            Write-Host "Skipping $($file.Name) because it is empty."
+            continue
+        }
         
         # Run the Python script on this file
         Write-Host "Running Python script on $($file.Name)..."
